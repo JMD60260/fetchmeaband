@@ -9,7 +9,7 @@ ___
 
 - <https://fectchmeaband-pro.herokuapp.com> :boom:
 - <https://fetchmeaband-staging.herokuapp.com>
-- - <https://git.heroku.com/fetchmeaband-staging.git>
+- <https://git.heroku.com/fetchmeaband-staging.git>
 - <https://git.heroku.com/fetchmeaband-pro.git> :boom:
   
 ___
