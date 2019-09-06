@@ -76,3 +76,8 @@ ___
 
 ___
 ![Trello](app/assets/images/Trello.png)
+___
+
+##### Commande de Guillaume #####
+
+![git command](app/assets/images/gdf.png)
