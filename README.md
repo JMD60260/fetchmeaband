@@ -7,11 +7,10 @@ ___
 
 3- Attention Bien lire le WIKI c'est tres important
 
-- <https://fectchmeaband-pro.herokuapp.com> :boom:
-..* <https://git.heroku.com/fetchmeaband-pro.git> :boom:
-- <https://fetchmeaband-staging.herokuapp.com>
-..* <https://git.heroku.com/fetchmeaband-staging.git>
-
+* <https://fectchmeaband-pro.herokuapp.com> :boom:
+* <https://git.heroku.com/fetchmeaband-pro.git> :boom:
+* <https://fetchmeaband-staging.herokuapp.com>
+* <https://git.heroku.com/fetchmeaband-staging.git>
   
 ___
 
@@ -73,7 +72,7 @@ ___
 ___
 ![show BDD](app/assets/images/BDD2.png)
 
-##### TRELLO #####
+##### TRELLO juste un aperu #####
 
 ___
 ![Trello](app/assets/images/Trello.png)
