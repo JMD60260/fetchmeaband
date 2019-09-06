@@ -5,23 +5,23 @@ ___
 2- Site Heroku
 3- Attention Bien lire le WIKI c'est tres important
 
-- <https://fectchmeaband.herokuapp.com> :boom:
-- <https://git.heroku.com/fetchmeaband.git> :boom:
+- <https://fectchmeaband-pro.herokuapp.com> :boom:
+- <https://fetchmeaband-staging.herokuapp.com>
+- - <https://git.heroku.com/fetchmeaband-staging.git>
+- <https://git.heroku.com/fetchmeaband-pro.git> :boom:
   
 ___
 
 - Ruby version 2.5.1
 - Rails version 5.2.3
-- CSS : Bootstrap
+- CSS : Theme
   
-___
-
 ## Contributeurs ##
 
 - ©Jean-Baptiste DEMENET
 - slack: @Jean-Baptiste :smile:
-- ©Hugo CORDILLOT
-- slack: @Hugo Cordillot :smile:
+- ~~©Hugo CORDILLOT~~
+- ~~slack: @Hugo Cordillot~~ :imp:
 - ©Nazanin FARSHAD
 - slack: @Nazanin :smile:
 - ©Jean-Marc DARDY
@@ -69,3 +69,7 @@ ___
 
 ___
 ![show BDD](app/assets/images/BDD2.png)
+
+##### TRELLO #####
+
+![Trello](app/assets/images/Trello.png)
