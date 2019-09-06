@@ -8,9 +8,10 @@ ___
 3- Attention Bien lire le WIKI c'est tres important
 
 - <https://fectchmeaband-pro.herokuapp.com> :boom:
+- - <https://git.heroku.com/fetchmeaband-pro.git> :boom:
 - <https://fetchmeaband-staging.herokuapp.com>
-- <https://git.heroku.com/fetchmeaband-staging.git>
-- <https://git.heroku.com/fetchmeaband-pro.git> :boom:
+- - <https://git.heroku.com/fetchmeaband-staging.git>
+
   
 ___
 
