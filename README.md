@@ -72,4 +72,5 @@ ___
 
 ##### TRELLO #####
 
+___
 ![Trello](app/assets/images/Trello.png)
