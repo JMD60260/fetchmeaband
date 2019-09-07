@@ -23,12 +23,12 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
- gem 'redis', '~> 4.0'
+ #gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
- gem 'mini_magick', '~> 4.8'
+# gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -49,7 +49,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rspec-rails'
-  gem 'rails-controller-testing'
   gem 'letter_opener'
   gem 'better_errors'
 end
@@ -66,16 +65,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'figaro'
-gem 'mailjet'
 gem 'rails_db'
 gem 'faker'
 gem 'table_print'
 gem 'jquery-rails'
-gem 'aws-sdk-s3', require:false
-gem 'activerecord'
-gem 'font-awesome-rails'
-gem 'minitest-reporters'
 gem 'stripe'
-gem 'jquery-rails'
-gem 'friendly_id'
 gem 'dotenv-rails'
