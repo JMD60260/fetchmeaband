@@ -5,8 +5,9 @@ ___
 
 2- Site Heroku
 
-3- Attention Bien lire le WIKI c'est tres important
+3- On a fait un Wiki
 
+* <https://github.com/JMD60260/fetchmeaband/wiki/Home/_edit>
 * <https://fectchmeaband-pro.herokuapp.com> :boom:
 * <https://git.heroku.com/fetchmeaband-pro.git> :boom:
 * <https://fetchmeaband-staging.herokuapp.com>
@@ -42,8 +43,8 @@ ___
 
 - JM doit mettre en contributeur tout le monde
 - dirige toi via ton terminal dans le dossier que tu souhaites
-- git clone <https://github.com/JMD60260/kitkatclub.git>
-- cd kitkatclub
+- git clone <https://github.com/JMD60260/fetchmeaband.git>
+- cd fetchmeaband
 - bundle install
 - rails db:create
 => Puis pour commencer à travailler :
