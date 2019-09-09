@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   root'staticpage#index'
   get 'staticpage/show'
   resources :city, only: [:show]
+  resources :forum
+  resources :city
 end
 
