@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 	before_action :find_forum
     before_action :find_comment, only: [:destroy, :edit, :update]
-	befor_action :authenticate_user!
+	before_action :authenticate_user!
 
 	def new
 	  @comments = Comment.new
