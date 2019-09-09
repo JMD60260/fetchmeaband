@@ -15,6 +15,17 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery_ujs
-//= require_tree .
-
-
+//= require js/jquery-3.3.1.min
+//= require js/jquery-migrate-3.0.1.min
+//= require js/jquery-ui
+//= require js/popper.min
+//= require js/bootstrap.min
+//= require js/owl.carousel.min
+//= require js/mediaelement-and-player.min
+//= require js/jquery.stellar.min
+//= require js/jquery.countdown.min
+//= require js/jquery.magnific-popup.min
+//= require js/bootstrap-datepicker.min
+//= require js/aos
+//= require js/circleaudioplayer
+//= require js/main
