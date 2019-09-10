@@ -15,17 +15,21 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery_ujs
-//= require js/jquery-3.3.1.min
-//= require js/jquery-migrate-3.0.1.min
-//= require js/jquery-ui
-//= require js/popper.min
-//= require js/bootstrap.min
-//= require js/owl.carousel.min
-//= require js/mediaelement-and-player.min
-//= require js/jquery.stellar.min
-//= require js/jquery.countdown.min
-//= require js/jquery.magnific-popup.min
-//= require js/bootstrap-datepicker.min
-//= require js/aos
-//= require js/circleaudioplayer
-//= require js/main
+
+//= require js/plugins/plugins
+//= require js/assan.custom
+
+//= require cubeportfolio/js/jquery.cubeportfolio.min
+
+//= require revolution/js/jquery.themepunch.tools.min
+//= require revolution/js/jquery.themepunch.revolution.min
+
+//= require revolution/js/extensions/revolution.extension.actions.min
+//= require revolution/js/extensions/revolution.extension.carousel.min
+//= require revolution/js/extensions/revolution.extension.kenburn.min
+//= require revolution/js/extensions/revolution.extension.layeranimation.min
+//= require revolution/js/extensions/revolution.extension.migration.min
+//= require revolution/js/extensions/revolution.extension.navigation.min
+//= require revolution/js/extensions/revolution.extension.parallax.min
+//= require revolution/js/extensions/revolution.extension.slideanims.min
+//= require revolution/js/extensions/revolution.extension.video.min
