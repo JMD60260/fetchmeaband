@@ -63,7 +63,8 @@
                             </div><br>
                             <%if current_user.id == @user.id%>
                             <div class="buttons">
-                            <a href="#folio" data-scroll class="btn btn-light btn-rounded">Modifier mon profil</a>
+                                <%= link_to "Editer mon profil", edit_user_registration_path, :class => "btn btn-light btn-rounded"%>
+                            
                             </div>
                             <%else%>
                             <%nil%>
