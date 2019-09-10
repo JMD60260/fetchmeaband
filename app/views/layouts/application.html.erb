@@ -11,7 +11,11 @@
   </head>
 
   <body>
+    <%= render partial: 'partials/navigation'%>
     <%= yield %>
+    
+    <%= render partial: 'partials/alert'%>
+    <%= render partial: 'partials/footer'%>
   </body>
 </html>
 
