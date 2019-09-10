@@ -33,3 +33,4 @@
 //= require revolution/js/extensions/revolution.extension.parallax.min
 //= require revolution/js/extensions/revolution.extension.slideanims.min
 //= require revolution/js/extensions/revolution.extension.video.min
+//= require js/resumeCv.custom

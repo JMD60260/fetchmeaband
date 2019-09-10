@@ -22,13 +22,18 @@
                 <div class="row no-margin align-items-center">
                     <div class="col-lg-6 no-padding">
                         <div class="resume-header-text">
+                            <%if @user.first_name == nil%>
                             <h2 class="h1 mb0">
-                                <%=user.first_name%> <%=user.last_name%>
+                                Anonymous
                             </h2>
+                            <%else%>
+                            <h2 class="h1 mb0">
+                                <%=@user.first_name%> <%=@user.last_name%>
+                            </h2>
+                            <%end%>
                             <p class="lead">Musicien</p>
-                            <p>Email: <a href="mailto:me@at-enfold.com"><%=user.email%></a><br>
+                            <p>Email: <a href="mailto:me@at-enfold.com"><%=@user.email%></a><br>
                                 Phone: <a href="tel:(555) 4167890"></a><br>
-                                Web: <a href="http://www.kriesi.at">www.bootstraplovers.com</a>
                             </p>
                             <div class="clearfix mb30 social-buttons">
                                 <a href="#" class="social-icon si-border si-facebook si-border-round text-white">
@@ -55,10 +60,18 @@
                             <div class="buttons">
                                 <a href="#contact" data-scroll class="btn btn-primary btn-rounded">Me contacter</a>
                                 <a href="#folio" data-scroll class="btn btn-light btn-rounded">Mes projets</a>
+                            </div><br>
+                            <%if current_user.id == @user.id%>
+                            <div class="buttons">
+                            <a href="#folio" data-scroll class="btn btn-light btn-rounded">Modifier mon profil</a>
                             </div>
+                            <%else%>
+                            <%nil%>
+                            <%end%>
                         </div>
                     </div>
                     <div class="col-lg-6 no-padding">
+                        <%= image_tag "jb.jpg", class: "img-fluid"%>
                         <img src="images/img-half2.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -69,7 +82,7 @@
                         <h3 class="text-primary center-title mb20 h1">A propose</h3>
                         <p class="lead">Passionate about <span class="text-primary font700">Web Design & Bootstrap</span> Themes & Templates</p>
                         <p class="lead">
-                            <%=user.description%>
+                            <%=@user.description%>
                         </p>
                     </div>
                 </div>
