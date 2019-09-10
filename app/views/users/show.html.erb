@@ -72,7 +72,17 @@
                         </div>
                     </div>
                     <div class="col-lg-6 no-padding">
-                        <%= image_tag "jb.jpg", class: "img-fluid"%>
+                        <%if @user.avatar.attached?%>
+                        <%= image_tag @user.avatar, size: "478x385", alt: 'avatar' %>
+                        <%else%>
+                        <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+                        <%end%>
+                        <h3>Changer d'avatar ?</h3>
+                        <%= form_tag user_avatars_path(@user), multipart: true do %>
+                        <%= file_field_tag :avatar %>
+                        <%= submit_tag "mettre à jour", :class => "btn btn-light btn-rounded" %>
+                        <% end %>
+                        
                         <img src="images/img-half2.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -80,8 +90,7 @@
             <div class="container pt60 pb60 text-center">
                 <div class="row">
                     <div class="col-lg-8 mr-auto ml-auto">
-                        <h3 class="text-primary center-title mb20 h1">A propose</h3>
-                        <p class="lead">Passionate about <span class="text-primary font700">Web Design & Bootstrap</span> Themes & Templates</p>
+                        <h3 class="text-primary center-title mb20 h1">A propos de</h3>
                         <p class="lead">
                             <%=@user.description%>
                         </p>
