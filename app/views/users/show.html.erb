@@ -22,19 +22,33 @@
             <div class="row no-margin align-items-center">
                 <div class="col-lg-6 no-padding">
                     <div class="resume-header-text">
-                        <%if @user.first_name == nil%>
+                        <%if @user.first_name.empty?%>
                         <h2 class="h1 mb0">
                             Anonymous
                         </h2>
                         <%else%>
                         <h2 class="h1 mb0">
-                            <%=@user.first_name%> <%=@user.last_name%>
+                            <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%>
                         </h2>
                         <%end%>
                         <p class="lead">Musicien</p>
-                        <p>Email: <a href="mailto:me@at-enfold.com"><%=@user.email%></a><br>
-                            Phone: <a href="tel:(555) 4167890"><%=@user.phone%></a><br>
+                        <%if @user.email.empty?%>
+                        <p>Email: non renseigné</p>
+                        <%else%>
+                        <p>Email: <a href="mailto:me@at-enfold.com"><%=@user.email%></a></p><br>
+                        <%end%>
+                        <%if @user.phone.empty?%>
+                        <p>Téléphone: non renseigné</p>
+                        <%else%>
+                            <p>Téléphone: <a href="tel:(555) 4167890"><%=@user.phone%></a><br>
                         </p>
+                        <%end%>
+                        <%if @user.age == nil%>
+                        <p>Age: non renseigné</p>
+                        <%else%>
+                            <p>Age: <a href=""><%=@user.age%></a><br>
+                        </p>
+                        <%end%>                        
                         <div class="clearfix mb30 social-buttons">
                             <a href="#" class="social-icon si-border si-facebook si-border-round text-white">
                                 <i class="fa fa-facebook"></i>
@@ -73,7 +87,7 @@
                 </div>
                 <div class="col-lg-6 no-padding">
                     <%if @user.avatar.attached?%>
-                    <%= image_tag @user.avatar, size: "478x385", alt: 'avatar' %>
+                    <%= image_tag @user.avatar.variant(resize: "478x385"), alt: 'avatar' %>
                     <%else%>
                     <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
                     <%end%>
