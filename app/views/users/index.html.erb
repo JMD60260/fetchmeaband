@@ -33,6 +33,8 @@
             </div>
         </div><!--page title end-->
 
+
+
         <div class="container pt100 pb100">
             <div class="">
                 <div class="">
@@ -44,185 +46,40 @@
                         <div data-filter=".motion" class="cbp-filter-item">Motion</div>
                     </div>
                    </div>
+
+<%@users.each do |user|%>
                     <div id="js-grid-lightbox-gallery" class="cbp">
                         <div class="cbp-item web-design graphic print motion">
                             <a href="images/img1.jpg" class="cbp-caption cbp-lightbox" data-title="World Clock<br>by Paul Flavius Nechita" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img1.jpg" alt="">
-                                </div>
+                         <%if user.avatar.attached?%>
+                         <%= image_tag user.avatar.variant(resize: "500x333"), alt: 'avatar' %>
+                         <%else%>
+                         <div class="cbp-caption-defaultWrap">
+                            <%=image_tag "mystere1.png"%>
+                        </div>
+                        <%end%>
                                 <div class="cbp-caption-activeWrap">
                                     <div class="cbp-l-caption-alignLeft">
                                         <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">World Clock</div>
-                                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                                            <div class="cbp-l-caption-title"><%=user.first_name%></div>
+                                            <div class="cbp-l-caption-desc"><%=user.email%></div>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="cbp-item web-design logos identity graphic">
-                            <a href="images/img2.jpg" class="cbp-caption cbp-lightbox" data-title="Bolt UI<br>by Tiberiu Neamu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img2.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Bolt UI</div>
-                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbp-item graphic print identity">
-                            <a href="images/img3.jpg" class="cbp-caption cbp-lightbox" data-title="WhereTO App<br>by Tiberiu Neamu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img3.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">WhereTO App</div>
-                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbp-item web-design motion logos">
-                            <a href="images/img4.jpg" class="cbp-caption cbp-lightbox" data-title="iDevices<br>by Tiberiu Neamu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img4.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">iDevices</div>
-                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbp-item identity graphic print">
-                            <a href="images/img5.jpg" class="cbp-caption cbp-lightbox" data-title="Seemple* Music<br>by Tiberiu Neamu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img5.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Seemple* Music</div>
-                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbp-item motion print logos web-design">
-                            <a href="images/img6.jpg" class="cbp-caption cbp-lightbox" data-title="Remind~Me Widget<br>by Tiberiu Neamu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img6.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Remind~Me Widget</div>
-                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbp-item graphic logos">
-                            <a href="images/img7.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img7.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Workout Buddy</div>
-                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbp-item identity print logos motion">
-                            <a href="images/img8.jpg" class="cbp-caption cbp-lightbox" data-title="Digital Menu<br>by Cosmin Capitanu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img8.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Digital Menu</div>
-                                            <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbp-item identity motion web-design">
-                            <a href="images/img9.jpg" class="cbp-caption cbp-lightbox" data-title="Holiday Selector<br>by Cosmin Capitanu" rel="nofollow">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="images/img9.jpg" alt="">
-                                </div>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title">Holiday Selector</div>
-                                            <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                   </div>
+                   <%end%>
                 </div>
             </div>
         </div>
-        <footer class="footer footer-dark pt50 pb30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6  ml-auto mr-auto text-center">
-                        <ul class="social-icons list-inline">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-facebook"></i>Facebook
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>twitter
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-instagram"></i>instagram
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fa fa-behance"></i>Behance
-                                </a>
-                            </li>
-                        </ul>
-                        <h4><i class="fa fa-phone"></i> 1800-355-4322</h4>
-                        <h4><i class="fa fa-envelope"></i> support@assan.com</h4>
-                        <p>&copy; Copyright 2018. Assan 3.0</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        
 
         <!--back to top-->
         <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
         <!-- jQuery first, then Tether, then Bootstrap JS. -->
-        <script src="js/plugins/plugins.js"></script> 
-        <script src="js/assan.custom.js"></script> 
+ 
+
         <!-- load cubeportfolio -->
         <script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
         <script>
