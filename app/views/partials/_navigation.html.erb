@@ -255,68 +255,48 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown dropdown-full-width">
+                        <%if user_signed_in?%>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                Elements
+                                Mon Profil
                             </a>
                             <ul class="dropdown-menu dropdown-mega-fw">
                                 <li class="container">
                                     <div class="mega-menu-content">
                                         <div class="row">
                                             <div class="col-lg-3">
-                                                <h4 class="mega-title">Shortcode 1</h4>
-                                                <ul class="mega-inner-nav list-unstyled">
-                                                    <li><a href="shortcode-buttons.html"><i class="ti-settings"></i> Buttons</a></li>
-                                                    <li><a href="shortcode-animations.html"><i class="ti-wand"></i> Animations</a></li>
-                                                    <li><a href="shortcode-social-buttons.html"><i class="ti-facebook"></i> Social Buttons</a></li>
-                                                    <li><a href="shortcode-carousel.html"><i class="ti-slice"></i> Carousel</a></li>
-                                                    <li><a href="shortcode-clients.html"><i class="ti-apple"></i> Clients</a></li>
-                                                    <li><a href="shortcode-columns.html"><i class="ti-align-center"></i> Columns</a></li>
-                                                    <li><a href="shortcode-alerts.html"><i class="ti-close"></i> Alerts</a></li>
-                                                    <li><a href="shortcode-page-titles.html"><i class="ti-heart"></i> Page Titles</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <h4 class="mega-title">Shortcode 2</h4>
-                                                <ul class="mega-inner-nav list-unstyled">
-                                                    <li><a href="shortcode-icon-box.html"><i class="ti-light-bulb"></i> Icon Boxes</a></li>
-                                                    <li><a href="shortcode-parallax.html"><i class="ti-image"></i> Parallax</a></li>
-                                                    <li><a href="shortcode-flex-box.html"><i class="ti-star"></i> flex boxes</a></li>
-                                                    <li><a href="shortcode-promo-box.html"><i class="ti-tag"></i> Promo Boxes</a></li>
-                                                    <li><a href="shortcode-lightbox.html"><i class="ti-plus"></i> Lightbox</a></li>
-                                                    <li><a href="shortcode-testimonials.html"><i class="ti-comments"></i> Testimonials</a></li>
-                                                    <li><a href="shortcode-counter.html"><i class="ti-calendar"></i> Counter & Countdowns</a></li>
-                                                    <li><a href="shortcode-icons.html"><i class="ti-flag"></i> icons</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <h4 class="mega-title">Shortcode 3</h4>
-                                                <ul class="mega-inner-nav list-unstyled">
-                                                    <li><a href="shortcode-tabs.html"><i class="fa fa-cog"></i> Tabs</a></li>
-                                                    <li><a href="shortcode-accordions.html"><i class="fa fa-magic"></i> Accordions</a></li>
-                                                    <li><a href="shortcode-progressbars.html"><i class="ti-align-left"></i> Progress bars</a></li>
-                                                    <li><a href="shortcode-typography.html"><i class="ti-text"></i> Typography</a></li>
-                                                    <li><a href="shortcode-card.html"><i class="ti-layout-tab-window"></i> Cards</a></li>
-                                                    <li><a href="shortcode-tables.html"><i class="ti-clipboard"></i> Tables</a></li>
-                                                    <li><a href="shortcode-sticky-elements.html"><i class="fa fa-arrow-circle-up"></i> Sticky Elements</a></li>
-                                                    <li><a href="shortcode-pricing-tables.html"><i class="ti-credit-card"></i> Pricing Tables</a></li>
-
-                                                </ul>
-
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <h4 class="mega-title">Shortcode 4</h4>
-                                                <ul class="mega-inner-nav list-unstyled">
-                                                    <li><a href="shortcode-charts.html"><i class="ti-bar-chart"></i> Charts</a></li>
-                                                    <li><a href="shortcode-responsive-videos.html"><i class="ti-control-play"></i> Responsive Videos</a></li>
-                                                    <li><a href="shortcode-gmap.html"><i class="ti-map"></i> Google Map</a></li>
+                                                                                                <ul class="mega-inner-nav list-unstyled">
+                                                    <li><%=link_to "My Profile", user_path(current_user.id), :class=>"dropdown-item"%></li>
                                                     
-                                                    <li><a href="shortcode-modals.html"><i class="ti-close"></i> Modals</a></li>
-                                                    <li><a href="shortcode-blockquotes.html"><i class="ti-quote-right"></i> Blockquotes</a></li>
-                                                    <li><a href="shortcode-paginations.html"><i class="ti-arrow-circle-right"></i> Paginations</a></li>
-                                                    <li><a href="shortcode-form-elments.html"><i class="ti-share"></i> Form Elements</a></li><li><a href="shortcode-notify.html"><i class="ti-alert"></i>Notification-bar</a></li><li><a href="shortcode-image-text-cards.html"><i class="ti-image"></i>Image+Text cards</a></li>
+                                                    <li><%=link_to "Log out", destroy_user_session_path, :class => "dropdown-item", method: :delete%></li>
+                                                    </ul>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                                                    <%else%>
+                                                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Log-in
+                            </a>
+                            <ul class="dropdown-menu dropdown-mega-fw">
+                                <li class="container">
+                                    <div class="mega-menu-content">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <ul class="mega-inner-nav list-unstyled">
+
+
+                                                    <li><%=link_to "Log-in", new_user_session_path, :class=>"dropdown-item"%></li>
+                                                    <li><%=link_to "Sign_up", new_user_registration_path, :class=>"dropdown-item"%></li>
+                                                    
+                                                    <%end%>
                                                 </ul>
                                             </div>
+                                           
                                         </div>
                                     </div>
                                 </li>
@@ -328,12 +308,9 @@
 
                     </ul>        
                 </div>
-                <div class=" navbar-right-elements">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="search-open"><i class="ti-search"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class=" menu-btn"><i class="ti-shopping-cart"></i> <span class="badge badge-default">3</span></a></li>
-                    </ul>
-                </div><!--right nav icons-->
+               
 
             </div>
         </nav>
+         <script src="js/plugins/plugins.js"></script> 
+        <script src="js/assan.custom.js"></script> 
