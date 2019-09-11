@@ -33,7 +33,7 @@
                         <%end%>
                         <p class="lead">Musicien</p>
                         <p>Email: <a href="mailto:me@at-enfold.com"><%=@user.email%></a><br>
-                            Phone: <a href="tel:(555) 4167890"></a><br>
+                            Phone: <a href="tel:(555) 4167890"><%=@user.phone%></a><br>
                         </p>
                         <div class="clearfix mb30 social-buttons">
                             <a href="#" class="social-icon si-border si-facebook si-border-round text-white">
@@ -82,7 +82,7 @@
                     <%= file_field_tag :avatar %>
 
                     <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
-                    
+
                     <% end %>
 
 
@@ -271,87 +271,7 @@
                 </div>
             </div><!--/row-->
         </div><!--container eDUCATION dETAILS-->
-        <div class="container bg-faded pt90 pb90">
-            <h3 class="text-primary center-title mb30 h1 text-center">Customer Reviews</h3>
-            <!-- Carousel -->
-            <div class="carousel-testimonial owl-carousel owl-theme">
-
-                <div class="item">
-                    <div class="testimonial-default testimonial">
-                        <div class="row">
-                            <div class="col-md-8 ml-auto mr-auto text-center">
-                                <p class="lead">
-                                    " This is a great theme! I love it and recommend it to anyone wanting to purchase it. "
-                                </p>
-                                <h5>John Doe - <span>Assan Customer</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--item-->
-                <div class="item">
-                    <div class="testimonial-default testimonial">
-                        <div class="row">
-                            <div class="col-md-8 ml-auto mr-auto text-center">
-                                <p class="lead">
-                                    " Compared to others this was a very easy to use and adapt template. It didn't break as easy with minor changes. Thanks "
-                                </p>
-                                <h5>John Doe - <span>Assan Customer</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--item-->
-                <div class="item">
-                    <div class="testimonial-default testimonial">
-                        <div class="row">
-                            <div class="col-md-8 ml-auto mr-auto text-center">
-                                <p class="lead">
-                                    " Hello,
-                                    your theme gets better and better on every version. Gratulation to this wonderful theme and please keep on working this way (good once)!! "
-                                </p>
-                                <h5>John Doe - <span>Assan Customer</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--item-->
-            </div> <!-- /Carousel -->
-        </div><!--container tESTIMONIALS-->
-
-        <footer class="container footer pt60 pb30" id="contact">
-            <div class="row">
-                <div class="col-lg-12 ml-auto mr-auto text-center mb30">
-                    <p>Email: <a href="mailto:me@at-enfold.com">me@doedomain.com</a><br>
-                        Phone: <a href="tel:(555) 4167890">(+91) 1234567890</a><br>
-                        Web: <a href="http://www.kriesi.at">www.bootstraplovers.com</a>
-                    </p>
-                    <div class="clearfix social-buttons">
-                        <a href="#" class="social-icon-sm si-gray si-facebook">
-                            <i class="fa fa-facebook"></i>
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social-icon-sm si-gray si-twitter">
-                            <i class="fa fa-twitter"></i>
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon-sm si-gray si-g-plus">
-                            <i class="fa fa-google-plus"></i>
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                        <a href="#" class="social-icon-sm si-gray si-skype">
-                            <i class="fa fa-skype"></i>
-                            <i class="fa fa-skype"></i>
-                        </a>
-                        <a href="#" class="social-icon-sm si-gray si-linkedin">
-                            <i class="fa fa-linkedin"></i>
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="text-center">
-                        &copy; Copyright 2020. All Right Reserved. Assan Product.
-                    </div>
-                </div>
-
-            </div>
-        </footer><!--fOOTER-->
+                
     </section><!--main wrapper for boxed layout-->
 
     <!--back to top-->
