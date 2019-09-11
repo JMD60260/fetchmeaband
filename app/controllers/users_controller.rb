@@ -5,6 +5,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def index
+    
+  	@users = User.all 
+  end
+
    #after_create :welcome_send
 
    private 

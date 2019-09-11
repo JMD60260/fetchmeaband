@@ -1,0 +1,137 @@
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Assan 3</title>    
+        <!-- Plugins CSS -->
+        <link href="css/plugins/plugins.css" rel="stylesheet">
+        <!-- load css for cubeportfolio -->
+        <link rel="stylesheet" type="text/css" href="cubeportfolio/css/cubeportfolio.min.css">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
+
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+
+
+        <div class="page-titles-img title-space-lg bg-parallax parallax-overlay color-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url()'>
+
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-8 ml-auto mr-auto">
+                        <h1 class='text-uppercase'>Nos musiciens </h1>
+
+                    </div>
+                </div>
+            </div>
+        </div><!--page title end-->
+
+        <div class="container pt100 pb100">
+            <div class="">
+                <div class="">
+                    <div class="clearfix">
+                        <div id="js-filters-lightbox-gallery" class="cbp-l-filters-button cbp-l-filters-left">
+                            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+                            <div data-filter=".graphic" class="cbp-filter-item">Graphic</div>
+                            <div data-filter=".logos" class="cbp-filter-item">Logo</div>
+                            <div data-filter=".motion" class="cbp-filter-item">Motion</div>
+                        </div>
+                    </div>
+
+
+                    <%@users.each do |user|%>
+                    <div id="js-grid-lightbox-gallery" class="cbp">
+                        <div class="cbp-item web-design graphic print motion">
+                            <div class="cbp-caption margin-bottom-20">
+                                 <%if user.avatar.attached?%>
+                                <%= image_tag user.avatar.variant(resize: "500x333"), alt: 'avatar' %>
+                                <%else%>
+                                <div class="cbp-caption-defaultWrap">
+                                    <%=image_tag "mystere1.png"%>
+                                </div>
+                                <%end%>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignCenter">
+                                        <div class="cbp-l-caption-body">
+                                            <ul class="link-captions no-bottom-space">
+                                                <li><a href="folio-single-gallery.html"><i class="ti-link"></i></a></li>
+                                                <li><a href="images/img1.jpg" class="cbp-lightbox" data-title="Design Object"><i class="ti-plus"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>                      
+                                </div>                              
+                            </div><!--/cbp-caption-->
+                            <div class="cbp-title-dark">
+                                <div class="cbp-l-grid-agency-title"><%=user.first_name%></div>
+                                <div class="cbp-l-grid-agency-desc"><%=user.email%></div>
+                            </div><!--/bottom desc-->
+                                               
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <%end%>
+
+
+
+
+
+
+
+        <!--back to top-->
+        <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="js/plugins/plugins.js"></script> 
+        <script src="js/assan.custom.js"></script> 
+        <!-- load cubeportfolio -->
+        <script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <script>
+            //projects
+            (function ($, window, document, undefined) {
+                'use strict';
+
+                // init cubeportfolio
+                $('#js-grid-lightbox-gallery').cubeportfolio({
+                    filters: '#js-filters-lightbox-gallery',
+                    layoutMode: 'grid',
+                    mediaQueries: [{
+                            width: 1500,
+                            cols: 4
+                        }, {
+                            width: 1100,
+                            cols: 4
+                        }, {
+                            width: 800,
+                            cols: 3
+                        }, {
+                            width: 480,
+                            cols: 2,
+                            options: {
+                                caption: ''
+                            }
+                        }],
+                    defaultFilter: '*',
+                    animationType: 'sequentially',
+                    gapHorizontal: 15,
+                    gapVertical: 15,
+                    gridAdjustment: 'responsive',
+                    caption: 'zoom',
+                    displayType: 'fadeIn',
+                    displayTypeSpeed: 100,
+                    // lightbox
+                    lightboxDelegate: '.cbp-lightbox',
+                    lightboxGallery: true,
+                    lightboxTitleSrc: 'data-title',
+                    lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>'
+                });
+            })(jQuery, window, document);
+        </script>
+    </body>
