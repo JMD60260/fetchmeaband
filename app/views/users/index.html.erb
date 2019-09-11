@@ -33,47 +33,22 @@
             </div>
         </div><!--page title end-->
 
-
-
-        <div class="container pt100 pb100">
-            <div class="">
-                <div class="">
-                   <div class="clearfix">
-                        <div id="js-filters-lightbox-gallery" class="cbp-l-filters-button cbp-l-filters-left">
-                        <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-                        <div data-filter=".graphic" class="cbp-filter-item">Graphic</div>
-                        <div data-filter=".logos" class="cbp-filter-item">Logo</div>
-                        <div data-filter=".motion" class="cbp-filter-item">Motion</div>
-                    </div>
-                   </div>
+     
 
 <%@users.each do |user|%>
-                    <div id="js-grid-lightbox-gallery" class="cbp">
-                        <div class="cbp-item web-design graphic print motion">
-                            <a href="images/img1.jpg" class="cbp-caption cbp-lightbox" data-title="World Clock<br>by Paul Flavius Nechita" rel="nofollow">
-                         <%if user.avatar.attached?%>
-                         <%= image_tag user.avatar.variant(resize: "500x333"), alt: 'avatar' %>
-                         <%else%>
-                         <div class="cbp-caption-defaultWrap">
-                            <%=image_tag "mystere1.png"%>
-                        </div>
-                        <%end%>
-                                <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignLeft">
-                                        <div class="cbp-l-caption-body">
-                                            <div class="cbp-l-caption-title"><%=user.first_name%></div>
-                                            <div class="cbp-l-caption-desc"><%=user.email%></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                   </div>
-                   <%end%>
-                </div>
-            </div>
-        </div>
-        
+<div class="card mb5">
+    <%if user.avatar.attached?%>
+    <%= image_tag user.avatar.variant(resize: "500x333"), class: "card-img-top img-fluid", alt: 'avatar' %>
+    <%else%>
+    <%=image_tag "mystere1.png", class: "card-img-top img-fluid"%>
+    <%end%>
+    <div class="card-body">
+        <h4 class="card-body"><%=user.first_name%></h4>
+    </div>
+</div>
+<%end%>
+
+
 
         <!--back to top-->
         <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
