@@ -37,7 +37,7 @@
                         <%else%>
                         <p>Email: <a href="mailto:me@at-enfold.com"><%=@user.email%></a></p><br>
                         <%end%>
-                        <%if @user.phone.empty?%>
+                        <%if @user.phone == nil%>
                         <p>Téléphone: non renseigné</p>
                         <%else%>
                             <p>Téléphone: <a href="tel:(555) 4167890"><%=@user.phone%></a><br>
