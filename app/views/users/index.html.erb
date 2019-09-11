@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -16,16 +17,16 @@
             <div id="preloader-inner"></div>
         </div><!--/preloader-->
 
+        
         <!-- Site Overlay -->
         <div class="site-overlay"></div>
 
 
-        <div class="page-titles-img title-space-lg bg-parallax parallax-overlay color-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url()'>
-
+        <div class="page-titles-img title-space-lg bg-parallax parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg6.jpg")'>
             <div class="container">
                 <div class="row">
                     <div class=" col-md-8 ml-auto mr-auto">
-                        <h1 class='text-uppercase'>Nos musiciens </h1>
+                        <h1 class='text-uppercase'>Portfolio 4 cols </h1>
 
                     </div>
                 </div>
@@ -35,56 +36,187 @@
         <div class="container pt100 pb100">
             <div class="">
                 <div class="">
-                    <div class="clearfix">
+                   <div class="clearfix">
                         <div id="js-filters-lightbox-gallery" class="cbp-l-filters-button cbp-l-filters-left">
-                            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-                            <div data-filter=".graphic" class="cbp-filter-item">Graphic</div>
-                            <div data-filter=".logos" class="cbp-filter-item">Logo</div>
-                            <div data-filter=".motion" class="cbp-filter-item">Motion</div>
-                        </div>
+                        <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+                        <div data-filter=".graphic" class="cbp-filter-item">Graphic</div>
+                        <div data-filter=".logos" class="cbp-filter-item">Logo</div>
+                        <div data-filter=".motion" class="cbp-filter-item">Motion</div>
                     </div>
-
-
-                    <%@users.each do |user|%>
+                   </div>
                     <div id="js-grid-lightbox-gallery" class="cbp">
                         <div class="cbp-item web-design graphic print motion">
-                            <div class="cbp-caption margin-bottom-20">
-                                 <%if user.avatar.attached?%>
-                                <%= image_tag user.avatar.variant(resize: "500x333"), alt: 'avatar' %>
-                                <%else%>
+                            <a href="images/img1.jpg" class="cbp-caption cbp-lightbox" data-title="World Clock<br>by Paul Flavius Nechita" rel="nofollow">
                                 <div class="cbp-caption-defaultWrap">
-                                    <%=image_tag "mystere1.png"%>
+                                    <img src="images/img1.jpg" alt="">
                                 </div>
-                                <%end%>
                                 <div class="cbp-caption-activeWrap">
-                                    <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-alignLeft">
                                         <div class="cbp-l-caption-body">
-                                            <ul class="link-captions no-bottom-space">
-                                                <li><a href="folio-single-gallery.html"><i class="ti-link"></i></a></li>
-                                                <li><a href="images/img1.jpg" class="cbp-lightbox" data-title="Design Object"><i class="ti-plus"></i></a></li>
-                                            </ul>
+                                            <div class="cbp-l-caption-title">World Clock</div>
+                                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
                                         </div>
-                                    </div>                      
-                                </div>                              
-                            </div><!--/cbp-caption-->
-                            <div class="cbp-title-dark">
-                                <div class="cbp-l-grid-agency-title"><%=user.first_name%></div>
-                                <div class="cbp-l-grid-agency-desc"><%=user.email%></div>
-                            </div><!--/bottom desc-->
-                                               
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item web-design logos identity graphic">
+                            <a href="images/img2.jpg" class="cbp-caption cbp-lightbox" data-title="Bolt UI<br>by Tiberiu Neamu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img2.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">Bolt UI</div>
+                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item graphic print identity">
+                            <a href="images/img3.jpg" class="cbp-caption cbp-lightbox" data-title="WhereTO App<br>by Tiberiu Neamu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img3.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">WhereTO App</div>
+                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item web-design motion logos">
+                            <a href="images/img4.jpg" class="cbp-caption cbp-lightbox" data-title="iDevices<br>by Tiberiu Neamu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img4.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">iDevices</div>
+                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item identity graphic print">
+                            <a href="images/img5.jpg" class="cbp-caption cbp-lightbox" data-title="Seemple* Music<br>by Tiberiu Neamu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img5.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">Seemple* Music</div>
+                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item motion print logos web-design">
+                            <a href="images/img6.jpg" class="cbp-caption cbp-lightbox" data-title="Remind~Me Widget<br>by Tiberiu Neamu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img6.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">Remind~Me Widget</div>
+                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item graphic logos">
+                            <a href="images/img7.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img7.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">Workout Buddy</div>
+                                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item identity print logos motion">
+                            <a href="images/img8.jpg" class="cbp-caption cbp-lightbox" data-title="Digital Menu<br>by Cosmin Capitanu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img8.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">Digital Menu</div>
+                                            <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cbp-item identity motion web-design">
+                            <a href="images/img9.jpg" class="cbp-caption cbp-lightbox" data-title="Holiday Selector<br>by Cosmin Capitanu" rel="nofollow">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/img9.jpg" alt="">
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            <div class="cbp-l-caption-title">Holiday Selector</div>
+                                            <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-        <%end%>
-
-
-
-
-
-
+        <footer class="footer footer-dark pt50 pb30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6  ml-auto mr-auto text-center">
+                        <ul class="social-icons list-inline">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>Facebook
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>twitter
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>instagram
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa fa-behance"></i>Behance
+                                </a>
+                            </li>
+                        </ul>
+                        <h4><i class="fa fa-phone"></i> 1800-355-4322</h4>
+                        <h4><i class="fa fa-envelope"></i> support@assan.com</h4>
+                        <p>&copy; Copyright 2018. Assan 3.0</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!--back to top-->
         <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
@@ -119,11 +251,11 @@
                             }
                         }],
                     defaultFilter: '*',
-                    animationType: 'sequentially',
+                    animationType: 'flipOutDelay',
                     gapHorizontal: 15,
                     gapVertical: 15,
                     gridAdjustment: 'responsive',
-                    caption: 'zoom',
+                      caption: 'zoom',
                     displayType: 'fadeIn',
                     displayTypeSpeed: 100,
                     // lightbox
@@ -135,3 +267,4 @@
             })(jQuery, window, document);
         </script>
     </body>
+</html>
