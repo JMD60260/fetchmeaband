@@ -1,102 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Assan 3</title>    
-        <!-- Plugins CSS -->
-        <link href="css/plugins/plugins.css" rel="stylesheet">
-        <!-- load css for cubeportfolio -->
-        <link rel="stylesheet" type="text/css" href="cubeportfolio/css/cubeportfolio.min.css">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
-        <div id="preloader">
-            <div id="preloader-inner"></div>
-        </div><!--/preloader-->
-
-        
-        <!-- Site Overlay -->
-        <div class="site-overlay"></div>
-
-
-        <div class="page-titles-img title-space-lg bg-parallax parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg6.jpg")'>
-            <div class="container">
-                <div class="row">
-                    <div class=" col-md-8 ml-auto mr-auto">
-                        <h1 class='text-uppercase'>Portfolio 4 cols </h1>
-
-                    </div>
-                </div>
-            </div>
-        </div><!--page title end-->
-
-     
-
-<%@users.each do |user|%>
-<div class="card mb5">
-    <%if user.avatar.attached?%>
-    <%= image_tag user.avatar.variant(resize: "500x333"), class: "card-img-top img-fluid", alt: 'avatar' %>
-    <%else%>
-    <%=image_tag "mystere1.png", class: "card-img-top img-fluid"%>
-    <%end%>
-    <div class="card-body">
-        <h4 class="card-body"><%=user.first_name%></h4>
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+​
+​
+<div class="page-titles-img title-space-lg bg-parallax parallax-overlay" data-jarallax='{"speed": 0.2}' style='background-image: url("<%= image_path "hero_bg_2.jpg" %>")'>
+  <div class="container">
+    <div class="row">
+      <div class=" col-md-8 ml-auto mr-auto">
+        <h1 class='text-uppercase'>Portfolio 4 cols </h1>
+​
+      </div>
     </div>
+  </div>
+</div><!--page title end-->
+​
+​
+<div class="container">
+  <div class="row">
+    <% @users.each do |user| %>
+    <div class="col-sm-3">
+      <div class="card mx-5">
+        <%= link_to user do %>
+        <%if user.avatar.attached?%>
+        <%= image_tag user.avatar.variant(resize: "208x208"), class: "card-img-top img-fluid", alt: 'avatar' %>
+        <%else%>
+        <%=image_tag "mystere1.png", class: "card-img-top img-fluid"%>
+        <%end%>
+        <% end %>
+        <div class="card-body">
+          <h4 class="card-body"><%=user.first_name%></h4>
+          <%= link_to "Voir le profil", user, class: "btn btn-primary btn-block" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
-<%end%>
-
-
-
-        <!--back to top-->
-        <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
-        <!-- jQuery first, then Tether, then Bootstrap JS. -->
- 
-
-        <!-- load cubeportfolio -->
-        <script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-        <script>
-            //projects
-            (function ($, window, document, undefined) {
-                'use strict';
-
-                // init cubeportfolio
-                $('#js-grid-lightbox-gallery').cubeportfolio({
-                    filters: '#js-filters-lightbox-gallery',
-                    layoutMode: 'grid',
-                    mediaQueries: [{
-                            width: 1500,
-                            cols: 4
-                        }, {
-                            width: 1100,
-                            cols: 4
-                        }, {
-                            width: 800,
-                            cols: 3
-                        }, {
-                            width: 480,
-                            cols: 2,
-                            options: {
-                                caption: ''
-                            }
-                        }],
-                    defaultFilter: '*',
-                    animationType: 'flipOutDelay',
-                    gapHorizontal: 15,
-                    gapVertical: 15,
-                    gridAdjustment: 'responsive',
-                      caption: 'zoom',
-                    displayType: 'fadeIn',
-                    displayTypeSpeed: 100,
-                    // lightbox
-                    lightboxDelegate: '.cbp-lightbox',
-                    lightboxGallery: true,
-                    lightboxTitleSrc: 'data-title',
-                    lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>'
-                });
-            })(jQuery, window, document);
-        </script>
-    </body>
-</html>
+​
+​
+​
+​
+<!--back to top-->
+<a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+​
+​
+<!-- load cubeportfolio -->
+<script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script>
+  //projects
+  (function ($, window, document, undefined) {
+    'use strict';
+​
+    // init cubeportfolio
+    $('#js-grid-lightbox-gallery').cubeportfolio({
+      filters: '#js-filters-lightbox-gallery',
+      layoutMode: 'grid',
+      mediaQueries: [{
+        width: 1500,
+        cols: 4
+      }, {
+        width: 1100,
+        cols: 4
+      }, {
+        width: 800,
+        cols: 3
+      }, {
+        width: 480,
+        cols: 2,
+        options: {
+          caption: ''
+        }
+      }],
+      defaultFilter: '*',
+      animationType: 'flipOutDelay',
+      gapHorizontal: 15,
+      gapVertical: 15,
+      gridAdjustment: 'responsive',
+      caption: 'zoom',
+      displayType: 'fadeIn',
+      displayTypeSpeed: 100,
+      // lightbox
+      lightboxDelegate: '.cbp-lightbox',
+      lightboxGallery: true,
+      lightboxTitleSrc: 'data-title',
+      lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>'
+    });
+  })(jQuery, window, document);
+</script>
