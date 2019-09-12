@@ -31,3 +31,4 @@
 /config/application.yml
 .rubocop.yml
 .rubocop_todo.yml
+.vscode/
