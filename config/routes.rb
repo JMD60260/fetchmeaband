@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :avatars, only: [:create]
   end
   resources :comments
-  get 'staticpage/new'
+  get '/new' to: 'staticpage#new'
   root 'staticpage#index'
   get 'staticpage/show'
   resources :city, only: [:show]
