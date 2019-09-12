@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class=" col-md-8 ml-auto mr-auto">
-        <h1 class='text-uppercase'>Portfolio 4 cols </h1>
+        <h1 class='text-uppercase'>Les profils </h1>
 ​
       </div>
     </div>
@@ -17,8 +17,8 @@
 <div class="container">
   <div class="row">
     <% @users.each do |user| %>
-    <div class="col-sm-3" style="width: 208">
-      <div class="card mx-5" style="width: 208">
+    <div class="col-sm-3">
+      <div class="card mx-5" style="width: 100%;">
         <%= link_to user do %>
         <%if user.avatar.attached?%>
         <%= image_tag user.avatar.variant(resize: "208x208"), class: "card-img-top img-fluid", alt: 'avatar' %>
