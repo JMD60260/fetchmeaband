@@ -25,14 +25,17 @@
   </head>
 
   <body>
-    <%= render partial: 'partials/navigation'%>
-    <%= yield %>
-    
-    <%= render partial: 'partials/alert'%>
-    <%= render partial: 'partials/footer'%>
 
+    <%= render partial: 'layouts/navigation'%>
         <script type="text/javascript" src="js/plugins/plugins.js"></script> 
         <script type="text/javascript" src="js/assan.custom.js"></script> 
+
+    <%= yield %>
+     <%= render partial: 'partials/footer'%>
+    
+   
+
+
         <!-- load cubeportfolio -->
         <script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
         <!-- REVOLUTION JS FILES -->
@@ -48,6 +51,8 @@
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+          <script src="js/resumeCv.custom.js"></script>
+          
         <script>
             /**Hero  script**/
             var tpj = jQuery;
