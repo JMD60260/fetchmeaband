@@ -10,6 +10,15 @@ class User < ApplicationRecord
   has_one_attached :avatar
   after_create :welcome_send
 
+  validates :email,
+    presence: true,
+    uniqueness: true,
+    format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
+  validates :first_name, length: { minimum: 2 }
+  validates :last_name, length: { minimum: 2 }
+  validates :age, numericality: { message: "%{value} seems wrong" }
+  validates :description, length: { maximum: 1000 }
+  validates :phone_number, length: { minimum: 2 }
   
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)
