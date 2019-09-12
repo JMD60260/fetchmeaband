@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   resources :comments
   get '/new' to: 'staticpage#new'
-  root 'staticpage#index'
+  root 'staticpage#new'
   get 'staticpage/show'
   resources :city, only: [:show]
   resources :forum do
