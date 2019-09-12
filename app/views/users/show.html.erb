@@ -3,33 +3,33 @@
             <div class="row no-margin align-items-center">
                 <div class="col-lg-6 no-padding">
                     <div class="resume-header-text">
-                        <%if @user.first_name.empty?%>
+                        <% if @user.first_name.empty? %>
                         <h2 class="h1 mb0">
                             Anonymous
                         </h2>
                         <%else%>
                         <h2 class="h1 mb0">
-                            <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%>
+                            <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>
                         </h2>
-                        <%end%>
+                        <% end %>
                         <p class="lead">Musicien</p>
-                        <%if @user.email.empty?%>
+                        <% if @user.email.empty? %>
                         <p>Email: non renseigné</p>
-                        <%else%>
-                        <p>Email: <a href="mailto:me@at-enfold.com"><%=@user.email%></a></p><br>
-                        <%end%>
-                        <%if @user.phone == nil%>
+                        <% else %>
+                        <p>Email: <a href="mailto:me@at-enfold.com"><%= @user.email %></a></p><br>
+                        <% end %>
+                        <% if @user.phone == nil %>
                         <p>Téléphone: non renseigné</p>
-                        <%else%>
-                            <p>Téléphone: <a href="tel:(555) 4167890"><%=@user.phone%></a><br>
+                        <% else %>
+                            <p>Téléphone: <a href="tel:(555) 4167890"><%= @user.phone %></a><br>
                         </p>
-                        <%end%>
-                        <%if @user.age == nil%>
+                        <% end %>
+                        <% if @user.age == nil %>
                         <p>Age: non renseigné</p>
-                        <%else%>
-                            <p>Age: <a href=""><%=@user.age%></a><br>
+                        <% else %>
+                            <p>Age: <a href=""><%= @user.age %></a><br>
                         </p>
-                        <%end%>                        
+                        <% end %>                        
                         <div class="clearfix mb30 social-buttons">
                             <a href="#" class="social-icon si-border si-facebook si-border-round text-white">
                                 <i class="fa fa-facebook"></i>
@@ -56,28 +56,32 @@
                             <a href="#contact" data-scroll class="btn btn-primary btn-rounded">Me contacter</a>
                             <a href="#folio" data-scroll class="btn btn-light btn-rounded">Mes projets</a>
                         </div><br>
-                        <%if current_user.id == @user.id%>
+                        <% if current_user.id == @user.id %>
                         <div class="buttons">
-                            <%= link_to "Editer mon profil", edit_user_registration_path, :class => "btn btn-light btn-rounded"%>
+                            <%= link_to "Editer mon profil", edit_user_registration_path, :class => "btn btn-light btn-rounded" %>
                             
                         </div>
-                        <%else%>
-                        <%nil%>
-                        <%end%>
+                        <% else %>
+                        <% nil %>
+                        <% end %>
                     </div>
                 </div>
                 <div class="col-lg-6 no-padding">
-                    <%if @user.avatar.attached?%>
-                    <%= image_tag @user.avatar.variant(resize: "478x385"), alt: 'avatar' %>
-                    <%else%>
-                    <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
-                    <%end%>
-                    <h3>Changer d'avatar ?</h3>
-                    <%= form_tag user_avatars_path(@user), multipart: true do %>
-                    <%= file_field_tag :avatar %>
+                    <% if current_user.id == @user.id %>
+                        <% if @user.avatar.attached? %>
+                        <%= image_tag @user.avatar.variant(resize: "478x385"), alt: 'avatar' %>
+                        <% else %>
+                        <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+                        <% end %>
+                        <h3>Changer d'avatar ?</h3>
+                        <%= form_tag user_avatars_path(@user), multipart: true do %>
+                        <%= file_field_tag :avatar %>
 
-                    <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
+                        <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
 
+                        <% end %>
+                    <% else %>
+                    <%= image_tag "mystere1.png", size: "385x385", alt: 'avatar' %>
                     <% end %>
 
 

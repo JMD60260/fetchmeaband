@@ -5,12 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
+
   has_many :comments
   has_one_attached :avatar
   after_create :welcome_send
 
-  @instruments = ["Guitare", "Basse", "Piano", "Batterie", "Vocal", "Trompette"]
-
+  
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)
 
