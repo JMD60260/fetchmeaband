@@ -10,18 +10,38 @@
                         <%else%>
                         <h2 class="h1 mb0">
                             <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>
-                        </h2>
+                        </h2><br>
                         <% end %>
-                        <p class="lead">Musicien</p>
+
+                        <% if @user.level == nil %>
+                        <h3 class="lead">Musicien</h3>
+                        <% else %>
+                        <h3>Niveau: <%= @user.level %></h3>
+                        <% end %>
+
+                        
                         <% if @user.email.empty? %>
                         <p>Email: non renseigné</p>
                         <% else %>
-                        <p>Email: <a href="mailto:me@at-enfold.com"><%= @user.email %></a></p><br>
+                        <p>Email: <a href="mailto:me@at-enfold.com"><%= @user.email %></a></p>
                         <% end %>
+
+                        <% if @user.instrument == nil %>
+                        <p>Instrument: non renseigné</p>
+                        <% else %>
+                        <p>Instrument: <a href="mailto:me@at-enfold.com"><%= @user.instrument %></a></p>
+                        <% end %>
+
+                        <% if @user.genre == nil %>
+                        <p>Genre: non renseigné</p>
+                        <% else %>
+                        <p>Genre favoris: <a href="mailto:me@at-enfold.com"><%= @user.genre %></a></p>
+                        <% end %>
+
                         <% if @user.phone == nil %>
                         <p>Téléphone: non renseigné</p>
                         <% else %>
-                            <p>Téléphone: <a href="tel:(555) 4167890"><%= @user.phone %></a><br>
+                            <p>Téléphone: <a href="tel:(555) 4167890"><%= @user.phone %></a>
                         </p>
                         <% end %>
                         <% if @user.age == nil %>
