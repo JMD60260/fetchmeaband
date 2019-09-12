@@ -17,7 +17,7 @@ ___
 
 - Ruby version 2.5.1
 - Rails version 5.2.3
-- CSS : Theme
+- CSS : Theme Assan
   
 ## Contributeurs ##
 
@@ -29,6 +29,8 @@ ___
 - slack: @Nazanin :smile:
 - ©Jean-Marc DARDY
 - slack: @JM :smile:
+- ©Jasmine BANCHEREAU
+- slack: @Jsamine Banchereau :smile:
   
 ### Mentor ###
 
