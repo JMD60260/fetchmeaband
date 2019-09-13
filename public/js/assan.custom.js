@@ -1,7 +1,4 @@
 $(function () {
-    /* 
-     Custom js file for assan
-     */
 //preloader
     $(window).preloader({
         delay: 500
