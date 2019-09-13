@@ -18,6 +18,10 @@ ___
 - Ruby version 2.5.1
 - Rails version 5.2.3
 - CSS : Theme Assan 3.8
+- API Utilisées:
+  * Amazon S3
+  * SendGrid
+  * un chatbot a venir
   
 ## Contributeurs ##
 
