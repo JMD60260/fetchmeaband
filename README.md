@@ -17,16 +17,16 @@ ___
 
 - Ruby version 2.5.1
 - Rails version 5.2.3
-- CSS : Theme
+- CSS : Theme Assan 3.8
   
 ## Contributeurs ##
 
 - ©Jean-Baptiste DEMENET
 - slack: @Jean-Baptiste :smile:
-- ~~©Hugo CORDILLOT~~
-- ~~slack: @Hugo Cordillot~~ :imp:
+- ©Jasmine BANCHEREAU
+- slack: @Jasmine Banchereau :disappointed_relieved:
 - ©Nazanin FARSHAD
-- slack: @Nazanin :smile:
+- slack: @Nazanin :disappointed:
 - ©Jean-Marc DARDY
 - slack: @JM :smile:
   
