@@ -1,6 +1,4 @@
 
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <%=link_to image_tag("logo3.png", size: "90x60", alt: "Brand"), root_path,:class => 'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,8 +27,8 @@
           Log-in
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <%=link_to "Log-in", new_user_session_path, :class=>"dropdown-item"%>
-          <%=link_to "Sign_up", new_user_registration_path, :class=>"dropdown-item"%>
+          <%=link_to "Log-in", new_user_session_path, :class=>"dropdown-item my-nav"%>
+          <%=link_to "Sign_up", new_user_registration_path, :class=>"dropdown-item my-nav"%>
           
         </div>
       </li>
@@ -39,3 +37,8 @@
 
   </div>
 </nav>
+
+       <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
