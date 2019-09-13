@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
     <title>Fetchmeaband</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -22,19 +24,23 @@
         <!-- load css for cubeportfolio -->
         <link rel="stylesheet" type="text/css" href="cubeportfolio/css/cubeportfolio.min.css">     
         <link href="css/style.css" rel="stylesheet">
+
+
+
+
   </head>
 
   <body>
 
     <%= render partial: 'layouts/navigation'%>
-        <script type="text/javascript" src="js/plugins/plugins.js"></script> 
-        <script type="text/javascript" src="js/assan.custom.js"></script> 
+
 
     <%= yield %>
      <%= render partial: 'partials/footer'%>
     
    
-
+        <script type="text/javascript" src="js/plugins/plugins.js"></script> 
+        <script type="text/javascript" src="js/assan.custom.js"></script> 
 
         <!-- load cubeportfolio -->
         <script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
@@ -56,7 +62,6 @@
         <script>
             /**Hero  script**/
             var tpj = jQuery;
-
             var revapi1078;
             tpj(document).ready(function () {
                 if (tpj("#rev_slider_1078_1").revolution == undefined) {
@@ -136,7 +141,6 @@
             //cube portfolio init
             (function ($, window, document, undefined) {
                 'use strict';
-
                 // init cubeportfolio
                 $('#js-grid-mosaic-flat').cubeportfolio({
                     filters: '#js-filters-mosaic-flat',
