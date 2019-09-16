@@ -56,14 +56,9 @@ ActiveRecord::Schema.define(version: 2019_09_16_112342) do
 
   create_table "forums", force: :cascade do |t|
     t.string "topic"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-=======
     t.string "description"
-    t.index ["user_id"], name: "index_forums_on_user_id"
->>>>>>> 1162289dcb0b7d8cff219cc45b224c94e9c5a317
   end
 
   create_table "users", force: :cascade do |t|
