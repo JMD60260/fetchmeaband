@@ -7,14 +7,13 @@ class UsersController < ApplicationController
   end
 
   def index
-    
-
   	@users = User.paginate(:page => params[:page], per_page: 8)
+
     @bassist = User.where(instrument:'Basse')
     @pianist = User.where(instrument:'Piano')
     @vocalist = User.where(instrument:'Vocal')
     @trompetist = User.where(instrument:'Trompette')
-    @batter = User.where(instrument:'Batterie')
+    @drummer = User.where(instrument:'Batterie')
 
     @pros = User.where(level:'Professionnel')
     @amateurs = User.where(level:'Amateur')
