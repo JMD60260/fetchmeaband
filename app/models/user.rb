@@ -12,14 +12,6 @@ class User < ApplicationRecord
     presence: true,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  validates :first_name, length: { minimum: 2 }
-  validates :last_name, length: { minimum: 2 }
-<<<<<<< HEAD
-  validates :age, numericality: { message: "%{value} seems wrong" }
-  validates :description, length: { maximum: 1000 }
-  validates :phone_number, length: { minimum: 2 }
 
   validates :first_name, length: { minimum: 2 }, on: :update
   validates :last_name, length: { minimum: 2 }, on: :update
