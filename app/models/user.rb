@@ -3,9 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-
-
   has_many :comments
   has_many :forums
   has_one_attached :avatar
@@ -15,10 +12,12 @@ class User < ApplicationRecord
     presence: true,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
+
   validates :first_name, length: { minimum: 2 }, on: :update
   validates :last_name, length: { minimum: 2 }, on: :update
   validates :age, numericality: { message: "%{value} seems wrong" }, :allow_nil => true, on: :update
   validates :description, length: { maximum: 1000 }, :allow_nil => true, on: :update
+
   
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)
