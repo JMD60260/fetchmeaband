@@ -1,0 +1,12 @@
+<div class="my-margin">
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+<div class="form-group my-form">
+<%= label_tag 'Topic' %>
+<%= text_field_tag 'topic', @new_forum.topic, class: "form-control" %>
+</div>
+<br /> <br />
+
+<%= submit_tag "Create topic", class: "btn btn-primary" %>
+
+<%end%>

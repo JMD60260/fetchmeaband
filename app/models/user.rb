@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
 
   has_many :comments
+  has_many :forums
   has_one_attached :avatar
   after_create :welcome_send
 
@@ -14,8 +15,8 @@ class User < ApplicationRecord
     presence: true,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
-  validates :first_name, length: { minimum: 2 }
-  validates :last_name, length: { minimum: 2 }
+  #validates :first_name, length: { minimum: 2 }
+  #validates :last_name, length: { minimum: 2 }
   #validates :age, numericality: { message: "%{value} seems wrong" }
   #validates :description, length: { maximum: 1000 }
   #validates :phone, length: { minimum: 2 }
