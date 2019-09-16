@@ -10,8 +10,11 @@
     <div class="card">
       <h2><%= f.topic %></h2>
 
-      <div class="fakeimg" style="height:200px;"><%= f.description %></div>
-      <%=link_to "En voir plus", f %>
+
+      <%=image_tag("forum.jpg", :class=>"fakeimg w-100", :alt=>"bg3")%>
+      <%= f.description %>
+      <br><br>
+      <%= link_to "En voir plus", f %>
       <p></p>
     </div>
   </div></div>
