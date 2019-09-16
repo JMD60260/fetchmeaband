@@ -15,11 +15,10 @@ class User < ApplicationRecord
     presence: true,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
-  #validates :first_name, length: { minimum: 2 }
-  #validates :last_name, length: { minimum: 2 }
-  #validates :age, numericality: { message: "%{value} seems wrong" }
-  #validates :description, length: { maximum: 1000 }
-  #validates :phone, length: { minimum: 2 }
+  validates :first_name, length: { minimum: 2 }, on: :update
+  validates :last_name, length: { minimum: 2 }, on: :update
+  validates :age, numericality: { message: "%{value} seems wrong" }, :allow_nil => true, on: :update
+  validates :description, length: { maximum: 1000 }, :allow_nil => true, on: :update
   
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)
