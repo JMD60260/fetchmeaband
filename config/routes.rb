@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   root 'staticpage#index'
   
   resources :city, only: [:show]
-  resources :forum do
+  
+  resources :forums do
     resources :comments
   end
   resources :city
