@@ -1,0 +1,9 @@
+<div class="my-form">
+<%= form_for([@forum, @comment]) do |f| %>
+<div class="form-group my-title">
+	<%= f.text_area :content, class: "form-control" %>
+	<br/>
+	<%= submit_tag "Update", class: "btn btn-primary"%>
+</div>
+<%end%>
+</div> 

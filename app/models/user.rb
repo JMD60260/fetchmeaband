@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :comments
+  has_many :forums
   has_one_attached :avatar
   after_create :welcome_send
 
@@ -11,6 +12,7 @@ class User < ApplicationRecord
     presence: true,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
+<<<<<<< HEAD
   validates :first_name, length: { minimum: 2 }
   validates :last_name, length: { minimum: 2 }
 <<<<<<< HEAD
@@ -26,6 +28,12 @@ class User < ApplicationRecord
   #validates :description, length: { maximum: 1000 }
   #validates :phone, length: { minimum: 2 }
 >>>>>>> e03ca5244233e029ce6e77c3dc28ce14b1b6851e
+=======
+  validates :first_name, length: { minimum: 2 }, on: :update
+  validates :last_name, length: { minimum: 2 }, on: :update
+  validates :age, numericality: { message: "%{value} seems wrong" }, :allow_nil => true, on: :update
+  validates :description, length: { maximum: 1000 }, :allow_nil => true, on: :update
+>>>>>>> 1162289dcb0b7d8cff219cc45b224c94e9c5a317
   
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)
