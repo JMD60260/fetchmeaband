@@ -51,21 +51,15 @@
                         </p>
                         <% end %>                        
                         <div class="clearfix mb30 social-buttons">
-                            <a href="#" class="social-icon si-border si-facebook si-border-round text-white">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a href="#" class="social-icon si-border si-twitter si-border-round text-white">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon si-border si-g-plus si-border-round text-white">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#" class="social-icon si-border si-skype si-border-round text-white">
-                                <i class="fa fa-skype"></i>
-                            </a>
-                            <a href="#" class="social-icon si-border si-linkedin si-border-round text-white">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
+                            <%=link_to image_tag("facebook-icon.png", size: "30x30"), @user.facebook %>
+
+                            <%=link_to image_tag("linkedin-icon.png", size: "30x30"), @user.linkedin %>
+
+                            <%=link_to image_tag("twiter-icon.png", size: "30x30"), @user.twitter %>
+
+                            <%=link_to image_tag("skype-icon.svg", size: "25x25"), @user.skype %>
+
+                            <%=link_to image_tag("youtube-icon.svg", size: "30x30"), @user.youtube %>
                         </div>
                         <div class="buttons">
                             <a href="#contact" data-scroll class="btn btn-primary btn-rounded">Me contacter</a>
