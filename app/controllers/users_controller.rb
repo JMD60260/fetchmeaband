@@ -8,7 +8,17 @@ class UsersController < ApplicationController
 
   def index
     
-  	@users = User.all 
+
+  	@users = User.paginate(:page => params[:page], per_page: 8)
+    @bassist = User.where(instrument:'Basse')
+    @pianist = User.where(instrument:'Piano')
+    @vocalist = User.where(instrument:'Vocal')
+    @trompetist = User.where(instrument:'Trompette')
+    @batter = User.where(instrument:'Batterie')
+
+    @pros = User.where(level:'Professionnel')
+    @amateurs = User.where(level:'Amateur')
+    @beginners = User.where(level:'Débutant')
   end
 
    #after_create :welcome_send
@@ -18,6 +28,4 @@ class UsersController < ApplicationController
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
-
-  
 end

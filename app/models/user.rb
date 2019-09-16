@@ -13,6 +13,7 @@ class User < ApplicationRecord
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
   validates :first_name, length: { minimum: 2 }
   validates :last_name, length: { minimum: 2 }
+<<<<<<< HEAD
   validates :age, numericality: { message: "%{value} seems wrong" }
   validates :description, length: { maximum: 1000 }
   validates :phone_number, length: { minimum: 2 }
@@ -20,6 +21,11 @@ class User < ApplicationRecord
 
 =======
 >>>>>>> 0bec007f25ebd3ffae5e937dfc136ba81947b00f
+=======
+  #validates :age, numericality: { message: "%{value} seems wrong" }
+  #validates :description, length: { maximum: 1000 }
+  #validates :phone, length: { minimum: 2 }
+>>>>>>> e03ca5244233e029ce6e77c3dc28ce14b1b6851e
   
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)

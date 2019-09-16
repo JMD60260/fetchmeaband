@@ -15,22 +15,28 @@ ___
   
 ___
 
+* <https://www.facebook.com/fetchmeaband/>  :notes: :electric_plug: :tada:
+   
+___
+
 - Ruby version 2.5.1
 - Rails version 5.2.3
-- CSS : Theme Assan
+- CSS : Theme Assan 3.8
+- API Utilisées:
+  * Amazon S3
+  * SendGrid
+  * un chatbot a venir
   
 ## Contributeurs ##
 
 - ©Jean-Baptiste DEMENET
 - slack: @Jean-Baptiste :smile:
-- ~~©Hugo CORDILLOT~~
-- ~~slack: @Hugo Cordillot~~ :imp:
+- ©Jasmine BANCHEREAU
+- slack: @Jasmine Banchereau
 - ©Nazanin FARSHAD
-- slack: @Nazanin :smile:
+- slack: @Nazanin :disappointed:
 - ©Jean-Marc DARDY
 - slack: @JM :smile:
-- ©Jasmine BANCHEREAU
-- slack: @Jsamine Banchereau :smile:
   
 ### Mentor ###
 
