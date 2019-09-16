@@ -20,6 +20,6 @@ class ForumsController < ApplicationController
 
 	def show
 	@forum = Forum.find(params[:id])
-    @comments = Comment.where(forum_id: @item).order("created_at DESC")
+    @comments = Comment.where(forum_id: @forum).order("created_at DESC")
 	end
 end

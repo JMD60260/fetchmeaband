@@ -33,11 +33,11 @@ class CommentsController < ApplicationController
 
 	private
 	def find_forum
-	  @item = Forum.find(params[:forum_id])
+	  @forum = Forum.find(params[:forum_id])
 	end
 
 	def find_comment
-	  @comment = @item.comments.find(params[:id])
+	  @comment = @forum.comments.find(params[:id])
 	end
 
 end
