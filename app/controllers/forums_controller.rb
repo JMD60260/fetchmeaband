@@ -10,7 +10,7 @@ class ForumsController < ApplicationController
 
 	def create
 	  @user = current_user.id 
-	  @new_forum = Forum.new('topic' => params[:topic], 'user_id' => @user)
+	  @new_forum = Forum.new('topic' => params[:topic], 'description' => params[:description], 'user_id' => @user)
 	  if @new_forum.save
 	  	redirect_to forum_path(@new_forum)
 	  else

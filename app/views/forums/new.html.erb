@@ -5,7 +5,13 @@
 <%= label_tag 'Topic' %>
 <%= text_field_tag 'topic', @new_forum.topic, class: "form-control" %>
 </div>
+
 <br /> <br />
+<div class="form-group my-form">
+<%= label_tag 'Description' %>
+<%= text_field_tag 'description', @new_forum.topic, class: "form-control" %>
+</div>
+<br>
 
 <%= submit_tag "Create topic", class: "btn btn-primary" %>
 
