@@ -8,31 +8,35 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-         <%=link_to "Les profils", users_path, :class => "nav-link my-nav"%>
+         <%=link_to "Les profils", users_path, :class => "nav-link my-nav", :style => "color: white"%>
       </li>
       <li class="nav-item active">
 
-       <%=link_to "Team", team_path, :method => 'get', :class=>"nav-link my-nav"%>
+       <%=link_to "Team", team_path, :method => 'get', :class=>"nav-link my-nav", :style => "color: white"%>
+       </li>
+       <li class="nav-item active">
+
+       <%=link_to "Forum", forums_path, :class=>"nav-link my-nav", :style => "color: white"%>
        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
       <% if user_signed_in? %>
       <li class="nav-item active">
 
-           <%=link_to "My Profile", user_path(current_user.id), :class=>"nav-link my-nav"%>
+           <%=link_to "My Profile", user_path(current_user.id), :class=>"nav-link my-nav", :style => "color: white"%>
        </li>
 
        <li class="nav-item active">
-          <%=link_to "Log out", destroy_user_session_path, :class => "nav-link my-nav", method: :delete%>
+          <%=link_to "Log out", destroy_user_session_path, :class => "nav-link my-nav", :style => "color: white", method: :delete%>
           </li>
 
       <%else%>
       <li class="nav-item active">
 
-          <%=link_to "Log-in", new_user_session_path, :class=>"nav-link my-nav"%>
+          <%=link_to "Log-in", new_user_session_path, :class=>"nav-link my-nav", :style => "color: white"%>
       </li>
       <li class="nav-item active">
-          <%=link_to "Sign_up", new_user_registration_path, :class=>"nav-link my-nav"%>
+          <%=link_to "Sign_up", new_user_registration_path, :class=>"nav-link my-nav", :style => "color: white"%>
       </li>
       <%end%>
     </ul>
