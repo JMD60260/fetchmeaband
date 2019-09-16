@@ -16,10 +16,6 @@ class User < ApplicationRecord
   validates :age, numericality: { message: "%{value} seems wrong" }
   validates :description, length: { maximum: 1000 }
   validates :phone_number, length: { minimum: 2 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0bec007f25ebd3ffae5e937dfc136ba81947b00f
   
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)

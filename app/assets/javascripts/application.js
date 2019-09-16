@@ -13,24 +13,4 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery3
-//= require jquery_ujs
-
-//= require js/plugins/plugins
-//= require js/assan.custom
-
-//= require cubeportfolio/js/jquery.cubeportfolio.min
-
-//= require revolution/js/jquery.themepunch.tools.min
-//= require revolution/js/jquery.themepunch.revolution.min
-
-//= require revolution/js/extensions/revolution.extension.actions.min
-//= require revolution/js/extensions/revolution.extension.carousel.min
-//= require revolution/js/extensions/revolution.extension.kenburn.min
-//= require revolution/js/extensions/revolution.extension.layeranimation.min
-//= require revolution/js/extensions/revolution.extension.migration.min
-//= require revolution/js/extensions/revolution.extension.navigation.min
-//= require revolution/js/extensions/revolution.extension.parallax.min
-//= require revolution/js/extensions/revolution.extension.slideanims.min
-//= require revolution/js/extensions/revolution.extension.video.min
-//= require js/resumeCv.custom
+//= require_tree .
