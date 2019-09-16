@@ -12,24 +12,4 @@
  *
  *= require_tree .
  *= require_self
-
- *= require css/plugins/plugins
- *= require revolution/css/settings
- *= require revolution/css/layers
- *= require revolution/css/navigation
- *= require cubeportfolio/css/cubeportfolio.min
- *= require css/style
- *= require css/style-resumeCv
-
  */
-
- .my-nav {
-
-   color: white !important;
- }
-
- .jumbotron {
-   background-image:url(audience.jpg);
-  background-position: center center;
-  height: 900px;
- }
