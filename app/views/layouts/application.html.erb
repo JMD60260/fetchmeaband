@@ -23,6 +23,12 @@
 
     <%= render partial: 'layouts/navigation'%>
 
+    <% flash.each do |key, value| %>
+    <div class="text-center <%= flash_class(key) %>">
+      <%= value %>
+    </div>
+<% end %>
+
 <div class="main" style="margin-top:80px">
     <%= yield %>
 </div>
