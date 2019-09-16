@@ -64,7 +64,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'faker'
-gem 'rspec'
+gem 'rspec-rails'
 gem 'table_print'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
@@ -73,5 +73,8 @@ gem 'bootstrap-sass'
 gem'font-awesome-sass'
 gem 'image_processing', '1.2'
 gem 'aws-sdk', '~> 3'
+
 gem 'rubocop'
 
+gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap' 
