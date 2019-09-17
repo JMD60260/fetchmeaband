@@ -4,7 +4,7 @@ class Event < ApplicationRecord
 	validates :start_date, presence: { message: "événement doit etre dans le futur"}
 	validate :future_event
 	validates :title, presence: { message: "titre entre 5 et 140 caracteres"}, length: { minimum: 5, maximum: 140}
-	validates :description, presence: { message: "description entre 20 et 1000 caracteres"}, length: { minimum: 20, maximum: 1000}
+	validates :description, presence: { message: "description entre 5 et 1000 caracteres"}, length: { minimum: 5, maximum: 1000}
 	validates :price, presence: { message: "entre 1 et 1000 euros"}, numericality: {greater_than: 0, less_than: 1000}
 	validates :location, presence: { message: "vous devez rentrer un lieu"}
 	
