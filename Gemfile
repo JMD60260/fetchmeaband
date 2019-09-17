@@ -77,9 +77,9 @@ gem 'bootstrap-sass'
 gem'font-awesome-sass'
 gem 'image_processing', '1.2'
 gem 'aws-sdk', '~> 3'
-
 gem 'rubocop'
-
 gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap' 
 gem 'mailboxer'
+gem 'geocoder'
+gem 'gmaps-rails', '~> 0.0.2'
