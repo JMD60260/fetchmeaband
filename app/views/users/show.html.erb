@@ -67,13 +67,13 @@
                             <% end %>
                     </div>
                 </div>
-                #avatar
+                <!-- avatar -->
                 <div class="col-lg-6 no-padding">
                     <% if current_user.id == @user.id %>
                         <% if @user.avatar.attached? %>
-                        <%= image_tag @user.avatar.variant(resize: "478x385"), alt: 'avatar' %>
+                        <%= image_tag @user.avatar.variant(resize: "385x385"), alt: 'avatar' %>
                         <% else %>
-                        <p>=== "Il n'y a pas encore d'avatar lié à cet utilisateur" ===</p>
+                        <p>=== "Il n'y a pas encore d'avatar lié à cet utilisateuravat" ===</p>
                         <% end %>
                     <h3>"Changer d'avatar ?"</h3>
                     <%= form_tag user_avatars_path(@user), multipart: true do %>
@@ -83,7 +83,7 @@
                     <%= image_tag "mystere1.png", size: "385x385", alt: 'avatar' %>
                     <%end%>
                     <% end %>
-                #fin avatar
+                <!-- fin avatar -->
 </div>
 </div>
 
@@ -152,7 +152,7 @@
                     </div>
                 </div>
             </div>
-        </div>#<!--container sKILLS-->
+        </div>
         <br>
         <div class="container pt60 pb20 bg-dark">
             <h3 class="text-primary center-title mb0 h1 text-center">Job Experiences</h3>
