@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
+  root 'staticpage#index'
   devise_for :users
   resources :users do 
     resources :avatars, only: [:create]
   end
   resources :comments
   get '/team', :to=> 'staticpage#show' 
-  root 'staticpage#index'
-  
-  resources :city, only: [:show]
-  
+
+  resources :events
   resources :forums do
     resources :comments
   end
@@ -26,5 +25,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :events
+
 end
