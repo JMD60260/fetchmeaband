@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :forums
   has_many :events
+  belongs_to :city, optional: true
   has_one_attached :avatar
   after_create :welcome_send
   
@@ -18,7 +19,7 @@ class User < ApplicationRecord
   validates :age, numericality: { message: "%{value} seems wrong" }, :allow_nil => true, on: :update
   validates :description, length: { maximum: 1000 }, :allow_nil => true, on: :update
 
-    def mailboxer_name
+  def mailboxer_name
     self.name
   end
 

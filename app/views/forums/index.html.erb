@@ -1,8 +1,12 @@
 <div class="header">
-  <h2>Forum</h2>
+  <h1>Forum</h1>
+</div>
+<div class="card">
+  <div class="card-header">
+    <h3>Pour créer un nouvel sujet de conversation c'est <%=link_to 'ici', new_event_path%></h3>
+  </div>
 </div>
 
-  <h6>Pour créer un nouvel événement c'est <%= link_to 'ici', new_forum_path %></h6>
 
 <%@forum.reverse_each do |f|%>
 <div class="row">
