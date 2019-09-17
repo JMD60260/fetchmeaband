@@ -1,0 +1,14 @@
+	<h6>Pour créer un nouvel événement c'est <%=link_to 'ici', new_event_path%></h6>
+
+<p><%@event.reverse_each do |e|%>
+	<a href="<%=event_path(e.id)%>" class="text-body" style="text-decoration: none;">
+	<div class="card" style="width: 18rem; margin: 5px;">
+	<div class="card-body">
+		<h5 class="card-title"> Evenement: <%=e.title%></h5>
+		<h6 class="card-subtitle mb-2 text-muted">lieu : <%=e.location%></h6>
+		<h6 class="card-subtitle mb-2 text-muted">date : <%=e.start_date%></h6>
+	</div>
+	</div>
+</a>
+
+	<%end%></p>

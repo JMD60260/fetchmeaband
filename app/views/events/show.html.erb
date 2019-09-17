@@ -1,0 +1,28 @@
+<center><h1>Bienvenue sur l'événement : <br/><%=@event.title%></h1>
+	<br/><% if flash[:alert] != nil %>
+<div class='alert alert-primary'>
+	<%= flash[:alert] %>
+</div>
+<% end %><br/>
+	<div class="card my-card" style="width: 25rem; margin: 5px;">
+	<div class="card-body">
+
+		<h6 class="card-subtitle mb-2 text-muted">lieu : <%=@event.location%></h6>
+		<hr>
+		<h6 class="card-subtitle mb-2 text-muted">début : <%=@event.message_time%></h6>
+		<hr>
+		<h6 class="card-subtitle mb-2 text-muted">fin : <%=@event.the_end%></h6>
+		<hr>
+		<h6 class="card-subtitle mb-2 text-muted">durée : <%=@event.duration%> minutes</h6>
+		<hr>
+		<h6 class="card-subtitle mb-2 text-muted">description : "<%=@event.description%>"</h6>
+		<hr>
+		<h6 class="card-subtitle mb-2 text-muted">prix : <%=@event.price%> euros</h6>
+		<hr>
+		<h6 class="card-subtitle mb-2 text-muted">créé par : <%=@event.user.first_name%></h6>
+		<hr>
+		<h6 class="card-subtitle mb-2 text-muted">contacter le créateur : <%=@event.user.email%></h6>
+		<hr>
+
+	</div>
+	</div>
