@@ -52,7 +52,4 @@ end
     UserMailer.welcome_email(self).deliver_now
   end
 
-  def address
-    [city.name, city.zip_code].compact.join(', ')
-  end
 end
