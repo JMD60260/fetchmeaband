@@ -1,14 +1,22 @@
-	<h6>Pour créer un nouvel événement c'est <%=link_to 'ici', new_event_path%></h6>
-
-<p><%@event.reverse_each do |e|%>
-	<a href="<%=event_path(e.id)%>" class="text-body" style="text-decoration: none;">
-	<div class="card" style="width: 18rem; margin: 5px;">
-	<div class="card-body">
-		<h5 class="card-title"> Evenement: <%=e.title%></h5>
-		<h6 class="card-subtitle mb-2 text-muted">lieu : <%=e.location%></h6>
-		<h6 class="card-subtitle mb-2 text-muted">date : <%=e.start_date%></h6>
-	</div>
-	</div>
-</a>
-
-	<%end%></p>
+	
+<div class="card">
+  <div class="card-header">
+    <h3>Pour créer un nouvel événement c'est <%=link_to 'ici', new_event_path%></h3>
+  </div>
+</div>
+<% @event.reverse_each do |e| %>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="..." class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> <%=e.title%> </h5>
+        <p class="card-text"> <%=e.location%> </p>
+        <p class="card-text"><small class="text-muted"> <%=e.start_date%> </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
