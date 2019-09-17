@@ -1,11 +1,13 @@
 
 <center><h1><%= @forum.topic %></h1></center>
 <% @comments.each do |comment| %>
-
-<div class="card border-dark mb-3">
-  <div class="card-header"><strong><%=comment.user.first_name%></strong></div>
-  <div class="card-body" style="height: 7rem;">
-    <p class="card-text" style="width: 100%;"><%=comment.content%></p>
+<div class="card">
+  <div class="card-header">
+    <%=comment.user.first_name%>
+  </div>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <%=comment.content%> </li>
+</ul>
 </div>
-</div>
+<br>
 <% end %>

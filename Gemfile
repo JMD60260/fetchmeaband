@@ -80,6 +80,6 @@ gem 'aws-sdk', '~> 3'
 
 gem 'rubocop'
 
-gem 'will_paginate', '~> 3.1.1'
-gem 'will_paginate-bootstrap' 
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'mailboxer'

@@ -4,11 +4,12 @@
     <h3>Pour créer un nouvel événement c'est <%=link_to 'ici', new_event_path%></h3>
   </div>
 </div>
-<% @event.reverse_each do |e| %>
+<% @events.reverse_each do |e| %>
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="..." class="card-img" alt="...">
+
+  <%= link_to image_tag("musicman.jpg", size: "166x140"), e %>
     </div>
     <div class="col-md-8">
       <div class="card-body">
