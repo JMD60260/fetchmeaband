@@ -62,7 +62,7 @@
                             <%=link_to image_tag("youtube-icon.svg", size: "30x30"), @user.youtube %>
                         </div>
                         <div class="buttons">
-                            <a href="#contact" data-scroll class="btn btn-primary btn-rounded">Me contacter</a>
+                            <%= link_to "Me contacter", new_conversation_path, :class => "btn btn-primary btn-rounded" %>
                             <a href="#folio" data-scroll class="btn btn-light btn-rounded">Mes projets</a>
                         </div><br>
                         <% if current_user.id == @user.id %>
