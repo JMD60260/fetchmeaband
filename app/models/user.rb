@@ -18,17 +18,7 @@ class User < ApplicationRecord
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
   validates :age, numericality: { message: "%{value} seems wrong" }, :allow_nil => true, on: :update
   validates :description, length: { maximum: 1000 }, :allow_nil => true, on: :update
-  geocoded_by :address
-  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
-  reverse_geocoded_by :latitude, :longitude do |obj, results|
-    if geo = results.first
-      obj.city    = geo.city
-      obj.zipcode = geo.postal_code
-    end
-  end
-  after_validation :reverse_geocode, unless: ->(obj) { obj.address.present? },
-                   if: ->(obj){ obj.latitude.present? and obj.latitude_changed? and obj.longitude.present? and obj.longitude_changed? }
-   
+
   def mailboxer_name
     self.name
   end
