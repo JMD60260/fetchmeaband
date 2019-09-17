@@ -69,9 +69,11 @@ ActiveRecord::Schema.define(version: 2019_09_17_073148) do
 
   create_table "forums", force: :cascade do |t|
     t.string "topic"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description"
+    t.index ["user_id"], name: "index_forums_on_user_id"
   end
 
   create_table "mailboxer_conversation_opt_outs", id: :serial, force: :cascade do |t|
