@@ -5,9 +5,11 @@ class NewslettersController < ApplicationController
     def create
       @newsletter = Newsletter.create(newsletter_params)
       if @newsletter.save
-        flash[:success] = "Demande prise en compte.", redirect_to root_path
+        flash[:success] = "Demande prise en compte."
+        render root_path
       else
-        redirect_to root_path
+        flash[:alert] = "Demande non prise en compte"
+        render root_path
       end
     end
 
