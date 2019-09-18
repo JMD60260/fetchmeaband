@@ -1,16 +1,13 @@
 <%if @receipts == nil%>
-<p> Vous n'avez aucun message</p>
+<p> "Vous n'avez aucun message"</p>
 <%else%>
 <% @receipts.each do |receipt| %>
 <% message = receipt.message %>
 <div class="media">
   <div class="media-left">
     <!-- user avators can go here -->
-    <% if conversation.originator.avatar.attached? %>
-    <%= image_tag message.senders.avatar.variant(resize: "64x64"), alt: 'avatar' %>
-    <% else %>
+
     <%= image_tag "mystere1.png", size: "64x64", alt: 'avatar' %>
-    <% end %>
 
   </div>
   <div class="media-body">
