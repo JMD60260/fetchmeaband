@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'fetchmeaband@gmail.com'
   layout 'mailer'
 
    def welcome_email(user)
@@ -7,7 +7,7 @@ class ApplicationMailer < ActionMailer::Base
     @user = user 
 
     #on définit une variable @url qu'on utilisera dans la view d’e-mail
-    @url = 'http://monsite.fr/login' 
+    @url = 'https.//fetchmeaband.herokuapp.com' 
 
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @user.email, subject: 'Bienvenue chez nous !') 
