@@ -135,6 +135,7 @@ ActiveRecord::Schema.define(version: 2019_09_17_104107) do
     t.string "last_name"
     t.integer "age"
     t.text "description"
+    t.bigint "city_id"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -153,6 +154,7 @@ ActiveRecord::Schema.define(version: 2019_09_17_104107) do
     t.string "youtube"
     t.float "latitude"
     t.float "longitude"
+    t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
