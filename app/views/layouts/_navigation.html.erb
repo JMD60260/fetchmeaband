@@ -27,24 +27,24 @@
       <% if user_signed_in? %>
       <li class="nav-item active">
 
-           <%=link_to "Inbox", mailbox_inbox_path, :class=>"nav-link my-nav", :style => "color: white"%>
+           <%=link_to "Courrier", mailbox_inbox_path, :class=>"nav-link my-nav", :style => "color: white"%>
       </li>
       <li class="nav-item active">
 
-           <%=link_to "My Profile", user_path(current_user.id), :class=>"nav-link my-nav", :style => "color: white"%>
+           <%=link_to "Mon Profil", user_path(current_user.id), :class=>"nav-link my-nav", :style => "color: white"%>
        </li>
 
        <li class="nav-item active">
-          <%=link_to "Log out", destroy_user_session_path, :class => "nav-link my-nav", :style => "color: white", method: :delete%>
+          <%=link_to "Deconnexion", destroy_user_session_path, :class => "nav-link my-nav", :style => "color: white", method: :delete%>
           </li>
 
       <%else%>
       <li class="nav-item active">
 
-          <%=link_to "Log-in", new_user_session_path, :class=>"nav-link my-nav", :style => "color: white"%>
+          <%=link_to "Connexion", new_user_session_path, :class=>"nav-link my-nav", :style => "color: white"%>
       </li>
       <li class="nav-item active">
-          <%=link_to "Sign_up", new_user_registration_path, :class=>"nav-link my-nav", :style => "color: white"%>
+          <%=link_to "Inscription", new_user_registration_path, :class=>"nav-link my-nav", :style => "color: white"%>
       </li>
       <%end%>
     </ul>
