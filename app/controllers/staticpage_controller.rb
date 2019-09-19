@@ -11,4 +11,7 @@ class StaticpageController < ApplicationController
   def contact
     
   end
+  def Aboutus
+    
+  end
 end
