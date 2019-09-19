@@ -1,19 +1,17 @@
 class Contact < ApplicationRecord
-attr_accessor :firstname, :lastname, :email, :content
- 
-  validates :lastname, :firstname, :email, :content, presence: true
-  validates :email, :format => { :with => %r{.+@.+\..+} }, allow_blank: true
-include ActiveModel::Validations
-include ActiveModel::Conversion
-extend  ActiveModel::Naming
- 
-    def persisted?
-    false
-    end
- 
-    def initialize(attributes = {})
-        attributes.each do |name, value|
-        send("#{name}=", value)
-        end
-    end
+class Contact < MailForm::Base  
+attribute :name,      :validate => true
+  attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :message
+  attribute :nickname,  :captcha  => true
+
+  # Declare the e-mail headers. It accepts anything the mail method
+  # in ActionMailer accepts.
+  def headers
+    {
+      :subject => "Contact Form Inquiry",
+      :to => "fetchmeaband@gmail.com",
+      :from => %("#{name}" <#{email}>)
+    }
+  end
 end
