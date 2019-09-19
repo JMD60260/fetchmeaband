@@ -86,3 +86,4 @@ gem 'mailboxer'
 gem 'geocoder'
 gem 'gmaps-rails', '~> 0.0.2'
 gem 'whenever', require: false
+gem 'capistrano-rails', '~> 1.1', '>= 1.1.7'
