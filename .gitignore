@@ -28,6 +28,6 @@
 /config/master.key
 
 # Ignore application configuration
-
+node_modules/
 .rubocop.yml
 .rubocop_todo.yml
