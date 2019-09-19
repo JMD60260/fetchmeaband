@@ -7,7 +7,7 @@ class Event < ApplicationRecord
 	validates :description, presence: { message: "description entre 5 et 1000 caracteres"}, length: { minimum: 5, maximum: 1000}
 	validates :price, presence: { message: "entre 1 et 1000 euros"}, numericality: {greater_than: 0, less_than: 1000}
 	validates :location, presence: { message: "vous devez rentrer un lieu"}
-	
+
 	def message_time
 		start_date.strftime("%d/%m/%y | %l:%M %p")
 	end
@@ -19,7 +19,7 @@ class Event < ApplicationRecord
 	private
 
 	def future_event
-		if start_date == nil 
+		if start_date == nil
 			puts ""
 		else
 			errors.add(:date, "Can't be in the past!") if start_date < Time.now

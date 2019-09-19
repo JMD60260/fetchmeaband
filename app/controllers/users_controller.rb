@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
    #after_create :welcome_send
 
-   private 
+   private
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
