@@ -10,13 +10,13 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = @forum.comments.create(params[:comment].permit(:content))
-		@comment.user_id = current_user.id 
+		@comment.user_id = current_user.id
 		@comment.save
 	if @comment.save
 		redirect_to forum_path(params[:forum_id])
 	else
 		render 'new'
-	end	  
+	end
 	end
 
 	def edit
