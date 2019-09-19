@@ -9,7 +9,7 @@ class User < ApplicationRecord
   belongs_to :city, optional: true
   has_one_attached :avatar
   after_create :welcome_send
-  
+
   acts_as_messageable
 
   validates :email,
@@ -26,7 +26,7 @@ class User < ApplicationRecord
   def mailboxer_email(object)
     self.email
   end
-  
+
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)
 
