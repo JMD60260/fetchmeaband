@@ -3,7 +3,7 @@ class ConversationsController < ApplicationController
 
 	def index
 	end
-
+	
 	def new
 	end
 
@@ -11,7 +11,7 @@ class ConversationsController < ApplicationController
 		recipients = User.where(id: conversation_params[:recipients])
 		conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
 		flash[:success] = "Your message was successfully sent!"
-		redirect_to conversations_path
+		redirect_to conversation_path(conversation)
 	end
 
 	def show
