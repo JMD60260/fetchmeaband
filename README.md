@@ -18,16 +18,15 @@ ___
 * <https://www.facebook.com/fetchmeaband/>  :notes: :electric_plug: :tada:
 * <https://twitter.com/FetchMeBand1> :notes: :electric_plug: :tada:
 * <https://www.instagram.com/fetchmeaband/> :notes: :electric_plug: :tada:
-  
 ___
 
 - Ruby version 2.5.1
 - Rails version 5.2.3
-- CSS : Theme Assan 3.8
+- CSS : Theme Bootstrap 
 - API Utilisées:
   * Amazon S3
   * SendGrid
-  * un chatbot a venir
+  * ++
   
 ## Contributeurs ##
 

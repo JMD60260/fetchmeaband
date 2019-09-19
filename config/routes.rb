@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :comments
   get '/team', :to=> 'staticpage#show' 
   get '/contact', :to=> 'staticpage#contact'
+  get '/aboutus', :to=> 'staticpage#aboutus'
   resources :events
   resources :forums do
     resources :comments
