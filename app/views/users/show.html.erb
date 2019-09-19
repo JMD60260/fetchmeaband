@@ -4,12 +4,40 @@
 <div class="card-body">
 <div class="profile">
  <%= image_tag "hero_bg_10.png", style: 'z-index: 0; width:100%; height:400px;' %>
-                     <% if @user.avatar.attached? %>
-                    <%= image_tag @user.avatar.variant(resize: "285x285"), style:'margin: -95px 10px 0px 25px; z-index: 9; width: 20%; height:20%;', alt: 'avatar' %>
+<% if current_user.id == @user.id %>
+<div class="flip-card" style="margin: -95px 10px 0px 25px; z-index: 9;width:285px;height:285px;" >
+    <div class="flip-card-inner" style="width:285px;height:285px;">
+      <div class="flip-card-front" style="width:285px;height:285px;">
+        
+        <% if @user.avatar.attached? %>
+
+          <%= image_tag @user.avatar, style:" width:285px;height:285px;", alt: 'avatar' %>
+
+        <% else %>
+        <%= image_tag "mystere1.png", style: 'width:285px;height:285px;', alt: 'avatar' %>
+        <% end %>
+        
+      </div>
+      <div class="flip-card-back" style="width:285px;height:285px;">
+                    <br><br>
+                      <h3>Changer d avatar ?</h3><br>
+                      <%= form_tag user_avatars_path(@user), multipart: true do %>
+                      <%= file_field_tag :avatar %> <br><br>
+                      <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
+                      <% end %>
+
+      </div>
+    </div>
+  </div> 
+  <% else %>
+ <% if @user.avatar.attached? %>
+                    <%= image_tag @user.avatar, style:'margin: -95px 10px 0px 25px; z-index: 9; width: 285px; height:285px;', alt: 'avatar' %>
                     <% else %>
-                     <%= image_tag "mystere1.png", size: '285x285', alt: 'avatar', style:'margin: -95px 10px 0px 25px; z-index: 9; width: 20%; height:20%;'%>
+                     <%= image_tag "mystere1.png", alt: 'avatar', style:'margin: -95px 10px 0px 25px; z-index: 9; width: 285px; height:285px;'%>
                     
                     <% end %>
+
+  <% end %>
 
     <div class="profile-text">
     <section class="site-wrapper">
@@ -88,19 +116,6 @@
                 <% nil %>
                 <% end %>
             </div>
-        </div>
-        <div class="col-lg-6 no-padding">
-                    <% if current_user.id == @user.id %>
-                      <h3>Changer d avatar ?</h3>
-                      <%= form_tag user_avatars_path(@user), multipart: true do %>
-                      <%= file_field_tag :avatar %>
-                      <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
-                      <% end %>
-
-                    <% else %>
-                      <% nil %>
-                      <% end %>
-
         </div>
     </div>
     </div>

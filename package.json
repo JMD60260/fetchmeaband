@@ -1,6 +1,13 @@
 {
   "name": "fetchmeaband",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "version": "1.0.0",
+  "description": "music",
+  "main": "index.js",
+  "repository": "git@github.com:JMD60260/fetchmeaband.git",
+  "author": "JMD60260 <dardy.jeanmarc@gmail.com>",
+  "license": "MIT"
 }
-

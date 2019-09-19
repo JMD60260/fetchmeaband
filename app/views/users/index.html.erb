@@ -1,46 +1,59 @@
 <!-- Site Overlay -->
 
 
+<<<<<<< HEAD
 
 <div class="container no-margin no-padding align-items-center">
   <div class="card mb-3 no-margin align-items-center">
     <div class="card-body">
       <%= image_tag "Rockband.png", style: 'z-index: 0; width:100%; height:500px;' %>
+=======
+<div class="card-body">
+      <center><%= image_tag "Rockband.png", style: 'z-index: 0; width:auto; height:700px;'%></center>
+>>>>>>> 76f537a6f9a00369d66e6792885f2fbbe8c14b57
       <h3 class="display-4 animated fadeInUp" style="font-family:'gill sans'; text-align:center; margin: -150px 10px 0px 25px; color: #FFFFFF;">Les Profils Utilisateurs</h3>
       <p class="lead animated fadeInUp" style="font-family:'gill sans'; text-align:center; color: #FFFFFF;">Retrouve ici les Profils des personnes inscrites sur le site</p>
-    </div>
-    
-    <!--page title end-->
+    </div><br><br>
 
-    <div class="row">
-      <% @users.each do |user| %>
-      <div class="col-sm-3">
-        <div class="card mx-3"  style="width: 250px; height: 430px;">
-          <%= link_to user do %>
-          <% if user.avatar.attached? %>
-          <div style="height: 213px;">
-            <%= image_tag user.avatar.variant(resize: "213x213"), class: "card-img-top img-fluid", alt: 'avatar' %>
-          </div>
-          <% else %>
-          <%= image_tag "mystere1.png", class: "card-img-top img-fluid" %>
-          <% end %>
-          <% end %>
-          <div class="card-body" >
-            <h4 class="card-body" style="width: 100%;"><%= user.first_name %></h4>
-            <p style="width: 100%;"><%= user.instrument %></p>
-            <%= link_to "Voir le profil", user, class: "btn btn-primary btn-block" %>
-          </div>
-        </div>
+
+<!--page title end-->
+<div class="container">
+<div class="row justify-content-md-center">
+  <% @users.reverse_each do |user| %>
+<%= link_to user do %>
+  <div class="flip-card col-lg2-2" style="width: 300px; height: 300px;">
+    <div class="flip-card-inner" style="width: 300px; height: 300px;">
+      <div class="flip-card-front" style="width: 300px; height: 300px;">
+        
+        <% if user.avatar.attached? %>
+
+          <%= image_tag user.avatar, style:"width:300px; height:300px;", class: "card-img-top img-fluid", alt: 'avatar' %>
+
+        <% else %>
+        <%= image_tag "mystere1.png", style:"width:300px;height:300px;" %>
+        <% end %>
+        
       </div>
-      <% end %>
+      <div class="flip-card-back" style="width: 300px; height: 300px; padding-top:75px;">
+        <h1><%= user.first_name %></h1>
+        <p><%= user.instrument %></p>
+        <p><%= user.level %></p>
+      </div>
     </div>
+  </div> 
+  <% end %>
+  <%end%>
 
-    <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
-    <!--back to top-->
-    <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-
-  </div>
 </div>
-​</div>
-​</div>
+
+
+​
+<%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+
+<!--back to top-->
+<a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+
+
+</div>
