@@ -16,7 +16,9 @@ ___
 ___
 
 * <https://www.facebook.com/fetchmeaband/>  :notes: :electric_plug: :tada:
-   
+* <https://twitter.com/FetchMeBand1> :notes: :electric_plug: :tada:
+* <https://www.instagram.com/fetchmeaband/> :notes: :electric_plug: :tada:
+  
 ___
 
 - Ruby version 2.5.1
@@ -79,7 +81,7 @@ ___
 ##### BDD View #####
 
 ___
-![show BDD](app/assets/images/BDD2.png)
+![show BDD](app/assets/images/erd.png)
 
 ##### TRELLO juste un aperu #####
 
