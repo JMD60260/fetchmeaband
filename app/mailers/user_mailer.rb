@@ -11,4 +11,10 @@ class UserMailer < ApplicationMailer
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @user.email, subject: 'Bienvenue chez nous !')
   end
+
+  def newsletter_mailer
+    @newsletter = Newsletter.all
+    emails = @newsletter.collect(&:email).join(", ")
+    mail(to: emails, subject: "Hi, this is a test mail.")
+  end
 end

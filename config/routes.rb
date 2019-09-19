@@ -22,6 +22,6 @@ Rails.application.routes.draw do
       post :reply
     end
   end
-
+  resources :newsletters
 
 end
