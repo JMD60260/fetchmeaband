@@ -1,15 +1,14 @@
 class NewslettersController < ApplicationController
-  #skip_before_action :authenticate_user!
+    #skip_before_action :authenticate_user!
     before_action :set_newsletter, only: [:destroy]
 
     def create
-      @newsletter = Newsletter.create(newsletter_params)
-      if @newsletter.save
-        flash[:success] = "Demande prise en compte."
-        render root_path
+      @newsletter = Newsletter.new(newsletter_params)
+      if @newsletter.save 
+        cookies[:save_lead] = true
+        redirect_to root_path, notice: "Demande prise en compte."
       else
-        flash[:alert] = "Demande non prise en compte"
-        render root_path
+        redirect_to root_path, notice: "Demande non prise en compte"
       end
     end
 
