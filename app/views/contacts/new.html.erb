@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <br><br><br>
+
+      <%= form_for(contact, url: new_contact_path(@contact), html: { method: :put, class: "form-signin mt-3" }) do |f| %>
+
+      <h1 class="h3 mb-3 font-weight-normal text-center">Contactez-Nous</h1>
+
+      <div class="row text-left my-3">
+        <div class="col">
+          <%= f.label "Prénom" %>
+          <%= f.text_field :firstname, :class => 'form-control'  %>
+        </div>
+        <div class="col">
+          <%= f.label "Nom" %>
+          <%= f.text_field :lastname, :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "Email" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "Contenu" %><br />
+        <%= f.text_area :content, autofocus: true, autocomplete: "description", class: "form-control" %>
+      </div>
+      
+      <div class="actions mt-5">
+
+      <%= f.submit "Envoyer",  class: "btn btn-lg btn-primary btn-block" %>
+      </div>
+      <% end %>
+
+      
+      <%= link_to "Retour", :back %>
+    </div></div></div>

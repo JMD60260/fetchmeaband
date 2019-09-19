@@ -12,6 +12,14 @@ class ApplicationMailer < ActionMailer::Base
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @user.email, subject: 'Bienvenue chez nous !')
   end
-
+  
+   def contact_form(contact)
+    @contact = contact
+    @to = "fetchmeaband@gmail.com>"
+ 
+    mail(to: @to, subject: "Nouveau contact depuis le site") do |format|
+      format.html
+    end
+  end
 end
 
