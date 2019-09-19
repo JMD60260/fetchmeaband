@@ -19,10 +19,10 @@
         
       </div>
       <div class="flip-card-back" style="width:285px;height:285px;">
-                    
-                      <h3>Changer d avatar ?</h3>
+                    <br><br>
+                      <h3>Changer d avatar ?</h3><br>
                       <%= form_tag user_avatars_path(@user), multipart: true do %>
-                      <%= file_field_tag :avatar %>
+                      <%= file_field_tag :avatar %> <br><br>
                       <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
                       <% end %>
 
