@@ -36,7 +36,7 @@ ___
 - ©Jean-Baptiste DEMENET
 - slack: @Jean-Baptiste :smile:
 - ©Jasmine BANCHEREAU
-- slack: @Jasmine Banchereau :smile:
+- slack: @Jasmine Banchereau
 - ©Nazanin FARSHAD
 - slack: @Nazanin :smile:
 - ©Jean-Marc DARDY
