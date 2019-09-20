@@ -1,5 +1,7 @@
 <div class="row">
+  
   <div class="spacer"></div>
+  
   <div class="col-md-12">
     <br><br><br>
     <%= link_to "Envoyer un message", new_conversation_path, class: "btn btn-primary" %>
@@ -17,20 +19,23 @@
 
   <div class="col-md-8">
     <div class="panel panel-default">
+      
       <div class="panel-body">
         <%= render partial: 'messages' %>
       </div>
+      
       <div class="panel-footer">
         <!-- Reply Form -->
         <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
+            
             <div class="form-group">
               <%= f.text_area :body, placeholder: "Reply Message", rows: 4, class: "form-control", style:"height: 40px; font-size: 18px;" %>
             </div>
             <%= f.submit "Reply", class: 'btn btn-danger pull-right', style:"height: 40px; font-size: 18px;" %>
         <% end %>
         <div class="clearfix"></div>
-      </div>
-    </div>
+      </div>   
+    </div>   
   </div>
 
 </div>
