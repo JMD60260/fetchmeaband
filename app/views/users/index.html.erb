@@ -1,5 +1,5 @@
 <div class="card-body">
-  <center><%= image_tag("Rockband.png", size:"1400x700")%></center>
+  <center><%= image_tag("Rockband.png", style:"width: 65%;height:auto;")%></center>
   <div class="carousel-caption d-none d-md-block">
     <h3 class="display-4 animated fadeInUpBig" style="font-size: 50px;">Les Profils Utilisateurs</h3>
     <p class="lead animated fadeInUpBig" style="font-size: 35px;">Retrouve ici tous les profils !</p>
@@ -36,8 +36,10 @@
     <% end %>
     <%end%>
 
+</div>
+<div class="row justify-content-md-center">
+
   ​<p class="text-center">
     <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
-  </p>
-</div>
+  </p></div>
 </div>
