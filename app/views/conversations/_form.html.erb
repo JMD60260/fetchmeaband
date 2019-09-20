@@ -1,12 +1,15 @@
 <%= form_for :conversation, url: :conversations, html: { class: "" } do |f| %>
+
     <div class="form-group">
       <%= f.label :recipients %>
       <%= f.select(:recipients, User.all.collect {|p| [ p.first_name, p.id ] }, {}, { multiple: true , class: "form-control" })%>
     </div>
+
     <div class="form-group">
       <%= f.label :subject %>
       <%= f.text_field :subject, placeholder: "Subject", class: "form-control", style:"height: 40px; font-size: 18px;" %>
     </div>
+
     <div class="form-group">
       <%= f.label :message %>
       <%= f.text_area :body, class: 'form-control', style:"height: 40px; font-size: 18px;", placeholder: "Type your message here", rows: 4  %>
