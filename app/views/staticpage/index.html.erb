@@ -1,36 +1,35 @@
 <%= render 'layouts/carrousel2'%>
 
-    <div class="container card border-0 mt-10 mb-15 pt-10 pb-10" style="border-radius:8px;">
-        <div class="row ">
-            <div class="highlight-clean" style="min-height:500px;">
-        <div class="container">
-          <div class="card border-0">
-            <div class="features-clean">
-        <div class="container">
-            <div class="row features">
+<div class="container card border-0 mt-10 mb-15 pt-10 pb-10" style="border-radius:8px;">
+  <div class="row ">
+    <div class="highlight-clean" style="min-height:500px;">
+      <div class="container">
+        <div class="card border-0">
+          <div class="features-clean">
+            <div class="container">
+              <div class="row features">
                 <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-id-badge fa-5x"></i></center><br>
-                   <center><h3 class="name"><B>Rentrez en contact</B></h3></center> 
-                    <center><p class="description">Contactez les artistes autour de vous en un clique.</p></center>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-calendar-week fa-5x"></i></center><br>
-                    <center><h3 class="name"><B>Créez des événements</B></h3></center>
-                    <center><p class="description">Partagez vos événements avec la communauté.</p></center>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-comments fa-5x"></i></center><br>
-                   <center> <h3 class="name"><B>Créez des topics</B></h3></center>
-                    <center><p class="description">Alimentez et créez des sujets de conversations.</p></center>
-                </div>
-            </div>
-        </div>
-    </div>
-            
-          </div>
-        </div>
-    </div>
-        </div>
+                 <center><h3 class="name"><B>Rentrez en contact</B></h3></center> 
+                 <center><p class="description">Contactez les artistes autour de vous en un clique.</p></center>
+               </div>
+               <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-calendar-week fa-5x"></i></center><br>
+                <center><h3 class="name"><B>Créez des événements</B></h3></center>
+                <center><p class="description">Partagez vos événements avec la communauté.</p></center>
+              </div>
+              <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-comments fa-5x"></i></center><br>
+               <center> <h3 class="name"><B>Créez des topics</B></h3></center>
+               <center><p class="description">Alimentez et créez des sujets de conversations.</p></center>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+     </div>
+   </div>
+
 <center><h1>Evénements organisés par la communauté</h1></center>
 <div class="row">
-<%@events.reverse_each do |event|%>
+  <%@events.reverse_each do |event|%>
   <div class="col-sm-4">
     <div class="card border-0">
       <h2><%= event.title %></h2>
@@ -46,6 +45,5 @@
   <%end%>
 </div>
 
-    </div>
 </div>
- 
+</div>
