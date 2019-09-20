@@ -10,7 +10,7 @@ class ConversationsController < ApplicationController
 	def create
 		recipients = User.where(id: conversation_params[:recipients])
 		conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
-		flash[:success] = "Your message was successfully sent!"
+		flash[:success] = "Votre message a bien été envoyé !"
 		redirect_to conversation_path(conversation)
 	end
 
@@ -21,7 +21,7 @@ class ConversationsController < ApplicationController
 end
 def reply
 	current_user.reply_to_conversation(conversation, message_params[:body])
-	flash[:notice] = "Your reply message was successfully sent!"
+	flash[:notice] = "Vous avez bien répondu !"
 	redirect_to conversation_path(conversation)
 end
 
