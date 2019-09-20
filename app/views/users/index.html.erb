@@ -1,3 +1,5 @@
+
+
 <div class="card-body">
   <center><%= image_tag "Rockband.png", style: 'z-index: 0; width:auto; height:710px;'%></center>
   <div class="carousel-caption d-none d-md-block">
@@ -39,9 +41,9 @@
   </div>
 
 
-  ​
-  <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
-
+  ​<div class="text-center">
+  <%= will_paginate @users, renderer: WillPaginate::ActionView::LinkRenderer %>
+</div>
   <!--back to top-->
   <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
   <!-- jQuery first, then Tether, then Bootstrap JS. -->
