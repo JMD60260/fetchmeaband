@@ -26,7 +26,9 @@ ___
 - API Utilisées:
   * Amazon S3
   * SendGrid
-  * ++
+
+- Gems Interessantes:
+  * Capistrano et Whenever pour la Newsletter automatique
   
 ## Contributeurs ##
 
