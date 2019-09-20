@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <%= render partial: 'layouts/alert'%>
+    
     <%= render partial: 'layouts/navigation'%>
 
     <% flash.each do |key, value| %>
@@ -29,6 +29,7 @@
 <% end %>
 
 <div class="main" style="margin-top:80px;margin-bottom:20px;">
+<%= render partial: 'layouts/alert'%>
     <%= yield %>
 </div>
 
