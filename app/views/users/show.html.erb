@@ -92,15 +92,15 @@
                 </p>
                 <% end %>                        
                 <div class="clearfix mb30 social-buttons">
-                    <%=link_to image_tag("facebook-icon.png", size: "30x30"), @user.facebook %>
+                    <%=link_to image_tag("facebook-icon.png", size: "30x30"), @user.facebook, target: :_blank %>
 
-                    <%=link_to image_tag("linkedin-icon.png", size: "30x30"), @user.linkedin %>
+                    <%=link_to image_tag("linkedin-icon.png", size: "30x30"), @user.linkedin, target: :_blank %>
 
-                    <%=link_to image_tag("twiter-icon.png", size: "30x30"), @user.twitter %>
+                    <%=link_to image_tag("twiter-icon.png", size: "30x30"), @user.twitter,target: :_blank %>
 
-                    <%=link_to image_tag("skype-icon.svg", size: "25x25"), @user.skype %>
+                    <%=link_to image_tag("skype-icon.svg", size: "25x25"), @user.skype, target: :_blank %>
 
-                    <%=link_to image_tag("youtube-icon.svg", size: "30x30"), @user.youtube %>
+                    <%=link_to image_tag("youtube-icon.svg", size: "30x30"), @user.youtube,target: :_blank %>
                 </div>
                 <div class="buttons">
                     <%=link_to "Me contacter", new_conversation_path, class:"btn btn-primary btn-rounded"%>
