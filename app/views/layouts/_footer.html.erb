@@ -4,12 +4,14 @@
  <div class="container text-center text-md-left">
    <!-- Grid row -->
    <div class="row">
+    
      <!-- Grid column -->
      <div class="col-md-4 mx-auto">
        <!-- Content -->
        <h5 style="color:#fff; font-family:gill sans;" class="font-weight-normal text-uppercase mt-3 mb-4">Newsletter</h5>
        <%= render 'newsletters/form' %>
      </div>
+    
      <!-- Grid column -->
      <hr class="clearfix w-100 d-md-none">
      <!-- Grid column -->
@@ -31,6 +33,7 @@
          </li>
        </ul>
      </div>
+    
      <!-- Grid column -->
      <hr class="clearfix w-100 d-md-none">
      <!-- Grid column -->
@@ -54,36 +57,40 @@
      </div>
    <!-- Grid row -->
  </div>
+ 
  <!-- Footer Links -->
  <!-- Social buttons -->
  <ul class="list-unstyled list-inline text-center">
    <li class="list-inline-item">
-     <a class="btn-floating btn-social-icon btn-facebook mx-1">
-     <!--Facebook-->
-     <ul class="list-unstyled list-inline text-center">
-     <li class="list-inline-item">
-       <a class="btn-floating btn-social-icon btn-facebook mx-1">
+      <a class="btn-floating btn-social-icon btn-facebook mx-1">
+      <!--Facebook-->
+      <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+         <a class="btn-floating btn-social-icon btn-facebook mx-1"  >
 
-       <%=link_to image_tag("facebook-icon.png", size:"50x50"), "https://www.facebook.com/fetchmeaband", target: :_blank%>
-       </a>
-     </li>
+         <%=link_to image_tag("facebook-icon.png", size:"50x50"), "https://www.facebook.com/fetchmeaband", target: :_blank%>
+         </a>
+      </li>
+      </ul>
+   
    <li class="list-inline-item">
      <a class="btn-floating btn-social-icon btn-twitter mx-1"> 
      <%=link_to image_tag("twiter-icon.png", size:"50x50"), "https://twitter.com/FetchMeBand1", target: :_blank%>
    </li>
+   
    <li class="list-inline-item">
      <a class="btn-floating btn-social-icon btn-instagram mx-1">
        <%=link_to image_tag("instagram-icon.png", size:"50x50"), "https://www.instagram.com/fetchmeaband/",target: :_blank%>
-
      </a>
    </li>
+   
    <li class="list-inline-item">
      <a class="btn-floating btn-social-icon btn-linkedin mx-1">
 
        <%= image_tag("linkedin-icon.png", alt: "Edit Entry", size:"50x50")%>
 
      </a>
-</li>
+  </li>
  </ul>
  <!-- Social buttons -->
  <!-- Copyright -->

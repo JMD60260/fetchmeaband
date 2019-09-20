@@ -38,16 +38,8 @@
     <% end %>
     <%end%>
 
-  </div>
-
-
-  ​<div class="text-center">
-  <%= will_paginate @users, renderer: WillPaginate::ActionView::LinkRenderer %>
+  ​<p class="text-center">
+    <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </p>
 </div>
-  <!--back to top-->
-  <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
-  <!-- jQuery first, then Tether, then Bootstrap JS. -->
-
-
-
 </div>
