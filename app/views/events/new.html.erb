@@ -47,7 +47,7 @@
 
 		<% if @new_event.errors.any? %>
 		<div class="alert alert-warning alert-dismissible fade show" role="alert">
-			<strong>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) </strong>  
+			<strong>Nous n'avons pas réussi à créer l'évènement pour la (ou les) raison(s) suivante(s) </strong>  
 			<ul> <% @new_event.errors.full_messages.each do |message| %>
 				<li><%= message %></li>
 				<% end %>
