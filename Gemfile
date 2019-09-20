@@ -81,7 +81,7 @@ gem 'aws-sdk', '~> 3'
 gem 'rubocop'
 
 gem 'will_paginate', '~> 3.1.1'
-gem 'will_paginate-bootstrap'
+gem 'will_paginate-bootstrap4'
 gem 'mailboxer'
 gem 'geocoder'
 gem 'gmaps-rails', '~> 0.0.2'
