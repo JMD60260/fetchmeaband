@@ -5,24 +5,24 @@
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-signin mt-3" }) do |f| %>
 
-      <h1 class="h3 mb-3 font-weight-normal text-center">Mettre à jour</h1>
+      <h1 class="mb-3 font-weight-normal text-center">Mettre à jour</h1>
 
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="row text-left my-3">
         <div class="col">
           <%= f.label "Prénom" %>
-          <%= f.text_field :first_name, :class => 'form-control'  %>
+          <%= f.text_field :first_name, :class => 'form-control', style:"height: 40px; font-size: 18px;"  %>
         </div>
         <div class="col">
           <%= f.label "Nom" %>
-          <%= f.text_field :last_name, :class => 'form-control' %>
+          <%= f.text_field :last_name, :class => 'form-control', style:"height: 40px; font-size: 18px;" %>
         </div>
       </div>
 
       <div class="form-group">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -31,17 +31,17 @@
 
       <div class="form-group">
         <%= f.label :description %><br />
-        <%= f.text_area :description, autofocus: true, autocomplete: "description", class: "form-control" %>
+        <%= f.text_area :description, autofocus: true, autocomplete: "description", class: "form-control", style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="form-group">
         <%= f.label :age %><br />
-        <%= f.number_field :age, autofocus: true, autocomplete: "age", class: "form-control" %>
+        <%= f.number_field :age, autofocus: true, autocomplete: "age", class: "form-control", style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="form-group">
         <%= f.label "Téléphone" %><br />
-        <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control" %>
+        <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control", style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="form-group">
@@ -61,34 +61,34 @@
 
       <div class="form-group">
         <%= f.label "Facebook" %>
-        <%= f.text_field :facebook, :class => 'form-control' %>
+        <%= f.text_field :facebook, :class => 'form-control', style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="form-group">
         <%= f.label "Twitter" %>
-        <%= f.text_field :twitter, :class => 'form-control' %>
+        <%= f.text_field :twitter, :class => 'form-control', style:"height: 40px; font-size: 18px;" %>
       </div>
 
 
       <div class="form-group">
         <%= f.label "Linked_in" %>
-        <%= f.text_field :linkedin, :class => 'form-control' %>
+        <%= f.text_field :linkedin, :class => 'form-control', style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="form-group">
         <%= f.label "Youtube" %>
-        <%= f.text_field :youtube, :class => 'form-control' %>
+        <%= f.text_field :youtube, :class => 'form-control', style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="form-group">
         <%= f.label "Skype" %>
-        <%= f.text_field :skype, :class => 'form-control' %>
+        <%= f.text_field :skype, :class => 'form-control', style:"height: 40px; font-size: 18px;" %>
       </div>
 
 
       <div class="form-group">
         <%= f.label :password %> <i>("leave blank if you don't want to change it")</i><br />
-        <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", style:"height: 40px; font-size: 18px;" %>
         <% if @minimum_password_length %>
         <br />
         <em><%= @minimum_password_length %> characters minimum</em>
@@ -97,16 +97,16 @@
 
       <div class="form-group">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="form-group">
         <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+        <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control", style:"height: 40px; font-size: 18px;" %>
       </div>
 
       <div class="actions mt-5">
-        <%= f.submit "Mettre à jour", class: "btn btn-lg btn-primary btn-block" %>
+        <%= f.submit "Mettre à jour", class: "btn btn-lg btn-primary btn-block", style:"height: 40px; font-size: 18px;" %>
       </div>
       <% end %>
 

@@ -6,41 +6,41 @@
 
 		<div class="form-group">
 			<%= label_tag 'Titre' %>
-			<%= text_field_tag 'title', @new_event.title, class: "form-control" %>
+			<%= text_field_tag 'title', @new_event.title, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 		<br /> <br />
 
 		<div class="form-group">
 			<%= label_tag 'Description'%>
-			<%= text_area_tag 'description', @new_event.description, class: "form-control" %>
+			<%= text_area_tag 'description', @new_event.description, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 
 		<br /> <br />
 		<div class="form-group">
 			<%= label_tag 'Durée'%>
-			<%= number_field_tag 'duration', @new_event.duration, class: "form-control" %>
+			<%= number_field_tag 'duration', @new_event.duration, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 		<br /> <br />
 		<div class="form-group">
 			<%= label_tag 'Date'%>
-			<%= date_field_tag 'start_date', @new_event.start_date, class: "form-control" %>
+			<%= date_field_tag 'start_date', @new_event.start_date, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 
 		<br /> <br />
 		<div class="form-group">
 			<%= label_tag 'Prix'%>
-			<%= number_field_tag'price', @new_event.price, class: "form-control" %>
+			<%= number_field_tag'price', @new_event.price, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 
 		<br /> <br />
 		<div class="form-group">
 			<%= label_tag 'Lieu'%>
-			<%= text_field_tag 'location', @new_event.location, class: "form-control" %>
+			<%= text_field_tag 'location', @new_event.location, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 
 		<br /> <br />
 
-		<%= submit_tag "Créer", class: "btn btn-primary" %>
+		<%= submit_tag "Créer", class: "btn btn-lg btn-primary", style:"height: 40px; font-size: 18px;" %>
 		<br><br>
 		<%end%>
 
