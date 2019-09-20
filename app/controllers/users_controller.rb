@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   	@users = User.paginate(:page => params[:page], per_page: 9)
   end
 
-   after_create :welcome_send
+  
 
    private
 
