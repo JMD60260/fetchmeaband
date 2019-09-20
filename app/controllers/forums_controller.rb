@@ -2,7 +2,7 @@ class ForumsController < ApplicationController
 	before_action :authenticate_user!, only: [:index, :show]
 
 	def index
-		@forum = Forum.all
+		@forum = Forum.paginate(:page => params[:page], per_page: 6)
 	end
 
 	def new
