@@ -96,21 +96,21 @@
                             </div></div>
                             <div class="col-lg-6 no-padding">               
                             <div class="clearfix mb30 social-buttons">
-                                <%=link_to image_tag("facebook-icon.png", size: "60x60"), @user.facebook %>
+                                <%=link_to image_tag("facebook-icon.png", size: "60x60"), @user.facebook, target: :_blank %>
 
-                                <%=link_to image_tag("linkedin-icon.png", size: "60x60"), @user.linkedin %>
+                                <%=link_to image_tag("linkedin-icon.png", size: "60x60"), @user.linkedin, target: :_blank  %>
 
-                                <%=link_to image_tag("twiter-icon.png", size: "60x60"), @user.twitter %>
+                                <%=link_to image_tag("twiter-icon.png", size: "60x60"), @user.twitter, target: :_blank  %>
 
-                                <%=link_to image_tag("skype-icon.svg", size: "55x55"), @user.skype %>
+                                <%=link_to image_tag("skype-icon.svg", size: "55x55"), @user.skype, target: :_blank  %>
 
-                                <%=link_to image_tag("youtube-icon.svg", size: "60x60"), @user.youtube %>
+                                <%=link_to image_tag("youtube-icon.svg", size: "60x60"), @user.youtube, target: :_blank  %>
                             </div><br>
                             <div class="buttons">
                                 <%=link_to "Me contacter", new_conversation_path, class:"btn btn-primary btn-rounded", style:"height: 40px; font-size: 18px;"%>
-                            </div><br>
+                            
                             <% if current_user.id == @user.id %>
-                            <div class="buttons">
+                           
                                 <%= link_to "Editer mon profil", edit_user_registration_path, :class => "btn btn-outline-primary btn-rounded", style:"height: 40px; font-size: 18px;" %>
 
                             </div>
