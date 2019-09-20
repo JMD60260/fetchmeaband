@@ -1,9 +1,9 @@
 <div class="my-form">
 	<%= form_for([@forum, @comment]) do |f| %>
 	<div class="form-group my-title">
-		<%= f.text_area :content, class: "form-control" %>
+		<%= f.text_area :content, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		<br/>
-		<%= submit_tag "Update", class: "btn btn-primary"%>
+		<%= submit_tag "Update", class: "btn btn-primary", style:"height: 40px; font-size: 18px;"%>
 	</div>
 	<%end%>
 </div> 
