@@ -15,7 +15,7 @@ class User < ApplicationRecord
   validates :email,
     presence: true,
     uniqueness: true,
-    format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
+    format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Votre adresse email s'il-vous-plaît !" }
   validates :age, numericality: { message: "%{value} seems wrong" }, :allow_nil => true, on: :update
   validates :description, length: { maximum: 1000 }, :allow_nil => true, on: :update
 

@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
 	belongs_to :user
 
-	validates :start_date, presence: { message: "événement doit etre dans le futur"}
+	validates :start_date, presence: { message: "évènement doit être dans le futur"}
 	validate :future_event
 	validates :title, presence: true
 	validates :description, presence: true
@@ -22,7 +22,7 @@ class Event < ApplicationRecord
 		if start_date == nil
 			puts ""
 		else
-			errors.add(:date, "Can't be in the past!") if start_date < Time.now
+			errors.add(:date, "L'évènement ne peut pas avoir lieu dans le passé !") if start_date < Time.now
 		end
 	end
 end
