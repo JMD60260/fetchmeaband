@@ -11,47 +11,40 @@
                 <p class="text-center">
                 <em>"Jouer de la musique seul c'est bien, à plusieurs c'est mieux"</em>
                 </p>
-                <p>Nous vous mettons en contact avec les personnes qui aiment la musique comme vous.<br></p>
+                <p>Avec Fetch me a Band, contactez facilement les artistes autours de vous !<br></p>
                 <p>Nous vous donnons les moyens de vous exprimer et de communiquer à propos de ce qui compte pour vous.</p>
                 <p>Nous vous aidons à découvrir du contenu et des services qui pourraient vous intéresser.</p>
                 <p>Nous vous aidons à trouver et à contacter les personnes, les groupes, et autres qui seraient succeptibles de jouer avec vous sur l’ensemble du territoire.<br>
                 Les vraies communautés sont fondées sur des liens forts et nous pensons que nos services vous seront utiles <br>
-                - Publiez vos evenements (concert, lieu de rassemblement musicaux, bar souhaitant avoir une animation musicale)<br>
-                - Envoyez des messages instantanes aux membres de la communaute<br>
-                - Participez au Forum de discussion qui vous interesse<br>
+                - Publiez vos événements (concert, lieu de rassemblement musicaux, bar souhaitant avoir une animation musicale)<br>
+                - Envoyez des messages instantanés aux membres de la communaute<br>
+                - Participez au Forum de discussion qui vous intérèsse<br>
                 </p>
-                <p>"Pour toute demande d'informations : "<%=mail_to"fetchmeaband@gmail.com"%> ou en remplissant le formulaire de contact</p>
+                <p>Pour toute demande d'informations : <%=mail_to"fetchmeaband@gmail.com"%> ou en remplissant le formulaire de contact</p>
                 <p><em>"Nous n'utilisons les données dont nous disposons que dans le cadre d'une eventuelle newsletter hebdomadaire: par exemple des groupes à rejoindre, des évènements auxquels participer.(Si vous ne souhaitez pas recevoir de newsletter faites le nous savoir)"</em></p>
             </div>
         </div>
     </div>
         </div>
-        <div class="row mb-5 pb-5">
-            <div class="col-md-4" >
-                <div class="card" >
-                <%=image_tag("MASSTO.jpg", :class=>"card-img-top w-100 d-block")%>
-                    <div class="card-body">
-                        <h4 class="card-title">MASSTO</h4>
-                        <p class="card-text">Très belle musique cinématique formée par Thomas Orlent à la guitare, à la lapsteel et au chant par Timothée Poncelet à la batterie et aux percussions puis par le bassiste Matthias Colombel. Le trio varie les humeurs entre blues et folk avec une jolie réverbe sur les guitares. Une ambiance mélancolique aux accents discrets d’une soul lancinante, et portée par la voix feutrée de Thomas. On passe un très bon moment en compagnie de Massto, qui compose des titres forts. Certainement fans de la musique australe de Jeff Lang, ces Amiénois vous emmènent vers les grands espaces.</p><button class="btn btn-primary" type="button">Button</button></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                <%=image_tag("Rainbreakers.jpg", :class=>"card-img-top w-100 d-block")%>
-                    <div class="card-body">
-                        <h4 class="card-title">RAINBREAKERS</h4>
-                        <p class="card-text">"Le blues rock de ce groupe anglais est extrêmement groovy, voire soul. Les British Blues Awards ne s'y trompent pas et offrent au quatuor une belle nomination en 2016. Le jeune groupe se retrouve dans la catégorie “meilleur artiste émergent”. La même année, ils gagnent le tremplin du Great British Rock & Blues Festival qui les propulse en 2017, sur la grande scène de Skegness. En concert, une tranquillité se dégage du groupe, comme si le groove omniprésent avait le don de bercer ; une évidente prestation bien rock mais qui séduit par sa finesse."</p><button class="btn btn-primary" type="button">Button</button></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                <%=image_tag("Dewaere.jpg", :class=>"card-img-top w-100 d-block")%>
-                    <div class="card-body">
-                        <h4 class="card-title">DEWAERE</h4>
-                        <p class="card-text">"DEWAERE est un groupe de noise punk français, originaire de Saint Brieuc et formé en 2018, avec à sa tête l’incroyable Maxwell Farrington, Julien Henry à la guitare, Marc Aumont à la basse & Hugues Le Corre à la batterie. Le groupe enregistre un album à l'été 2018 qui sort sur les labels allemand Phantom records & français Bigôut records. Si vous deviez vivre vos dernières heures en slip au milieu des décombres, flânant au bord d’une piscine miraculeusement intacte, "SLOT LOGIC" de DEWAERE serait la BO parfaite de votre court-métrage péri-mortem. Entre guitares vinaigre et drums MG-42, les hits noise rock malades du groupe s’écoutent comme on s’apprête à lancer sa première grenade : le coeur battant, prêt à bondir."</p><button class="btn btn-primary" type="button">Button</button></div>
-                </div>
-            </div>
-        </div>
+        <br><hr><br>
+<center><h1>Evénements organisés par la communauté</h1></center>
+<div class="row">
+<%@events.reverse_each do |event|%>
+  <div class="col-sm-4">
+    <div class="card">
+      <h2><%= event.title %></h2>
+
+
+      <%=image_tag("musicman.jpg", :alt=>"bg3", style:"height:260px; width:auto;")%>
+      <%= event.description %>
+      <br><br>
+      <%= link_to "En voir plus", event %>
+      <p></p>
+    </div>
+  </div>
+  <%end%>
+</div>
+
     </div>
 </div>
  
