@@ -9,6 +9,8 @@
     <br><br>
   </div>
 
+<p class="text-center">Retrouvez tous vos messages ici : </p>
+
   <div class="col-md-4">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -29,7 +31,9 @@
         <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
             
             <div class="form-group">
-              <%= f.text_area :body, placeholder: "Répondre", rows: 4, class: "form-control", style:"height: 40px; font-size: 18px;" %>
+
+              <%= f.text_area :body, placeholder: "Répondre au message", rows: 4, class: "form-control", style:"height: 40px; font-size: 18px;" %>
+
             </div>
             <%= f.submit "Répondre", class: 'btn btn-danger pull-right', style:"height: 40px; font-size: 18px;" %>
         <% end %>
