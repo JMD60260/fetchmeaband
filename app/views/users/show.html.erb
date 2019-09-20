@@ -58,13 +58,13 @@
                             <% if @user.level == nil %>
                             <h3 class="lead">Musicien</h3>
                             <% else %>
-                            <h3>Niveau: <%= @user.level %></h3>
+                            <h3>Niveau : <%= @user.level %></h3>
                             <% end %>
 
                             <% if @user.email.empty? %>
-                            <p>Email: non renseigné</p>
+                            <p>Email : non renseigné</p>
                             <% else %>
-                            <p>Email: <a href="mailto:me@at-enfold.com"><%= @user.email %></a></p>
+                            <p>Email : <a href="mailto:me@at-enfold.com"><%= @user.email %></a></p>
                             <% end %>
 
                             <% if @user.instrument == nil %>
@@ -74,21 +74,21 @@
                             <% end %>
 
                             <% if @user.genre == nil %>
-                            <p>Genre: non renseigné</p>
+                            <p>Genre : non renseigné</p>
                             <% else %>
-                            <p>Genre favoris: <%= @user.genre %></a></p>
+                            <p>Genre favoris : <%= @user.genre %></a></p>
                             <% end %>
 
                             <% if @user.phone == nil %>
-                            <p>Téléphone: non renseigné</p>
+                            <p>Téléphone : non renseigné</p>
                             <% else %>
-                            <p>Téléphone: <a href="tel:(555) 4167890"><%= @user.phone %></a>
+                            <p>Téléphone : <a href="tel:(555) 4167890"><%= @user.phone %></a>
                             </p>
                             <% end %>
                             <% if @user.age == nil %>
-                            <p>Age: non renseigné</p>
+                            <p>Âge : non renseigné</p>
                             <% else %>
-                            <p>Age: <a href=""><%= @user.age %></a><br>
+                            <p>Âge : <a href=""><%= @user.age %></a><br>
                             </p>
                             <% end %>    
 
