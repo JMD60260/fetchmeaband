@@ -22,6 +22,6 @@ Rails.application.routes.draw do
     end
   end
   resources :newsletters
-  resources :contacts
+  resources :contacts, only: [:index, :new, :create]
 
 end
