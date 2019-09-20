@@ -3,14 +3,17 @@
     <div class="container card mt-10 mb-15 pt-10 pb-10" style="border-radius:8px;">
         <div class="row ">
             <div class="highlight-clean" style="min-height:500px;">
-        <div class="container mt-5 pt-5">
+        <div class="container">
+          <div class="card">
             <div class="intro">
+
                 <h1 class="text-center">Fetch me A Band</h1>
+
                 <p class="text-center">
                 <strong ><em>On ne le dira jamais assez</em></strong></p>
                 <p class="text-center">
                 <em>"Jouer de la musique seul c'est bien, à plusieurs c'est mieux"</em>
-                </p>
+                </p><br>
                 <p>Avec Fetch me a Band, contactez facilement les artistes autours de vous !<br></p>
                 <p>Nous vous donnons les moyens de vous exprimer et de communiquer à propos de ce qui compte pour vous.</p>
                 <p>Nous vous aidons à découvrir du contenu et des services qui pourraient vous intéresser.</p>
@@ -23,10 +26,11 @@
                 <p>Pour toute demande d'informations : <%=mail_to"fetchmeaband@gmail.com"%> ou en remplissant le formulaire de contact</p>
                 <p><em>"Nous n'utilisons les données dont nous disposons que dans le cadre d'une eventuelle newsletter hebdomadaire: par exemple des groupes à rejoindre, des évènements auxquels participer.(Si vous ne souhaitez pas recevoir de newsletter faites le nous savoir)"</em></p>
             </div>
+            </div>
         </div>
     </div>
         </div>
-        <br><hr><br>
+        <br>
 <center><h1>Evénements organisés par la communauté</h1></center>
 <div class="row">
 <%@events.reverse_each do |event|%>
