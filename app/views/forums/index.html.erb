@@ -1,16 +1,13 @@
-<div class="header">
-  <h1>Forum</h1>
-</div>
+<div class="container">
 <div class="card">
-  <div class="card-header">
-    <h3>Pour créer un nouvel sujet de conversation c'est <%=link_to 'ici', new_forum_path%></h3>
-  </div>
+<div class="card-header" style= "font-family:'gill Sans'; background-color: #212121; color: #FFFFFF;">
+  <center><h4>Pour créer un nouvel événement c'est    <%=link_to 'Cliquez ici', new_forum_path, class:"btn btn-primary"%></h4></center>
+</div>
 </div>
 
-
-<%@forum.reverse_each do |f|%>
 <div class="row">
-  <div class="leftcolumn">
+<%@forum.reverse_each do |f|%>
+  <div class="col-sm-12">
     <div class="card">
       <h2><%= f.topic %></h2>
 
@@ -21,5 +18,10 @@
       <%= link_to "En voir plus", f %>
       <p></p>
     </div>
-  </div></div>
-<%end%>
+  </div>
+  <%end%>
+</div>
+
+</div>
+
+</div>
