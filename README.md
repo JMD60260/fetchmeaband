@@ -18,11 +18,12 @@ ___
 * <https://www.facebook.com/fetchmeaband/>  :notes: :electric_plug: :tada:
 * <https://twitter.com/FetchMeBand1> :notes: :electric_plug: :tada:
 * <https://www.instagram.com/fetchmeaband/> :notes: :electric_plug: :tada:
+  
 ___
 
 - Ruby version 2.5.1
 - Rails version 5.2.3
-- CSS : Theme Bootstrap 
+- CSS : Bootstrap 
 - API Utilisées:
   * Amazon S3
   * SendGrid
@@ -35,9 +36,9 @@ ___
 - ©Jean-Baptiste DEMENET
 - slack: @Jean-Baptiste :smile:
 - ©Jasmine BANCHEREAU
-- slack: @Jasmine Banchereau
+- slack: @Jasmine Banchereau :smile:
 - ©Nazanin FARSHAD
-- slack: @Nazanin :disappointed:
+- slack: @Nazanin :smile:
 - ©Jean-Marc DARDY
 - slack: @JM :smile:
   
@@ -52,13 +53,14 @@ ___
   
 ##### Pour Github #####
 
-- JM doit mettre en contributeur tout le monde
 - dirige toi via ton terminal dans le dossier que tu souhaites
 - git clone <https://github.com/JMD60260/fetchmeaband.git>
 - cd fetchmeaband
 - bundle install
 - rails db:create
+  
 => Puis pour commencer à travailler :
+
 - git checkout master
 - git pull origin master
 - git branch nom_de_ta_branche
