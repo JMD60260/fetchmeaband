@@ -8,44 +8,53 @@
           <div class="features-clean">
             <div class="container">
               <div class="row features">
-                <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-id-badge fa-5x"></i></center><br>
-                 <center><h3 class="name"><B>Rentrez en contact</B></h3></center> 
-                 <center><p class="description">Contactez les artistes autour de vous en un clique.</p></center>
+                <div class="col-sm-6 col-lg-4 item"><center>
+                  <i class="fas fa-id-badge fa-5x"></i></center><br>
+                  <center><h3 class="name"><B>Rentrez en contact</B></h3></center> 
+                  <center><p class="description">Contactez les artistes autour de vous en un clique.</p></center>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-calendar-week fa-5x"></i></center><br>
+                  <center><h3 class="name"><B>Créez des événements</B></h3></center>
+                  <center><p class="description">Partagez vos événements avec la communauté.</p></center>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-comments fa-5x"></i></center><br>
+                 <center> <h3 class="name"><B>Créez des topics</B></h3></center>
+                 <center><p class="description">Alimentez et créez des sujets de conversations.</p></center>
                </div>
-               <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-calendar-week fa-5x"></i></center><br>
-                <center><h3 class="name"><B>Créez des événements</B></h3></center>
-                <center><p class="description">Partagez vos événements avec la communauté.</p></center>
+             </div><br>
+             <% if current_user == nil %>
+             <div class="row justify-content-md-center">
+               <div class="col col-lg-4">
+                <%= link_to new_user_registration_path do %>
+                <center><i class="fab fa-itunes-note fa-7x"></i></center><br>
+                <center> <h3 class="name"><B>Inscrivez-vous !</B></h3></center>
+                <center><p class="description">N'attendez plus, c'est gratuit ! </p></center>
+                <% end %>
               </div>
-              <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-comments fa-5x"></i></center><br>
-               <center> <h3 class="name"><B>Créez des topics</B></h3></center>
-               <center><p class="description">Alimentez et créez des sujets de conversations.</p></center>
-             </div>
-           </div>
-         </div>
-       </div>
-       
-     </div>
-   </div>
+            </div>
+            <% else %>
+            <% nil %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+    <center><B><h1>Evènements organisés par la communauté</h1></B></center><br><br>
+    <div class="row">
+      <% @all_events.reverse_each do |event| %>
+      <div class="col-sm-4">
+        <div class="card border-0">
+          <h2><%= event.title %></h2>
+          <%=image_tag("musicman.jpg", :alt=>"bg3", style:"height:260px; width:auto;")%>
+          <%= event.description %>
+          <br><br>
+          <%= link_to "En voir plus", event %>
+          <p></p>
+        </div>
+      </div>
+      <%end%>
 
-
-<center><h1 class="mt10 mb10">Évènements organisés par la communauté</h1></center>
-
-<div class="row">
-  <%@events.reverse_each do |event|%>
-  <div class="col-sm-4">
-    <div class="card border-0">
-      <h2><%= event.title %></h2>
-
-
-      <%=image_tag("musicman.jpg", :alt=>"bg3", style:"height:260px; width:auto;")%>
-      <%= event.description %>
-      <br><br>
-      <%= link_to "En voir plus", event %>
-      <p></p>
     </div>
   </div>
-  <%end%>
-</div>
 
-</div>
 </div>
