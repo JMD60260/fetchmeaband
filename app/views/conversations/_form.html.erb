@@ -7,14 +7,14 @@
 
     <div class="form-group">
       <%= f.label :subject %>
-      <%= f.text_field :subject, placeholder: "Subject", class: "form-control", style:"height: 40px; font-size: 18px;" %>
+      <%= f.text_field :subject, placeholder: "Sujet", class: "form-control", style:"height: 40px; font-size: 18px;" %>
     </div>
 
     <div class="form-group">
       <%= f.label :message %>
-      <%= f.text_area :body, class: 'form-control', style:"height: 40px; font-size: 18px;", placeholder: "Type your message here", rows: 4  %>
+      <%= f.text_area :body, class: 'form-control', style:"height: 40px; font-size: 18px;", placeholder: "Tapez votre message", rows: 4  %>
     </div>
 
-    <%= f.submit "Send Message", class: "btn btn-success", style:"height: 40px; font-size: 18px;" %>
+    <%= f.submit "Envoyer", class: "btn btn-success", style:"height: 40px; font-size: 18px;" %>
 
 <% end %>
