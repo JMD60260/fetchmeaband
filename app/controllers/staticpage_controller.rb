@@ -3,8 +3,8 @@ class StaticpageController < ApplicationController
   end
 
   def index
-    @all_events = Event.all
-    @events = @all_events.last(3)
+    @the_events = Event.all
+    @all_events = @the_events.last(3)
   end
 
   def show

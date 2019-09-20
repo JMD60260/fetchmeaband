@@ -41,7 +41,7 @@
     </div><br><br>
     <center><B><h1>Evénements organisés par la communauté</h1></B></center><br><br>
     <div class="row">
-      <% @events.reverse_each do |event| %>
+      <% @all_events.reverse_each do |event| %>
       <div class="col-sm-4">
         <div class="card border-0">
           <h2><%= event.title %></h2>
@@ -55,4 +55,5 @@
       <%end%>
     </div>
   </div>
+
 </div>
