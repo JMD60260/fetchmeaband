@@ -1,24 +1,35 @@
-
+<div class="container">
 <div class="card">
-  <div class="card-header">
-    <h3>Pour créer un nouvel événement c'est <%=link_to 'ici', new_event_path%></h3>
-  </div>
+<div class="card-header" style= "font-family:'gill Sans'; background-color: #212121; color: #FFFFFF;">
+  <center><h4>Pour créer un nouvel événement c'est    <%=link_to 'Cliquez ici', new_event_path, class:"btn btn-primary"%></h4></center>
 </div>
-<% @events.reverse_each do |e| %>
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
+</div>
 
-  <%= link_to image_tag("musicman.jpg", size: "166x140", alt: 'avatar'), e %>
 
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"> <%=e.title%> </h5>
-        <p class="card-text"> <%=e.location%> </p>
-        <p class="card-text"><small class="text-muted"> <%=e.start_date%> </small></p>
+
+<div class="row justify-content-md-center">
+  <% @events.reverse_each do |event| %>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+      <%= link_to event do %>
+        <%= link_to image_tag("musicman.jpg", size: "166x140", alt: 'avatar'), event %>
+        <% end %>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+                    <h5 class="card-title"> <%=event.title%> </h5>
+        <p class="card-text"> <%=event.location%> </p>
+        <p class="card-text"><small class="text-muted"> <%=event.start_date%> </small></p>
+            
+          </div>
+          
+        </div>
       </div>
     </div>
   </div>
+    <% end %>
+  </div>
+
 </div>
-<% end %>
