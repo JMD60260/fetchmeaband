@@ -3,14 +3,16 @@
     <%= link_to mailbox_inbox_path, class: "btn btn-outline-primary"  do  %>
 
     <em class="fa fa-inbox fa-lg"></em>
-    <span>Mail</span>
+
+    <span>Boîte de réception</span>
+
     <% end %>
   </li>
   <li class="<%= active_page(:sent) %>">
     <%= link_to mailbox_sent_path, class: "btn btn-outline-primary" do %>
 
     <em class="fa fa-paper-plane-o fa-lg"></em>
-    <span>Sent</span>
+    <span>Messages envoyés</span>
     <% end %>
   </li>
 </ul>
