@@ -13,7 +13,7 @@ class StaticpageController < ApplicationController
   def contact
 
   end
-  def About_us
+  def about_us
 
   end
 end
