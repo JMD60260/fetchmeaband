@@ -8,8 +8,8 @@ ___
 3- On a fait un Wiki
 
 * <https://github.com/JMD60260/fetchmeaband/wiki/Home/_edit>
-* <https://fectchmeaband-pro.herokuapp.com> :boom:
-* <https://git.heroku.com/fetchmeaband-pro.git> :boom:
+* <https://fectchmeaband-prod.herokuapp.com> :boom:
+* <https://git.heroku.com/fetchmeaband-prod.git> :boom:
 * <https://fetchmeaband-staging.herokuapp.com>
 * <https://git.heroku.com/fetchmeaband-staging.git>
   
