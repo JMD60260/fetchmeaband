@@ -88,3 +88,4 @@ gem 'gmaps-rails', '~> 0.0.2'
 gem 'whenever', require: false
 gem 'capistrano-rails', '~> 1.1', '>= 1.1.7'
 gem 'capistrano', '~> 3.11', '>= 3.11.1'
+gem 'mail_form'
