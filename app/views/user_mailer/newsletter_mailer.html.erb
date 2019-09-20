@@ -1,6 +1,21 @@
 <p> Salut Les Musiciens </p>
 <p> Voici comme promis notre Newsletter de la semaine: </p>
-<p> Les derniers evenements en cours :</p>
+<p> Les derniers evenements en cours : </p>
+<div class="row">
+  <%Event.last(3).reverse_each do |event|%>
+  <div class="col-sm-4">
+    <div class="card border-0">
+      <h2><%= event.title %></h2>
 
+
+      <%=image_tag("musicman.jpg", :alt=>"bg3", style:"height:260px; width:auto;")%>
+      <%= event.description %>
+      <br><br>
+      <%= link_to "En voir plus", event %>
+      <p></p>
+    </div>
+  </div>
+  <%end%>
+</div>
 
 <br/>
