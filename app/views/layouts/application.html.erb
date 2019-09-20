@@ -18,16 +18,17 @@
   </head>
 
   <body>
-    <%= render partial: 'layouts/alert'%>
-    <%= render partial: 'layouts/navigation'%>
+
+      <%= render partial: 'layouts/navigation'%>
+
+<div class="main" style="margin-top:100px;margin-bottom:20px;">
+
 
     <% flash.each do |key, value| %>
     <div class="text-center <%= flash_class(key) %>">
       <%= value %>
     </div>
 <% end %>
-
-<div class="main" style="margin-top:80px;margin-bottom:20px;">
     <%= yield %>
 </div>
 
