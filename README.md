@@ -27,9 +27,11 @@ ___
 - API Utilisées:
   * Amazon S3
   * SendGrid
+  * Evolution a venir : implementation de geocoder et Gmaps
 
 - Gems Interessantes:
   * Capistrano et Whenever pour la Newsletter automatique
+  * gem 'devise-i18n' Internationalisation de Devise
   
 ## Contributeurs ##
 
