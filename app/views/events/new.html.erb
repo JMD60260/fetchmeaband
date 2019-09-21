@@ -17,7 +17,7 @@
 
 		<br /> <br />
 		<div class="form-group">
-			<%= label_tag 'Durée'%>
+			<%= label_tag 'Durée en minutes'%>
 			<%= number_field_tag 'duration', @new_event.duration, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 		<br /> <br />
@@ -28,7 +28,7 @@
 
 		<br /> <br />
 		<div class="form-group">
-			<%= label_tag 'Prix'%>
+			<%= label_tag 'Prix en €'%>
 			<%= number_field_tag'price', @new_event.price, class: "form-control", style:"height: 40px; font-size: 18px;" %>
 		</div>
 
