@@ -12,12 +12,12 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="row no-gutters">
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-12 col-sm-12">
       <%= link_to event do %>
         <%= link_to image_tag("musicman.jpg", size: "166x140", alt: 'avatar'), event %>
         <% end %>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-xs-12 col-sm-12">
           <div class="card-body">
                     <h5 class="card-title"> <%=event.title%> </h5>
         <p class="card-text"> <%=event.location%> </p>
@@ -31,7 +31,9 @@
   </div>
   <% end %>
   </div>
+  <div class="row justify-content-md-center">
     ​<p class="text-center">
     <%= will_paginate @events, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
   </p>
+  </div>
 </div>
