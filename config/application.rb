@@ -10,7 +10,6 @@ Dotenv::Railtie.load
 
 HOSTNAME = ENV['HOSTNAME']
 
-
 module Fetchmeaband
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
