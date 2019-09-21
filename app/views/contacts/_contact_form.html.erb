@@ -1,4 +1,7 @@
-<%= form_for @contact, url: new_contact_path, remote: true do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+    <%= form_for @contact, url: new_contact_path, remote: true do |f| %>
 
     <div class="col-md-6">
         <%= f.label :name %></br>
@@ -16,11 +19,14 @@
         <%= f.text_field :nickname, :hint => 'Ne laisse pas ce champ vide !' %>
       </div>
 
-        <%= f.submit 'Envoi du message', class: 'btn btn-primary' %>
+        <%= f.submit 'Envoi du message', class: "btn btn-lg btn-primary btn-block", style:"height: 40px; font-size: 18px;" %>
     </div>
 
-<% end %>
+    <% end %>
 
     <div class="col-md-6" id="flash-message">
       <%= render 'flash' %>
+    </div>
+    </div>
+    </div>
     </div>
