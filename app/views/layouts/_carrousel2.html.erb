@@ -1,37 +1,13 @@
 <% if current_user == nil %>
-<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="background-color:#000;" data-interval="3000">
-      <%=image_tag("concert.jpg", :class=>"d-block", :alt=>"bg1")%>
-      <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 animated slideInLeft" style="font-size: 70px;">Fecth Me A Band</h3>
-          <p class="lead animated slideInLeft" style="font-size: 35px;">"Jouer de la musique seul c'est bien, à plusieurs c'est mieux"</p>
-        </div>
-    </div>
-    <div class="carousel-item" style="background-color:#000" data-interval="3000">
-      <%=image_tag("guitare.jpg", :class=>"d-block w-100", :alt=>"bg2")%>
-      <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 animated bounceInDown" style="font-size: 70px;">Inscrivez vous</h3>
-          <p class="lead animated bounceInDown" style="font-size: 35px;">Créez un compte en quelques cliques</p>
-        </div>
-    </div>
-    <div class="carousel-item" data-interval="3000">
-      <%=image_tag("ukulele.jpg", :class=>"d-block w-100", :alt=>"bg4")%>
-      <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 animated slideInDown" style="font-size: 70px;">Fetch Me A Band</h3>
-          <p class="lead animated slideInDown" style="font-size: 35px;">Venez partager avec les artistes autour de vous ! C'est gratuit !</p>
-        </div>
-    </div>
+
+<div class="jumbotron jumbotron-fluid vertical-center container-fluid">
+  <div class="container">
+    <center><h1 class="display-4 animated bounceInDown" style="font-size: 70px;color:white;">Fetch me a Band</h1>
+    <p class="lead animated bounceInDown" style="font-size: 35px;color:white;">Rencontrez les artistes autour de vous</p></center>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
+
+
 
 <% else %>
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
@@ -53,14 +29,14 @@
     <div class="carousel-item" data-interval="3000">
       <%=image_tag("ukulele.jpg", :class=>"d-block w-100", :alt=>"bg4")%>
       <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 animated slideInDown" style="font-size: 70px;">Fetch Me A Band</h3>
+          <h3 class="display-4 animated slideInDown" style="font-size: 70px;">Fecth Me A Band</h3>
           <p class="lead animated slideInDown" style="font-size: 35px;">Partagez avec la communauté en créant un nouveau forum de conversation</p>
         </div>
     </div>
     <div class="carousel-item"style="background-color:#000" data-interval="3000">
     <%=image_tag("audience.jpg", :class=>"d-block", :alt=>"bg3")%>
     <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4 animated lightSpeedIn" style="font-size: 70px;">Fetch Me A Band</h3>
+          <h3 class="display-4 animated lightSpeedIn" style="font-size: 70px;">Fecth Me A Band</h3>
           <p class="lead animated lightSpeedIn" style="font-size: 35px;">"Jouer de la musique seul c'est bien, à plusieurs c'est mieux"</p>
         </div>
     </div>
