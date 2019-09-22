@@ -56,9 +56,9 @@
                             <% end %>
 
                             <% if @user.level == nil %>
-                            <h3 class="lead">Musicien</h3>
+                            <p class="lead">Musicien</p>
                             <% else %>
-                            <h3>Niveau : <%= @user.level %></h3>
+                            <p>Niveau : <%= @user.level %></p>
                             <% end %>
 
                             <% if @user.email.empty? %>
@@ -82,15 +82,22 @@
                             <% if @user.phone == nil %>
                             <p>Téléphone : non renseigné</p>
                             <% else %>
-                            <p>Téléphone : <a href="tel:(555) 4167890"><%= @user.phone %></a>
+                            <p>Téléphone : <%= @user.phone %></a>
                             </p>
                             <% end %>
                             <% if @user.age == nil %>
                             <p>Âge : non renseigné</p>
                             <% else %>
-                            <p>Âge : <a href=""><%= @user.age %></a><br>
+                            <p>Âge : <%= @user.age %></a><br>
+                            </p>
+                            <% end %>
+                            <% if @user.location == nil %>
+                            <p>Ville : non renseignée</p>
+                            <% else %>
+                            <p>Ville : <%= @user.location %></a><br>
                             </p>
                             <% end %>    
+    
 
                             
                             </div></div>
@@ -133,7 +140,7 @@
             <p class="lead">
                 <% if @user.description == nil %>
 
-                <p><i>Pas de description renseigné.</i></p>
+                <p><i>Pas de description renseignée.</i></p>
                 <% else %>
                 <p> <%= @user.description %> </p>                        
                 <% end %>

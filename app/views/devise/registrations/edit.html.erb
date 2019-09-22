@@ -45,6 +45,11 @@
       </div>
 
       <div class="form-group">
+        <%= f.label "Ville" %>
+        <%= f.text_field :location, :class => 'form-control', style:"height: 40px; font-size: 18px;" %>
+      </div>
+
+      <div class="form-group">
         <%= f.label :instrument %><br />
         <%= f.select :instrument, ["Guitare", "Basse", "Piano", "Batterie", "Vocal", "Trompette"], :prompt => 'Select one' %>
       </div>

@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
 
 
 	def configure_devise_parameters
-		devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:first_name, :age, :description, :last_name, :is_alive, :email, :phone, :instrument, :genre, :level, :youtube, :skype, :twitter, :linkedin, :facebook, :password, :password_confirmation)}
-		devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:first_name, :age, :description, :last_name, :is_alive, :email, :phone, :instrument, :genre, :level, :youtube, :skype, :twitter, :linkedin, :facebook, :password, :password_confirmation)}
+		devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit(:first_name, :age, :description, :last_name, :is_alive, :email, :phone, :instrument, :genre, :level, :youtube, :skype, :twitter, :linkedin, :facebook, :location, :password, :password_confirmation)}
+		devise_parameter_sanitizer.permit(:account_update) {|u| u.permit(:first_name, :age, :description, :last_name, :is_alive, :email, :phone, :instrument, :genre, :level, :youtube, :skype, :twitter, :linkedin, :facebook, :location, :password, :password_confirmation)}
 	end
 
 	private
