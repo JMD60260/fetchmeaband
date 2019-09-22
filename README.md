@@ -5,7 +5,7 @@ ___
 
 2- Site Heroku
 
-3- On a fait un Wiki
+3- On a fait un Wiki instructif 
 
 * <https://github.com/JMD60260/fetchmeaband/wiki/Home/_edit>
 * <https://fectchmeaband-prod.herokuapp.com> :boom:
