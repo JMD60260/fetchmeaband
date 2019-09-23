@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -13,18 +15,18 @@ class User < ApplicationRecord
   acts_as_messageable
 
   validates :email,
-    presence: true,
-    uniqueness: true,
-    format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Votre adresse email s'il-vous-plaît !" }
-  validates :age, numericality: { message: "%{value} seems wrong" }, :allow_nil => true, on: :update
-  validates :description, length: { maximum: 1000 }, :allow_nil => true, on: :update
+            presence: true,
+            uniqueness: true,
+            format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Votre adresse email s'il-vous-plaît !" }
+  validates :age, numericality: { message: '%{value} seems wrong' }, allow_nil: true, on: :update
+  validates :description, length: { maximum: 1000 }, allow_nil: true, on: :update
 
   def mailboxer_name
-    self.name
+    name
   end
 
-  def mailboxer_email(object)
-    self.email
+  def mailboxer_email(_object)
+    email
   end
 
   def update_with_password(params, *options)
@@ -36,12 +38,12 @@ class User < ApplicationRecord
     end
 
     result = if params[:password].blank? || valid_password?(current_password)
-      update_attributes(params, *options)
-    else
-      self.assign_attributes(params, *options)
-      self.valid?
-      self.errors.add(:current_password, current_password.blank? ? :blank : :invalid)
-      false
+               update_attributes(params, *options)
+             else
+               assign_attributes(params, *options)
+               valid?
+               errors.add(:current_password, current_password.blank? ? :blank : :invalid)
+               false
     end
 
     clean_up_passwords
@@ -51,5 +53,4 @@ end
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
-
 end

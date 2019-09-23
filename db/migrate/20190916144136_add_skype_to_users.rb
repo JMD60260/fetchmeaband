@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddSkypeToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :skype, :string

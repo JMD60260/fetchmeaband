@@ -1,5 +1,5 @@
-class CitiesController < ApplicationController
+# frozen_string_literal: true
 
-	def show
-	end
+class CitiesController < ApplicationController
+  def show; end
 end

@@ -9,8 +9,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.integer :age
       t.text :description
       t.belongs_to :city, index: true
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :email,              null: false, default: ''
+      t.string :encrypted_password, null: false, default: ''
 
       ## Recoverable
       t.string   :reset_password_token
@@ -37,7 +37,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-
       t.timestamps null: false
     end
 
@@ -46,6 +45,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end
+
   def self.down
     remove_column :users, :reset_password_token
     remove_column :users, :reset_password_sent_at
@@ -54,8 +54,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
     remove_index :users, :email
     begin
-    remove_index :users, :reset_password_token
-    rescue
+      remove_index :users, :reset_password_token
+    rescue StandardError
     end
     # raise ActiveRecord::IrreversibleMigration
   end

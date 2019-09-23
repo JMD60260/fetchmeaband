@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 class Forum < ApplicationRecord
-	belongs_to :user
-	has_many :comments
+  belongs_to :user
+  has_many :comments
 
-	validates :topic, presence: true
-	validates :description, presence: true
-
+  validates :topic, presence: true
+  validates :description, presence: true
 end

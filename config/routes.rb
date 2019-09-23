@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'staticpage#index'
   devise_for :users
@@ -5,16 +7,16 @@ Rails.application.routes.draw do
     resources :avatars, only: [:create]
   end
   resources :comments
-  get '/team', :to=> 'staticpage#show'
-  get '/aboutus', :to=> 'staticpage#aboutus'
+  get '/team', to: 'staticpage#show'
+  get '/aboutus', to: 'staticpage#aboutus'
   resources :events
   resources :forums do
     resources :comments
   end
   resources :city
 
-  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
-  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+  get 'mailbox/inbox' => 'mailbox#inbox', as: :mailbox_inbox
+  get 'mailbox/sent' => 'mailbox#sent', as: :mailbox_sent
 
   resources :conversations do
     member do
@@ -22,6 +24,5 @@ Rails.application.routes.draw do
     end
   end
   resources :newsletters
-  resources :contacts, only: [:index, :new, :create]
-
+  resources :contacts, only: %i[index new create]
 end

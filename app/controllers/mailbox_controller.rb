@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MailboxController < ApplicationController
   before_action :authenticate_user!
 
@@ -15,5 +17,4 @@ class MailboxController < ApplicationController
     @trash = mailbox.trash
     @active = :trash
   end
-
 end
