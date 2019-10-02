@@ -1,136 +1,134 @@
 <!-- /container 1-->
 <div class="container">
-    <div class="card mb-3">
-        <div class="card-body">
-            <div class="profile">
-               <%= image_tag "hero_bg_10.png", style: 'z-index: 0; width:100%; height:400px;' %>
-               <% if current_user.id == @user.id %>
-               <div class="flip-card" style="margin: -95px 10px 0px 25px; z-index: 9;width:285px;height:285px;" >
-                <div class="flip-card-inner" style="width:285px;height:285px;">
-                  <div class="flip-card-front" style="width:285px;height:285px;">
-
-                    <% if @user.avatar.attached? %>
-
-                    <%= image_tag @user.avatar, style:" width:285px;height:285px;", alt: 'avatar' %>
-
-                    <% else %>
-                    <%= image_tag "mystere1.png", style: 'width:285px;height:285px;', alt: 'avatar' %>
-                    <% end %>
-
-                </div>
-                <div class="flip-card-back" style="width:285px;height:285px;">
-                    <br><br>
-                    <h3>Changer d avatar ?</h3><br>
-                    <%= form_tag user_avatars_path(@user), multipart: true do %>
-                    <%= file_field_tag :avatar %> <br><br>
-                    <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
-                    <% end %>
-
-                </div>
-            </div>
-        </div> 
-        <% else %>
-        <% if @user.avatar.attached? %>
-        <%= image_tag @user.avatar, style:'margin: -95px 10px 0px 25px; z-index: 9; width: 285px; height:285px;', alt: 'avatar' %>
-        <% else %>
-        <%= image_tag "mystere1.png", alt: 'avatar', style:'margin: -95px 10px 0px 25px; z-index: 9; width: 285px; height:285px;'%>
-
-        <% end %>
-
-        <% end %>
-
-        <div class="profile-text">
-            <section class="site-wrapper">
-
-                <div class="row no-margin align-items-center">
-                    <div class="col-lg-6 no-padding">
-                        <div class="resume-header-text" style= "font-family:'gill Sans'; font-weight: 700; font-size:16px; margin: 10px 90px 0px 25px;">
-                            <% if @user.first_name == nil %>
-                            <h2 class="h1 mb0">
-                                Anonyme
-                            </h2>
-                            <%else%>
-                            <h2 class="h1 mb0">
-                                <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>
-                            </h2><br>
-                            <% end %>
-
-                            <% if @user.level == nil %>
-                            <p class="lead">Musicien</p>
-                            <% else %>
-                            <p>Niveau : <%= @user.level %></p>
-                            <% end %>
-
-                            <% if @user.email.empty? %>
-                            <p>Email : non renseigné</p>
-                            <% else %>
-                            <p>Email : <a href="mailto:me@at-enfold.com"><%= @user.email %></a></p>
-                            <% end %>
-
-                            <% if @user.instrument == nil %>
-                            <p>Instrument: non renseigné</p>
-                            <% else %>
-                            <p>Instrument: <%= @user.instrument %></a></p>
-                            <% end %>
-
-                            <% if @user.genre == nil %>
-                            <p>Genre : non renseigné</p>
-                            <% else %>
-                            <p>Genre favoris : <%= @user.genre %></a></p>
-                            <% end %>
-
-                            <% if @user.phone == nil %>
-                            <p>Téléphone : non renseigné</p>
-                            <% else %>
-                            <p>Téléphone : <%= @user.phone %></a>
-                            </p>
-                            <% end %>
-                            <% if @user.age == nil %>
-                            <p>Âge : non renseigné</p>
-                            <% else %>
-                            <p>Âge : <%= @user.age %></a><br>
-                            </p>
-                            <% end %>
-                            <% if @user.location == nil %>
-                            <p>Ville : non renseignée</p>
-                            <% else %>
-                            <p>Ville : <%= @user.location %></a><br>
-                            </p>
-                            <% end %>    
     
 
-                            
-                            </div></div>
-                            <div class="col-lg-6 no-padding">               
-                            <div class="clearfix mb30 social-buttons">
-                                <%=link_to image_tag("facebook-icon.png", size: "60x60"), @user.facebook, target: :_blank %>
+       <%= image_tag "hero_bg_10.png", style: 'z-index: 0; width:100%; height:400px;' %>
+       <% if current_user.id == @user.id %>
+       <div class="row">
+           <div class="col">
+               <% if @user.avatar.attached? %>
 
-                                <%=link_to image_tag("linkedin-icon.png", size: "60x60"), @user.linkedin, target: :_blank  %>
+               <%= image_tag @user.avatar, class:'rounded-circle float-left mr-2', width:'285', height:'285', style:'margin: -95px 10px 0px 25px; z-index: 9;' %>
 
-                                <%=link_to image_tag("twiter-icon.png", size: "60x60"), @user.twitter, target: :_blank  %>
 
-                                <%=link_to image_tag("skype-icon.svg", size: "55x55"), @user.skype, target: :_blank  %>
+               <% else %>
+               <%= image_tag "mystere1.png", class:'rounded-circle float-left mr-2', width:'285', height:'285', style:'margin: -95px 10px 0px 25px; z-index: 9;', alt: 'avatar' %>
+               <% end %>
+           </div>     
+           <div class="col">
+               <h3>Changer d'avatar ?</h3><br>
+               <%= form_tag user_avatars_path(@user), multipart: true do %>
+               <%= file_field_tag :avatar %> <br><br>
+               <%= submit_tag "mettre à jour", :class => "btn btn-primary btn-rounded" %>
+               <% end %>
+           </div>
+       </div>
 
-                                <%=link_to image_tag("youtube-icon.svg", size: "60x60"), @user.youtube, target: :_blank  %>
-                            </div><br>
-                            <div class="buttons">
-                                <%=link_to "Me contacter", new_conversation_path, class:"btn btn-primary btn-rounded", style:"height: 40px; font-size: 18px;"%>
+
+       <% else %>
+       <div class="row">
+       <% if @user.avatar.attached? %>
+       <%= image_tag @user.avatar, class:'rounded-circle float-left mr-2', width:'285', height:'285', style:'margin: -95px 10px 0px 25px; z-index: 9;', alt: 'avatar' %>
+
+       <% else %>
+       <%= image_tag "mystere1.png", class:'rounded-circle float-left mr-2', width:'285', height:'285', style:'margin: -95px 10px 0px 25px; z-index: 9;', alt: 'avatar'%>
+
+       <% end %>
+   </div>
+       <% end %>
+
+       <div class="profile-text">
+        <section class="site-wrapper">
+
+            <div class="row no-margin align-items-center">
+                <div class="col-lg-6 no-padding">
+                    <div class="resume-header-text">
+                        <% if @user.first_name == nil %>
+                        <h2 class="h1 mb0">
+                            Anonyme
+                        </h2>
+                        <%else%>
+                        <h2 class="h1 mb0">
+                            <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>
+                        </h2><br>
+                        <% end %>
+
+                        <% if @user.level == nil %>
+                        <p class="lead">Musicien</p>
+                        <% else %>
+                        <p>Niveau : <%= @user.level %></p>
+                        <% end %>
+
+                        <% if @user.email.empty? %>
+                        <p>Email : non renseigné</p>
+                        <% else %>
+                        <p>Email : <a href="mailto:me@at-enfold.com"><%= @user.email %></a></p>
+                        <% end %>
+
+                        <% if @user.instrument == nil %>
+                        <p>Instrument: non renseigné</p>
+                        <% else %>
+                        <p>Instrument: <%= @user.instrument %></a></p>
+                        <% end %>
+
+                        <% if @user.genre == nil %>
+                        <p>Genre : non renseigné</p>
+                        <% else %>
+                        <p>Genre favoris : <%= @user.genre %></a></p>
+                        <% end %>
+
+                        <% if @user.phone == nil %>
+                        <p>Téléphone : non renseigné</p>
+                        <% else %>
+                        <p>Téléphone : <%= @user.phone %></a>
+                        </p>
+                        <% end %>
+                        <% if @user.age == nil %>
+                        <p>Âge : non renseigné</p>
+                        <% else %>
+                        <p>Âge : <%= @user.age %></a><br>
+                        </p>
+                        <% end %>
+                        <% if @user.location == nil %>
+                        <p>Ville : non renseignée</p>
+                        <% else %>
+                        <p>Ville : <%= @user.location %></a><br>
+                        </p>
+                        <% end %>    
+
+
+
+                    </div></div>
+                    <div class="col-lg-6 no-padding">               
+                        <div class="clearfix mb30 social-buttons">
+                            <%=link_to image_tag("facebook-icon.png", size: "60x60"), @user.facebook, target: :_blank %>
+
+                            <%=link_to image_tag("linkedin-icon.png", size: "60x60"), @user.linkedin, target: :_blank  %>
+
+                            <%=link_to image_tag("twiter-icon.png", size: "60x60"), @user.twitter, target: :_blank  %>
+
+                            <%=link_to image_tag("skype-icon.svg", size: "55x55"), @user.skype, target: :_blank  %>
+
+                            <%=link_to image_tag("youtube-icon.svg", size: "60x60"), @user.youtube, target: :_blank  %>
+                        </div><br>
+                        <div class="buttons">
+                            <%=link_to "Me contacter", new_conversation_path, class:"btn btn-primary ", style:"height: 40px; font-size: 18px;"%>
                             
                             <% if current_user.id == @user.id %>
-                           
-                                <%= link_to "Éditer mon profil", edit_user_registration_path, :class => "btn btn-outline-primary btn-rounded", style:"height: 40px; font-size: 18px;" %>
 
-                            </div>
-                            <% else %>
-                            <% nil %>
-                            <% end %>
+                            <%= link_to "Éditer mon profil", edit_user_registration_path, :class => "btn btn-outline-primary", style:"height: 40px; font-size: 18px;" %>
+
                         </div>
-                        </div>    
+                        <% else %>
+                        <% nil %>
+                        <% end %>
                     </div>
-                </div>
+                </div>    
             </div>
         </div>
-    </div> <!-- /container -->   
+   
+</div>
+</div> <!-- /container -->   
 
 </div><!--container hEADER--> 
 <div class="container pt60 pb60 text-center">

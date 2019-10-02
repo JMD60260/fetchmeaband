@@ -8,12 +8,19 @@
       <div class="row h-100vh align-items-center">
         <div class="col">
           <h1 class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-duration="1000">Fetch me a Band</h1>
+           <p class="mb-5 fs-0 fs-lg-1 text-white" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">Réseau social pour les artistes</p>
         </div>
       </div>
     </div>
   </section>
   <section>
     <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Fetch Me a Band</h3>
+          <h2 class="mb-5 fw-medium text-primary text-uppercase">A quoi ça sert ?</h2>
+        </div>
+      </div>
       <div class="card-deck d-block d-lg-flex">
         <div class="card mb-3">
           <div class="card-body"><center><i class="fas fa-id-badge fa-5x"></i></center><br>
@@ -34,7 +41,7 @@
           </div>
         </div>
       </div>
-       <% if current_user == nil %>
+      <% if current_user == nil %>
       <div class="card-deck d-block d-lg-flex">
         <div class="card">
           <div class="card-body"><center><i class="fab fa-itunes-note fa-7x"></i></center><br>
@@ -44,9 +51,39 @@
         </div>
       </div>
       <% else %>
-            <% nil %>
-            <% end %>
+      <% nil %>
+      <% end %>
     </div>
   </section>
+  <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Les evenements</h3>
+          <h2 class="mb-5 fw-medium text-primary text-uppercase">de notre communauté</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
 
+        <div class="col-lg-10">
+          <div class="row">
+            <% @all_events.reverse_each do |event| %>
+            <div class="col-lg-4 mb-5">
+              <div class="card d-block border-0" data-aos="zoom-in">
+                <%=image_tag("musicman.jpg", class:"card-img-top")%>
+                
+                <div class="card-body p-0 pt-4">
+                  <h6 class="mb-3 text-uppercase"><%= event.title %></h6>
+                  <p class="card-text fs--1"><%= event.description %></p>
+                  <%= link_to "En voir plus", event, class:"h6 fs--1 fw-bold text-uppercase text-primary float-right" %>
+                  
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>

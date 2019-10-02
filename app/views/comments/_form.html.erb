@@ -1,11 +1,14 @@
 
 <%= form_for([@forum, @forum.comments.build]) do |f| %>
-<fieldset>
-	<div class="form-group my-title">
+<div class="col-lg-8 order-lg-2 pb-6 pb-lg-0">
+	<div class="form-group mb-4">
 		<label for="exampleTextarea">Votre Commentaire</label>
-		<%= f.text_area 'content', class: "form-control", style:"height: 40px; font-size: 18px;"%>
+		<%= f.text_area 'content', class: "form-control form-control-lg"%>
 	</div>
-</fieldset>
 
-<%= submit_tag "submit", class: "btn btn-primary", style:"height: 40px; font-size: 18px;" %>
-<%end%>
+
+
+<%= submit_tag "submit", class: "btn btn-primary btn-lg px-6"%>
+</div>
+<br><br><br><br>
+<% end %>

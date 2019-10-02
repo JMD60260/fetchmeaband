@@ -1,20 +1,36 @@
-<br><br><br><br><br><br><br><br>
-<div class="my-margin" style="margin: 0 auto; width: 600px;">
-<%= form_tag url_for(action: 'create'), method: "post" do %>
 
-<div class="form-group my-form">
-<%= label_tag 'Topic' %>
-<%= text_field_tag 'topic', @new_forum.topic, class: "form-control" %>
-</div>
+<main class="main minh-100vh">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">En un clic</h3>
+					<h2 class="mb-5 fw-medium text-primary text-uppercase">Créez un nouveau topic !</h2>
+				</div>
+			</div>
 
-<br /> <br />
-<div class="form-group my-form">
-<%= label_tag 'Description' %>
-<%= text_field_tag 'description', @new_forum.topic, class: "form-control" %>
-</div>
-<br>
+			<div class="row">
+				<div class="col text-center">
 
-<%= submit_tag "Créer un topic", class: "btn btn-primary" %>
+					<%= form_tag url_for(action: 'create'), method: "post" do %>
+					
+						<div class="form-group mb-4">
+							<%= label_tag 'Topic' %>
+							<%= text_field_tag 'topic', @new_forum.topic, class: "form-control form-control-lg" %>
+						</div>
+						<div class="form-group mb-4">
+							<%= label_tag 'Description' %>
+							<%= text_field_tag 'description', @new_forum.topic, class: "form-control form-control-lg" %>
+						</div>
 
-<%end%>
-<br><br><br><br><br><br>
+
+
+
+						<%= submit_tag "submit", class: "btn btn-primary btn-lg px-6"%>
+					
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
