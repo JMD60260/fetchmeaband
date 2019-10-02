@@ -1,53 +1,131 @@
+<header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-text-color="#ffffff">
+  <div class="container">
+    <a class="navbar-brand mr-lg-5 mr-xl-7" href="../pages/index.html">
+      <%=link_to image_tag("logo3.png", size: "120x72", alt: "Brand"), root_path, :class => 'navbar-brand' %>
+    </a>
 
 
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #212121; height: 100px;">
-  <%=link_to image_tag("logo3.png", size: "120x72", alt: "Brand"), root_path, :class => 'navbar-brand' %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
-    <span class="navbar-toggler-icon"> </span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-         <%=link_to "Les profils", users_path, :class => "nav-link my-nav", :style => "color: white"%>
-      </li>
-      <li class="nav-item active">
-
-       <%=link_to "Team", team_path, :method => 'get', :class=>"nav-link my-nav", :style => "color: white"%>
-       </li>
-       <li class="nav-item active">
-
-       <%=link_to "Forum", forums_path, :class=>"nav-link my-nav", :style => "color: white"%>
-       </li>
-              <li class="nav-item active">
-       <%=link_to "Evénements", events_path, :class=>"nav-link my-nav", :style => "color: white"%>
-
-       </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-      <% if user_signed_in? %>
-      <li class="nav-item active">
-
-           <%=link_to "Courrier", mailbox_inbox_path, :class=>"nav-link my-nav", :style => "color: white"%>
-      </li>
-      <li class="nav-item active">
-
-           <%=link_to "Mon Profil", user_path(current_user.id), :class=>"nav-link my-nav", :style => "color: white"%>
-       </li>
-
-       <li class="nav-item active">
-          <%=link_to "Déconnexion", destroy_user_session_path, :class => "nav-link my-nav", :style => "color: white", method: :delete%>
-          </li>
-
-      <%else%>
-      <li class="nav-item active">
-
-          <%=link_to "Connexion", new_user_session_path, :class=>"nav-link my-nav", :style => "color: white"%>
-      </li>
-      <li class="nav-item active">
-          <%=link_to "Inscription", new_user_registration_path, :class=>"nav-link my-nav", :style => "color: white"%>
-      </li>
-      <%end%>
-    </ul>
-
+    <div class="menu-toggle">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cross">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </div>
-</nav>
+
+  <!-- Spyrenav Overlay -->
+  <div class="spyre-navbar-overlay overlay-slide">
+    <div class="container">
+      <div class="row">
+        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+          <nav class="spyre-navbar-nav">
+            <ul class="spyre-nav">
+              <li class="spyre-nav-item"><%=link_to "Les profils", users_path, :class => "spyre-nav-link" %></li>
+              <li class="spyre-nav-item"><%=link_to "Forum", forums_path, :class=>"spyre-nav-link" %></li>
+              <li class="spyre-nav-item"> <%=link_to "Evénements", events_path, :class=>"spyre-nav-link" %></li>
+              <% if user_signed_in? %>
+              <li class="spyre-nav-item dropdown">
+
+                <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                  <li class="dropdown-menu-item"><%=link_to "Courrier", mailbox_inbox_path, :class=>"dropdown-menu-link" %></li>
+                  <li class="dropdown-menu-item"><%=link_to "Mon Profil", user_path(current_user.id), :class=>"dropdown-menu-link"%></li>
+                  <li class="dropdown-menu-item"> <%=link_to "Déconnexion", destroy_user_session_path, :class => "dropdown-menu-link", method: :delete %></li>
+                </li>                                
+              </ul>                                          
+              <% else %>   
+              <li class="spyre-nav-item dropdown">
+
+                <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connexion</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="dropdown-menu-item"><%=link_to "Connexion", new_user_session_path, :class=>"dropdown-menu-link" %></li>
+                  <li class="dropdown-menu-item"><%=link_to "Inscription", new_user_registration_path, :class=>"dropdown-menu-link" %></li>
+                </li>                                
+              </ul>  
+              <% end %>
+
+            </nav>
+          </div>
+
+          <div class="col-lg-7 col-xl-8 d-none d-md-block">
+            <div class="d-flex flex-column h-100">
+              <div class="d-flex h-100">
+                <div class="align-self-center">
+                  <div class="text-uppercase"
+                  data-background-text="communication"
+                  data-color="#7079a2"
+                  data-opacity="0.02"
+                  data-font-size="85px"
+                  data-font-weight="500"
+                  data-offset-x="-5%"
+                  data-letter-spacing="5px"
+                  ></div>
+                  <div class="text-uppercase"
+                  data-background-text="planning"
+                  data-color="#7079a2"
+                  data-opacity="0.04"
+                  data-font-size="175px"
+                  data-font-weight="500"
+                  data-offset-x="29%"
+                  data-padding="7vh 0 2vh 0"
+                  data-letter-spacing="5px"
+                  ></div>
+                  <div class="text-uppercase"
+                  data-background-text="delivering"
+                  data-color="#7079a2"
+                  data-opacity="0.03"
+                  data-font-size="140px"
+                  data-font-weight="500"
+                  data-offset-x="15%"
+                  data-letter-spacing="5px"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="mt-auto">
+                <ul class="nav flex-nowrap float-right">
+                  <li class="nav-item">
+                    <a class="nav-link px-2" href="#" target="_blank">
+                      <i class="zmdi zmdi-twitter text-white"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-2" href="#" target="_blank">
+                      <i class="zmdi zmdi-instagram text-white"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-2" href="#" target="_blank">
+                      <i class="zmdi zmdi-facebook-box text-white"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-2" href="#" target="_blank">
+                      <i class="zmdi zmdi-pinterest text-white"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-2" href="#" target="_blank">
+                      <i class="zmdi zmdi-flickr text-white"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-2" href="#" target="_blank">
+                      <i class="zmdi zmdi-youtube text-white"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Spyrenav Overlay -->
+  </header>

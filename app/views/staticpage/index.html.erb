@@ -1,60 +1,52 @@
-<%= render 'layouts/carrousel2'%>
 
-<div class="container card border-0 mt-10 mb-15 pt-10 pb-10" style="border-radius:8px;">
-  <div class="row ">
-    <div class="highlight-clean" style="min-height:500px;">
-      <div class="container">
-        <div class="card border-0">
-          <div class="features-clean">
-            <div class="container">
-              <div class="row features">
-                <div class="col-sm-6 col-lg-4 item"><center>
-                  <i class="fas fa-id-badge fa-5x"></i></center><br>
-                  <center><h3 class="name"><B>Entrez en contact</B></h3></center> 
-                  <center><p class="description">Contactez les artistes autour de vous en un clic.</p></center>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-calendar-week fa-5x"></i></center><br>
-                  <center><h3 class="name"><B>Créez des évènements</B></h3></center>
-                  <center><p class="description">Partagez vos évènements avec la communauté.</p></center>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><center><i class="fas fa-comments fa-5x"></i></center><br>
-                 <center> <h3 class="name"><B>Prenez part aux conversations</B></h3></center>
-                 <center><p class="description">Alimentez et créez des sujets de conversation.</p></center>
-               </div>
-             </div><br>
-             <% if current_user == nil %>
-             <div class="row justify-content-md-center">
-               <div class="col col-lg-4">
-                <%= link_to new_user_registration_path do %>
-                <center><i class="fab fa-itunes-note fa-7x"></i></center><br>
-                <center> <h3 class="name"><B>Inscrivez-vous !</B></h3></center>
-                <center><p class="description">N'attendez plus, c'est gratuit ! </p></center>
-                <% end %>
-              </div>
-            </div>
-            <% else %>
-            <% nil %>
-            <% end %>
+
+<main class="main minh-100vh">
+  <!-- Section -->
+  <section class="py-0 overflow-hidden text-center">
+    <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background: url(<%= asset_path 'custom.jpg' %>)"></div>
+    <div class="container">
+      <div class="row h-100vh align-items-center">
+        <div class="col">
+          <h1 class="text-white text-uppercase fs-4 fs-lg-6" data-aos="zoom-in" data-aos-duration="1000">Fetch me a Band</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="card-deck d-block d-lg-flex">
+        <div class="card mb-3">
+          <div class="card-body"><center><i class="fas fa-id-badge fa-5x"></i></center><br>
+            <h2 class="mb-4 fs-1 fw-medium text-primary text-uppercase text-center">Entrez en contact</h2>
+            <p class="fs--1 text-center">Contactez les artistes autour de vous en un clic.</p>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-body"><center><i class="fas fa-calendar-week fa-5x"></i></center><br>
+            <h2 class="mb-4 fs-1 fw-medium text-primary text-uppercase text-center">Créez des évènements</h2>
+            <p class="fs--1 text-center">Partagez vos évènements avec la communauté.</p>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-body"><center><i class="fas fa-comments fa-5x"></i></center><br>
+            <h2 class="mb-4 fs-1 fw-medium text-primary text-uppercase text-center">Forum</h2>
+            <p class="fs--1 text-center">Alimentez et créez des sujets de conversation.</p>
           </div>
         </div>
       </div>
-    </div><br><br>
-    <center><B><h1>Evènements organisés par la communauté</h1></B></center><br><br>
-    <div class="row">
-      <% @all_events.reverse_each do |event| %>
-      <div class="col-sm-4">
-        <div class="card border-0">
-          <h2><%= event.title %></h2>
-          <%=image_tag("musicman.jpg", :alt=>"bg3", style:"height:260px; width:auto;")%>
-          <%= event.description %>
-          <br><br>
-          <%= link_to "En voir plus", event %>
-          <p></p>
+       <% if current_user == nil %>
+      <div class="card-deck d-block d-lg-flex">
+        <div class="card">
+          <div class="card-body"><center><i class="fab fa-itunes-note fa-7x"></i></center><br>
+            <h2 class="mb-4 fs-1 fw-medium text-primary text-uppercase text-center"><%= link_to 'Inscrivez-vous', new_user_registration_path %></h2>
+            <p class="fs--1 text-center">N'attendez plus, c'est gratuit !</p>
+          </div>
         </div>
       </div>
-      <%end%>
-
+      <% else %>
+            <% nil %>
+            <% end %>
     </div>
-  </div>
+  </section>
 
-</div>
+</main>
