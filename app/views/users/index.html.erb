@@ -10,6 +10,7 @@
         </div>
       </div>
       <div class="card-columns mt-neg-5">
+        <% if @users != nil %>
         <% @users.reverse_each do |user| %>
         <%= link_to user do %>
         <div class="card mt-6">
@@ -30,13 +31,16 @@
           </div>
         </div>
         <% end %>
-    <%end%>
+        <%end%>
       </div>
       <div class="row justify-content-md-center">
         ​<p class="text-center">
           <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
         </p>
       </div>
+      <% else %>
+      <% nil %>
+      <% end %> 
     </div>
   </section>
 </main>
