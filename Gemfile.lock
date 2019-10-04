@@ -1120,7 +1120,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (~> 3)
+  aws-sdk
   better_errors
   bootsnap (>= 1.1.0)
   bootstrap-sass
