@@ -67,20 +67,24 @@
 
         <div class="col-lg-10">
           <div class="row">
-            <% @all_events.reverse_each do |event| %>
-            <div class="col-lg-4 mb-5">
-              <div class="card d-block border-0" data-aos="zoom-in">
-                <%=image_tag("musicman.jpg", class:"card-img-top")%>
-                
-                <div class="card-body p-0 pt-4">
-                  <h6 class="mb-3 text-uppercase"><%= event.title %></h6>
-                  <p class="card-text fs--1"><%= event.description %></p>
-                  <%= link_to "En voir plus", event, class:"h6 fs--1 fw-bold text-uppercase text-primary float-right" %>
+            <% if @all_events != nil %>
+              <% @all_events.reverse_each do |event| %>
+              <div class="col-lg-4 mb-5">
+                <div class="card d-block border-0" data-aos="zoom-in">
+                  <%=image_tag("musicman.jpg", class:"card-img-top")%>
                   
+                  <div class="card-body p-0 pt-4">
+                    <h6 class="mb-3 text-uppercase"><%= event.title %></h6>
+                    <p class="card-text fs--1"><%= event.description %></p>
+                    <%= link_to "En voir plus", event, class:"h6 fs--1 fw-bold text-uppercase text-primary float-right" %>
+                    
+                  </div>
                 </div>
               </div>
-            </div>
-            <% end %>
+              <% end %>
+             <% else %>
+             <% nil %> 
+             <% end %>  
           </div>
         </div>
       </div>
