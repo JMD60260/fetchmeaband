@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :events
   belongs_to :city, optional: true
   has_one_attached :avatar
-  after_create :welcome_send
+  #after_create :welcome_send
 
   acts_as_messageable
 
