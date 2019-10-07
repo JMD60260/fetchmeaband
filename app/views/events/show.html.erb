@@ -1,29 +1,27 @@
 <main class="main minh-100vh">
-    
+    <div class="container">
         <section >
             <div class="row">
                 <div class="col text-center">
                   <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Bienvenue sur l'évènement de </h3>
                   <h2 class="mb-5 fw-medium text-primary text-uppercase"><%= @event.user.first_name %></h2>
-              </div>
-          </div>
+                </div>
+            </div>
 
-            <div class="row no-gutters pt-6 py-lg-7 align-items-center justify-content-center">
-                <div class="col-md-8 col-lg-6 col-xl-7">
-                    <div class="row justify-content-center">
+                    <div class="row">
                         <div class="col-lg-6 mb-5">
-                            <div class="d-flex flex-row" data-aos="fade-right">
+                            <div class="d-flex flex-row justify-content-center" data-aos="fade-right">
                                 <div>
                                     <i class="fas fa-map-marker-alt fa-3x zmdi-hc-fw"></i>
                                 </div>
                                 <div class="flex-shrink-1">
-                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase">Lieu</h2>
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase ">Lieu</h2>
                                     <p class="fs--1"><%=@event.location%></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 mb-5">
-                            <div class="d-flex flex-row" data-aos="fade-left">
+                            <div class="d-flex flex-row justify-content-center" data-aos="fade-left">
                                 <div>
 
                                     <i class="fas fa-play-circle fa-3x zmdi-hc-fw"></i>
@@ -35,7 +33,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 mb-5">
-                            <div class="d-flex flex-row" data-aos="fade-right">
+                            <div class="d-flex flex-row justify-content-center" data-aos="fade-right">
                                 <div>
                                     <i class="fas fa-hourglass-start fa-3x zmdi-hc-fw"></i>
                                 </div>
@@ -46,7 +44,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 mb-5">
-                            <div class="d-flex flex-row" data-aos="fade-left">
+                            <div class="d-flex flex-row justify-content-center" data-aos="fade-left">
                                 <div>
                                     <i class="fas fa-pencil-alt fa-3x zmdi-hc-fw"></i>
                                 </div>
@@ -57,7 +55,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 mb-5 mb-lg-0">
-                            <div class="d-flex flex-row" data-aos="fade-right">
+                            <div class="d-flex flex-row justify-content-center" data-aos="fade-right">
                                 <div>
                                     <i class="fas fa-coins fa-3x zmdi-hc-fw"></i>
                                 </div>
@@ -68,7 +66,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="d-flex flex-row" data-aos="fade-left">
+                            <div class="d-flex flex-row justify-content-center" data-aos="fade-left">
                                 <div>
                                     <i class="fas fa-user-check fa-3x zmdi-hc-fw"></i>
                                 </div>
@@ -79,10 +77,9 @@
                             </div>
                         </div>
                     </div>
-                </div>                        
-           
-        </div>
+
     </section>
+        </div>
     <section class="py-6 py-lg-8 bg-primary text-white">
     <div class="container">
         <div class="row align-items-center text-center">
@@ -93,4 +90,5 @@
         </div>
     </div>
     </section>
+
 </main>
