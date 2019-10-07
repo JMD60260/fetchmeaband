@@ -1,39 +1,68 @@
-<div class="container">
-<div class="card">
-<div class="card-header" style= "font-family:'gill Sans'; background-color: #212121; color: #FFFFFF;">
-  <center><h4>Pour créer un nouvel évènement c'est    <%=link_to 'Cliquez ici', new_event_path, class:"btn btn-primary"%></h4></center>
-</div>
-</div>
+<main class="main minh-100vh">
 
-
-
-<div class="row justify-content-md-center">
-  <% @events.reverse_each do |event| %>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="row no-gutters">
-        <div class="col-md-4 col-xs-12 col-sm-12">
-      <%= link_to event do %>
-        <%= link_to image_tag("musicman.jpg", size: "166x140", alt: 'avatar'), event %>
-        <% end %>
-        </div>
-        <div class="col-md-8 col-xs-12 col-sm-12">
-          <div class="card-body">
-                    <h5 class="card-title"> <%=event.title%> </h5>
-        <p class="card-text"> <%=event.location%> </p>
-        <p class="card-text"><small class="text-muted"> <%=event.start_date%> </small></p>
-            
-          </div>
-          
-        </div>
+ <section class="py-0 overflow-hidden text-center">
+  <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(/img/artist.jpg)">
+  </div>
+  <div class="container">
+    <div class="row h-100vh align-items-center">
+      <div class="col">
+        <h1 class="text-white text-uppercase fs-4 fs-lg-6">nos évènements</h1>
+        <%= link_to 'Créer un nouveau topic', new_event_path, class:'btn btn-primary btn-lg px-6'%>
       </div>
     </div>
   </div>
-  <% end %>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col text-center">
+        <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Les evenements</h3>
+        <h2 class="mb-5 fw-medium text-primary text-uppercase">de notre communauté</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+
+      <div class="col-lg-10">
+        <div class="row">
+          <% if @events != nil %>
+          <% @events.reverse_each do |event| %>
+          <div class="col-lg-4 mb-5">
+            <div class="card d-block border-0" data-aos="zoom-in">
+              <%=image_tag("musicman.jpg", class:"card-img-top")%>
+
+              <div class="card-body p-0 pt-4">
+                <h6 class="mb-3 text-uppercase"><%= event.title %></h6>
+                <p class="card-text fs--1"><%= event.description %></p>
+                <%= link_to "En voir plus", event, class:"h6 fs--1 fw-bold text-uppercase text-primary float-right" %>
+
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <% else %>
+          <% nil %> 
+          <% end %>  
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      ​<p class="text-center">
+        <%= will_paginate @events, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+      </p>
+    </div>
   </div>
-  <div class="row justify-content-md-center">
-    ​<p class="text-center">
-    <%= will_paginate @events, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
-  </p>
+</section>
+<section class="py-6 py-lg-8 bg-primary text-white">
+  <div class="container">
+    <div class="row align-items-center text-center">
+      <div class="col">
+        <h2 class="mb-5">Créez un évènement</h2>
+
+        <%= link_to "C'est parti !", new_event_path, class:"btn bg-white text-primary mb-4 px-4"%>
+
+      </div>
+    </div>
   </div>
-</div>
+</section>
+</main>

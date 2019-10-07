@@ -1,17 +1,17 @@
 <main class="main minh-100vh">
-     <section class="py-0 overflow-hidden text-center">
-                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background: url(<%= asset_path 'forum2.jpg' %>)">
-                    <div class="bg-video vimeo" data-property="{videoURL:'https://vimeo.com/159035843', stopAt:45, autoPlay:true, mute:true, showControls: false, containment: 'self', loop: false}"></div>
-                </div>
-                <div class="container">
-                    <div class="row h-100vh align-items-center">
-                        <div class="col">
-                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Forums</h1>
-                            <%= link_to 'Créer un forum', new_forum_path, class:'btn btn-primary btn-lg px-6'%>
-                        </div>
-                    </div>
-                </div>
-            </section>
+ <section class="py-0 overflow-hidden text-center">
+  <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(/img/forum2.jpg)">
+    <div class="bg-video vimeo" data-property="{videoURL:'https://vimeo.com/159035843', stopAt:45, autoPlay:true, mute:true, showControls: false, containment: 'self', loop: false}"></div>
+  </div>
+  <div class="container">
+    <div class="row h-100vh align-items-center">
+      <div class="col">
+        <h1 class="text-white text-uppercase fs-4 fs-lg-6">Forums</h1>
+        <%= link_to 'Créer un forum', new_forum_path, class:'btn btn-primary btn-lg px-6'%>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="pb-0">
   <div class="container">
@@ -40,6 +40,18 @@
       ​<p class="text-center">
         <%= will_paginate @forum, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
       </p>
+    </div>
+  </div>
+</section>
+<section class="py-6 py-lg-8 bg-primary text-white">
+  <div class="container">
+    <div class="row align-items-center text-center">
+      <div class="col">
+        <h2 class="mb-5">Créez un nouveau sujet de conversation</h2>
+        
+        <%= link_to "C'est parti !", new_forum_path, class:"btn bg-white text-primary mb-4 px-4"%>
+        
+      </div>
     </div>
   </div>
 </section>

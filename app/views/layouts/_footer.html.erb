@@ -1,63 +1,24 @@
 
 
 
- <footer class="footer text-white" style="background-image: url(../assets/img/footer-bg.jpg)">
-            <div class="container d-flex h-100">
-                <div class="row flex-grow-1">
-                    <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
-                           
-       <!-- Content -->
-       <h4 style="color:#fff; font-family:gill sans;" class="font-weight-normal text-uppercase mt-3 mb-4">Newsletter</h4>
-       
-
-                    </div>
-
-                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
-                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
-                            <div class="col-6 col-lg-3">
-                                <h6 class="mb-1 mb-lg-4 text-uppercase">Services</h6>
-                                <ul class="pt-2 mb-5 fw-light list-unstyled">
-
-                                    <li class="my-1">
-           <%= link_to "Accueil", root_path%>
-         </li>
-         <li class="my-1">
-           <%= link_to "Profils", users_path%>
-         </li>
-         <li class="my-1">
-           <%= link_to "Équipe", team_path%>
-         </li>
-         <li class="my-1">
-           <%=link_to "Forum", forums_path%>
-         </li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
-                                <ul class="pt-2 mb-5 fw-light list-unstyled">
-                                    <li class="my-1"><a href="#" class="text-white">About Us</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">Contact</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">The team</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">Careers</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">Locate store</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-lg-3">
-                                <h6 class="mb-1 mb-lg-4 text-uppercase">Help</h6>
-                                <ul class="pt-2 mb-5 fw-light list-unstyled">
-                                    <li class="my-1"><a href="#" class="text-white">Sponsors</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">FAQs</a></li>
-                                    <li class="my-1"><a href="#" class="text-white">Stories & Ideas</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="mt-auto d-flex justify-content-between">
-                            <span class="fs--3 fs-lg--2">&copy; Spyre, 2019 Webinning Ltd.</span>
-                            <div class="fs--3 fs-lg--2"><a href="#" class="mr-1 text-white">Privacy Policy</a>|<a href="#" class="ml-1 text-white">Cookie Policy</a></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </footer>
+<footer class="footer text-white">
+    <div class="container d-flex h-100">
+       <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+         <h6 class="mb-1 mb-lg-4 text-uppercase">Services</h6>
+            <ul class="pt-2 mb-5 fw-light list-unstyled">
+                <li class="my-1">
+                    <%= link_to "Accueil", root_path, class:"text-white"%>
+                </li>
+                <li class="my-1">
+                    <%= link_to "Profils", users_path, class:"text-white"%>
+                </li>
+                <li class="my-1">
+                    <%= link_to "Équipe", team_path, class:"text-white"%>
+                </li>
+                <li class="my-1">
+                    <%=link_to "Forum", forums_path, class:"text-white" %>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
