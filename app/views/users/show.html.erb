@@ -49,9 +49,10 @@
                         </h2>
                         <%else%>
                         <h2 class="h1 mb0">
-                            <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>
+                            <%= @user.first_name.capitalize %>
                         </h2><br>
                         <% end %>
+                        
 
                         <% if @user.level == nil %>
                         <p class="lead">Musicien</p>

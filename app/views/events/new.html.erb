@@ -1,57 +1,62 @@
 
-<div class="container" style="padding:auto; max-width:1000px;">
-	<br><h1>Créer un évènement :</h1><br>
-	<div class="my-margin">
-		<%= form_tag url_for(action: 'create'), method: "post" do %>
-
-		<div class="form-group">
-			<%= label_tag 'Titre' %>
-			<%= text_field_tag 'title', @new_event.title, class: "form-control", style:"height: 40px; font-size: 18px;" %>
-		</div>
-		<br /> <br />
-
-		<div class="form-group">
-			<%= label_tag 'Description'%>
-			<%= text_area_tag 'description', @new_event.description, class: "form-control", style:"height: 40px; font-size: 18px;" %>
-		</div>
-
-		<br /> <br />
-		<div class="form-group">
-			<%= label_tag 'Durée en minutes'%>
-			<%= number_field_tag 'duration', @new_event.duration, class: "form-control", style:"height: 40px; font-size: 18px;" %>
-		</div>
-		<br /> <br />
-		<div class="form-group">
-			<%= label_tag 'Date'%>
-			<%= date_field_tag 'start_date', @new_event.start_date, class: "form-control", style:"height: 40px; font-size: 18px;" %>
-		</div>
-
-		<br /> <br />
-		<div class="form-group">
-			<%= label_tag 'Prix en €'%>
-			<%= number_field_tag'price', @new_event.price, class: "form-control", style:"height: 40px; font-size: 18px;" %>
-		</div>
-
-		<br /> <br />
-		<div class="form-group">
-			<%= label_tag 'Lieu'%>
-			<%= text_field_tag 'location', @new_event.location, class: "form-control", style:"height: 40px; font-size: 18px;" %>
-		</div>
-
-		<br /> <br />
-
-		<%= submit_tag "Créer", class: "btn btn-lg btn-primary", style:"height: 40px; font-size: 18px;" %>
-		<br><br>
-		<%end%>
 
 
-		<% if @new_event.errors.any? %>
-		<div class="alert alert-warning alert-dismissible fade show" role="alert">
-			<strong>Nous n'avons pas réussi à créer l'évènement pour la (ou les) raison(s) suivante(s) </strong>  
-			<ul> <% @new_event.errors.full_messages.each do |message| %>
-				<li><%= message %></li>
-				<% end %>
-			</ul>
-		<% end %>
+<main class="main minh-100vh">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">En un clic</h3>
+					<h2 class="mb-5 fw-medium text-primary text-uppercase">Créez un nouvel évènement !</h2>
+				</div>
+			</div>
 
-		</div></div>
+			<div class="row no-gutters minh-100vh h-100vh pt-6 py-lg-7 align-items-center justify-content-center">
+				<div class="col-md-8 col-lg-6 col-xl-7">
+
+					<%= form_tag url_for(action: 'create'), method: "post" do %>
+					
+					<div class="form-group mb-4">
+						<%= label_tag 'Titre' %>
+						<%= text_field_tag 'tilte', @new_event.title, class: "form-control form-control-lg" %>
+					</div>
+					<div class="form-group mb-4">
+						<%= label_tag 'Description' %>
+						<%= text_area_tag 'description', @new_event.description, class: "form-control form-control-lg" %>
+					</div>
+					<div class="form-group mb-4">
+						<%= label_tag 'Durée (en minutes)' %>
+						<%= number_field_tag 'duration', @new_event.duration, class: "form-control form-control-lg" %>
+					</div>
+					<div class="form-group mb-4">
+						<%= label_tag 'Date' %>
+						<%= date_field_tag 'start_date', @new_event.start_date, class: "form-control form-control-lg" %>
+					</div>
+					<div class="form-group mb-4">
+						<%= label_tag 'Prix' %>
+						<%= number_field_tag 'price', @new_event.price, class: "form-control form-control-lg" %>
+					</div>
+					<div class="form-group mb-4">
+						<%= label_tag 'Lieu' %>
+						<%= text_field_tag 'location', @new_event.location, class: "form-control form-control-lg" %>
+					</div>
+
+
+
+
+					<%= submit_tag "Créer", class: "btn btn-primary btn-lg px-6"%>
+					
+					<% end %>
+					<% if @new_event.errors.any? %>
+					<div class="alert alert-warning alert-dismissible fade show" role="alert">
+						<strong>Nous n'avons pas réussi à créer l'évènement pour la (ou les) raison(s) suivante(s) </strong>  
+						<ul> <% @new_event.errors.full_messages.each do |message| %>
+							<li><%= message %></li>
+							<% end %>
+						</ul>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>

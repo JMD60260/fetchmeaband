@@ -1,7 +1,12 @@
 
 <section class="pb-0">
-  <div class="container">
-  	<center><h1><%= @forum.topic %></h1></center>
+    <div class="row">
+        <div class="col text-center">
+          <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Bienvenue</h3>
+          <h2 class="mb-5 fw-medium text-primary text-uppercase"><%= @forum.topic %></h2>
+        </div>
+      </div>
+
     <div class="row">
       <%@comments.each do |comment|%>
       <div class="col-lg-8 order-lg-2 pb-6 pb-lg-0">
@@ -11,16 +16,15 @@
           <div class="mt-4 d-flex justify-content-between">
             <div class="w-50">
               <% if comment.user.avatar.attached? %>
-              <%= image_tag comment.user.avatar, class:'rounded-circle float-left mr-2', width:'40', height:'40'%>
+              <%= link_to image_tag(comment.user.avatar, class:'rounded-circle float-left mr-2', width:'40', height:'40'), comment.user %>
               <% else %>
-              <%= image_tag "mystere1.png", class:'rounded-circle float-left mr-2', width:'40', height:'40'%>
+              <%= link_to image_tag("mystere1.png", class:'rounded-circle float-left mr-2', width:'40', height:'40'), comment.user%>
               <% end %>
-              <p class="fs--1 lh-13 text-700"><%=comment.user.first_name%><br /><span class="fs--3"><%= comment.created_at %></span></p>
+              <p class="fs--1 lh-13 text-700"><%=link_to comment.user.first_name, comment.user %><br /><span class="fs--3"><%= comment.created_at %></span></p>
             </div>
           </div>
         </div>
       </div>
       <% end %>
     </div>
-</div>
 </section>

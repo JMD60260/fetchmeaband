@@ -2,15 +2,15 @@
 <main class="main minh-100vh">
 	<section>
 		<div class="container">
-			<div class="row">
+
 				<div class="col text-center">
 					<h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">En un clic</h3>
 					<h2 class="mb-5 fw-medium text-primary text-uppercase">Créez un nouveau topic !</h2>
 				</div>
-			</div>
 
-			<div class="row">
-				<div class="col text-center">
+
+			<div class="row no-gutters pt-6 py-lg-7 align-items-center justify-content-center">
+				<div class="col-md-8 col-lg-6 col-xl-7">
 
 					<%= form_tag url_for(action: 'create'), method: "post" do %>
 					
@@ -20,7 +20,7 @@
 						</div>
 						<div class="form-group mb-4">
 							<%= label_tag 'Description' %>
-							<%= text_field_tag 'description', @new_forum.topic, class: "form-control form-control-lg" %>
+							<%= text_area_tag 'description', @new_forum.topic, class: "form-control form-control-lg" %>
 						</div>
 
 
