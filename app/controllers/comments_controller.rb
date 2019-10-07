@@ -20,7 +20,8 @@ class CommentsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+   end
 
   def update
     if @comment.update(params[:comment].permit(:content))

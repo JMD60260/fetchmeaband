@@ -2,10 +2,11 @@
 <section class="pb-0">
     <div class="row">
         <div class="col text-center">
-          <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Bienvenue</h3>
+          <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Bienvenue sur le topic de : </h3>
           <h2 class="mb-5 fw-medium text-primary text-uppercase"><%= @forum.topic %></h2>
         </div>
       </div>
+
 
     <div class="row">
       <%@comments.each do |comment|%>
@@ -27,4 +28,5 @@
       </div>
       <% end %>
     </div>
+
 </section>
