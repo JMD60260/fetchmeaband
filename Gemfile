@@ -76,7 +76,7 @@ gem 'rspec-rails'
 gem 'table_print'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'aws-sdk', require:false
+gem 'aws-sdk', '~> 3'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'image_processing'
