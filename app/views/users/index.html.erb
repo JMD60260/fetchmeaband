@@ -1,44 +1,46 @@
 
-<div class="container">
-  <div class="card">
-<div class="card-header" style= "font-family:'gill Sans'; background-color: #212121; color: #FFFFFF;">
-
-
-  <center><h4>Profils utilisateurs</h4></center>
-
-</div>
-</div><br>
-
-  <div class="row justify-content-md-center">
-    <% @users.reverse_each do |user| %>
-    <%= link_to user do %>
-    <div class="flip-card col-lg2-2" style="width: 300px; height: 300px;">
-      <div class="flip-card-inner" style="width: 300px; height: 300px;">
-        <div class="flip-card-front" style="width: 300px; height: 300px;">
-
-          <% if user.avatar.attached? %>
-
-          <%= image_tag user.avatar, style:"width:300px; height:300px;", class: "card-img-top img-fluid", alt: 'avatar' %>
-
-          <% else %>
-          <%= image_tag "mystere1.png", style:"width:300px;height:300px;" %>
-          <% end %>
-
-        </div>
-        <div class="flip-card-back" style="width: 300px; height: 300px; padding-top:75px;">
-          <h1><%= user.first_name %></h1>
-          <p><%= user.instrument %></p>
-          <p><%= user.level %></p>
-          <p><%= user.location %></p>
+<!-- new -->
+<main class="main minh-100vh">
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Retrouvez</h3>
+          <h2 class="mb-5 fw-medium text-primary text-uppercase">Les artistes</h2>
         </div>
       </div>
-    </div> 
-    <% end %>
-    <%end%>
-</div>
-<div class="row justify-content-md-center">
-  ​<p class="text-center">
-    <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
-  </p>
-</div>
-</div>
+      <div class="card-columns mt-neg-5">
+        <% if @users != nil %>
+        <% @users.reverse_each do |user| %>
+        <%= link_to user do %>
+        <div class="card mt-6">
+          <div class="px-3 mt-neg-4">
+            <% if user.avatar.attached? %>
+
+          <%= image_tag user.avatar, class:"card-img"%>
+          
+          
+          <% else %>
+          <%= image_tag "mystere1.png", class:'card-img' %>
+          <% end %>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title mb-0 text-uppercase"><%= user.first_name %></h6>
+            <p class="card-text mb-3 fs--1 text-primary fw-bold"><%= user.instrument %></p>
+            <p class="card-text fs--1"><%= user.description %></p>
+          </div>
+        </div>
+        <% end %>
+        <%end%>
+      </div>
+      <div class="row justify-content-md-center">
+        ​<p class="text-center">
+          <%= will_paginate @users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+        </p>
+      </div>
+      <% else %>
+      <% nil %>
+      <% end %> 
+    </div>
+  </section>
+</main>

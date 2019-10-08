@@ -79,7 +79,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'aws-sdk', '~> 3'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
-gem 'image_processing', '1.2'
+gem 'image_processing'
 gem 'rubocop'
 
 gem 'capistrano', '~> 3.11', '>= 3.11.1'

@@ -1,35 +1,58 @@
-<div class="container">
-<div class="card">
-<div class="card-header" style= "font-family:'gill Sans'; background-color: #212121; color: #FFFFFF;">
-
-  <center><h4>Pour créer un nouveau sujet c'est    <%=link_to 'Cliquez ici', new_forum_path, class:"btn btn-primary"%></h4></center>
-
-</div>
-</div>
-
-<div class="row">
-<%@forum.reverse_each do |f|%>
-  <div class="col-sm-12">
-    <div class="card">
-      <h2><%= f.topic %></h2>
-
-
-      <%=image_tag("forum.jpg", :class=>"w-100", :alt=>"bg3")%>
-      <%= f.description %>
-      <br><br>
-      <%= link_to "En voir plus", f %>
-      <p></p>
+<main class="main minh-100vh">
+ <section class="py-0 overflow-hidden text-center">
+  <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(/img/forum2.jpg)">
+    <div class="bg-video vimeo" data-property="{videoURL:'https://vimeo.com/159035843', stopAt:45, autoPlay:true, mute:true, showControls: false, containment: 'self', loop: false}"></div>
+  </div>
+  <div class="container">
+    <div class="row h-100vh align-items-center">
+      <div class="col">
+        <h1 class="text-white text-uppercase fs-4 fs-lg-6">Forums</h1>
+        <%= link_to 'Créer un forum', new_forum_path, class:'btn btn-primary btn-lg px-6'%>
+      </div>
     </div>
   </div>
-  <%end%>
-</div>
+</section>
 
-
-</div>
-<div class="row justify-content-md-center">
-    ​<p class="text-center">
-    <%= will_paginate @forum, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
-  </p>
-</div>
-
-</div>
+<section class="pb-0">
+  <div class="container">
+    <div class="row">
+      <%@forum.reverse_each do |f|%>
+      <div class="col-lg-8 order-lg-2 pb-6 pb-lg-0">
+        <div class="mb-8">
+          <h2 class="mb-4 text-uppercase"><%= f.topic %></h2>
+          <p class="text-700 fw-medium"><%= f.description %></p>
+          <div class="mt-4 d-flex justify-content-between">
+            <div class="w-50">
+              <% if f.user.avatar.attached? %>
+              <%= image_tag f.user.avatar, class:'rounded-circle float-left mr-2', width:'40', height:'40'%>
+              <% else %>
+              <%= image_tag "mystere1.png", class:'rounded-circle float-left mr-2', width:'40', height:'40'%>
+              <% end %>
+              <p class="fs--1 lh-13 text-700"><%= f.user.first_name %><br /><span class="fs--3"><%= f.created_at %></span></p>
+            </div>
+            <%= link_to "En voir plus", f %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="row justify-content-md-center">
+      ​<p class="text-center">
+        <%= will_paginate @forum, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer %>
+      </p>
+    </div>
+  </div>
+</section>
+<section class="py-6 py-lg-8 bg-primary text-white">
+  <div class="container">
+    <div class="row align-items-center text-center">
+      <div class="col">
+        <h2 class="mb-5">Créez un nouveau sujet de conversation</h2>
+        
+        <%= link_to "C'est parti !", new_forum_path, class:"btn bg-white text-primary mb-4 px-4"%>
+        
+      </div>
+    </div>
+  </div>
+</section>
+</main>

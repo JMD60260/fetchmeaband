@@ -1,3 +1,31 @@
-<%=render 'comments/comment'%>
+<main class="main minh-100vh">
+	<div class="container">
+		<section class="pb-0">
+			<% if @comments.empty? %>
+			<div class="row">
+				<div class="col text-center">
+					<h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase">Bienvenue sur le topic de : </h3>
+					<h2 class="mb-5 fw-medium text-primary text-uppercase"><%= @forum.topic %></h2>
+				</div>
+			</div>
 
-<%=render 'comments/form'%>
+			<div class="row">
+				<div class="col text-center">
+					<h5 class="my-0 fs-1 fw-medium text-secondary">Topic en cours de consctruction </br> Soyez le premier à vous exprimer sur le sujet !</h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<img src="/img/forum-empty2.jpg" width="752" height="564">
+				</div>
+			</div>
+			<%=render 'comments/form'%>
+			<% else %>
+
+			<%=render 'comments/comment'%>
+
+			<%=render 'comments/form'%>
+			<% end %>
+		</section>
+	</div>
+</main>

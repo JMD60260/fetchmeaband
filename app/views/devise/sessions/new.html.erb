@@ -1,33 +1,48 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 offset-md-3"></div>
-    <div class="col-md-6 offset-md-3">
-      <br><br><br>
-      <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: "form-signup mt-3" } do |f| %>
-      <h1 class="mb-3 font-weight-normal text-center">Connexion</h1>
-        <%= devise_error_messages! %>
-        <div class="form-group">
-          <%= f.label :email, "Email" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", style:"height: 40px; font-size: 18px;" %>
-        </div>
-        <div class="form-group">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "current-password", class: "form-control", style:"height: 40px; font-size: 18px;"%>
-        </div>
-        <% if devise_mapping.rememberable? %>
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-        <%end%>
 
-        <div class="actions mt-5">
-          <%= f.submit "Valider", class: "btn btn-lg btn-primary btn-block", style:"height: 40px; font-size: 18px;" %>
+
+<!-- Main Content -->
+<main class="main minh-100vh">
+  <!-- Section -->
+  <section class="py-0">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 order-lg-2">
+          <div class="row minh-100vh h-100 align-items-center">
+            <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: "col px-lg-6 px-xl-8 px-xxl-11 py-9 py-lg-4" } do |f| %>
+            <%= devise_error_messages! %>
+            <h1>Connexion</h1>
+
+            <h5 class="mb-5 text-700">Identifiez-vous</h5>
+
+
+            <div class="form-group mb-4">
+             <%= f.label :email, "Email" %><br />
+             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg", placeholder: "Adresse email" %>
+           </div>
+           <div class="form-group mb-4">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "current-password", class: "form-control form-control-lg", placeholder:"Mot de passe"%>
+
+
+          </div>
+          <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+          <% end %>
+          <%= f.submit "Valider", class: "btn btn-lg btn-secondary btn-block mb-4" %>
+          <% end %> 
+
+
         </div>
-      <% end %>
-      <%= render "devise/shared/links" %>
+      </div>
+
+      <div class="col-lg-6 order-lg-1 px-0 py-9">
+        <div class="bg-container overlay overlay-10" style="background-image: url(/img/sign-in.jpg)"></div>
+      </div>
     </div>
-  <div class="col-md-3 offset-md-3"></div>
   </div>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+<!-- End of Section -->
+</main>

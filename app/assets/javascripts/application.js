@@ -12,5 +12,14 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
-//= require_tree .
+//= require vendor/jquery/dist/jquery.min
+//= require vendor/popper.js/dist/umd/popper.min
+//= require vendor/bootstrap/dist/js/bootstrap.min
+//= require vendor/rellax/rellax.min
+//= require vendor/@fancyapps/fancybox/dist/jquery.fancybox.min
+//= require vendor/sticky-kit/dist/sticky-kit.min
+//= require vendor/imagesloaded/imagesloaded.pkgd.min
+//= require vendor/isotope-layout/dist/isotope.pkgd.min
+//= require vendor/isotope-packery/packery-mode.pkgd.min
+//= require vendor/aos/dist/aos
+//= require js/theme
