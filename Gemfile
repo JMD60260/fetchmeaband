@@ -92,3 +92,4 @@ gem 'mailboxer'
 gem 'whenever', require: false
 gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap4'
+gem "loofah", ">= 2.3.1"
